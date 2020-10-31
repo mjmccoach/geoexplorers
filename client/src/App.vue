@@ -1,33 +1,29 @@
-<template>
-  <div>
-    <p>{{ countryInfo }}</p>
-    <promises></promises>
-  </div>
-</template>
+<template></template>
 
 <script>
-import { eventBus } from './main.js';
-import Promises from './components/Promises'
+import { eventBus } from "./main.js";
+import Promises from "./components/Promises";
 
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
       countryInfo: [],
-      selectedCountry: null
-    }
+      selectedCountry: null,
+    };
   },
   mounted() {
-    eventBus.$on('country-info', (info) => {
-			this.countryInfo = info;
-		});
+    this.fetchCountryInfo();
   },
-  components: {
-    'promises': Promises
-  }
-}
+  methods: {
+    fetchCountryInfo: function () {
+      fetch("https://restcountries.eu/rest/v2/all")
+        .then((res) => res.json())
+        .then((data) => (this.countryInfo = data));
+    },
+  },
+};
 </script>
 
 <style>
-
 </style>
