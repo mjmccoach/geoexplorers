@@ -1,7 +1,7 @@
 <template>
   <article>
     <div>
-      <p>k</p>
+      <p></p>
     </div>
   </article>
 </template>
