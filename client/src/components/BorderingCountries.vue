@@ -1,9 +1,8 @@
-<template>
-  <ul>
+<template lang="html">
+  <ul class="testing" id="bordering-countries">
     <bordering-country-item
-      v-for="(country, index) in countryList"
-      :borderingCountries="borderingCountries"
-      key="index"
+    v-for="(borderingCountry, index) in borderingCountriesList" :borderingCountry="borderingCountry" key="index"
+    v-if="(borderingCountry === country.alpha3Code) :country.name"
     >
     </bordering-country-item>
   </ul>
@@ -11,20 +10,20 @@
 
 <script>
 import { eventBus } from "@/main.js";
-import CountryList from "./CountryList";
 
 export default {
   name: "bordering-countries",
-  props: ["countryList", "borderingCountries"],
-  components: {
-    "country-list": CountryList,
-  },
+  props: ["countries", "borderingCountriesList"],
+  components: {},
   methods: {},
 };
 </script>
 
 <style lang="css" scoped>
+
 .testing {
   color: red;
 }
+
+
 </style>

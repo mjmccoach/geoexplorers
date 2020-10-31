@@ -2,7 +2,7 @@
   <article v-if="country">
     <h1>{{ country.name }}</h1>
     <span>
-      <img :src="country.flag" :alt="'Flag of ' + country.name" />
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" />
     </span>
     <hr />
     <p>
@@ -16,9 +16,7 @@
     </p>
     <p>
       {{ country.name }} is bordered by:
-      <!-- <bordering-countries
-        :borderingCountries="borderingCountries"
-      ></bordering-countries> -->
+      <bordering-countries :borderingCountriesList="country.borders"></bordering-countries>
     </p>
   </article>
 </template>
