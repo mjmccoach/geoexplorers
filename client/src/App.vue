@@ -4,6 +4,13 @@
 
 <script>
 export default {
+  name: 'app',
+  data() {
+    return {
+      countryInfo: [],
+      selectedCountry: null
+    }
+  }
 
 }
 </script>
