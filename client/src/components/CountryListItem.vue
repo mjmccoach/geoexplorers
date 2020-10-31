@@ -20,7 +20,6 @@ export default {
 
 <style>
 li {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 </style>
