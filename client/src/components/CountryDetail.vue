@@ -23,11 +23,14 @@
 
 <script>
 import { eventBus } from "@/main.js";
+import BorderingCountries from "./BorderingCountries.vue"
 
 export default {
   name: "country-detail",
   props: ["country"],
-  components: {},
+  components: {
+    "bordering-countries": BorderingCountries
+  },
   methods: {},
 };
 </script>
