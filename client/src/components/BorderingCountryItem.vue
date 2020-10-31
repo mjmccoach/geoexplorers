@@ -2,7 +2,7 @@
   <article>
     <div>
       <li>
-        <p>{{ borderingCountry }}</p>
+      {{ country.name }}
       </li>
     </div>
   </article>
@@ -14,7 +14,7 @@ import borderingCountries from "./BorderingCountries.vue"
 
 export default {
   name: "bordering-country-item",
-  props: [borderingCountry],
+  props: ["borderingCountry"],
   components: {
     "bordering-countries": borderingCountries
   },

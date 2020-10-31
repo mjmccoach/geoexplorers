@@ -2,7 +2,8 @@
   <ul class="testing" id="bordering-countries">
     <bordering-country-item
     v-for="(borderingCountry, index) in borderingCountriesList" :borderingCountry="borderingCountry" key="index"
-    v-if="(borderingCountry === country.alpha3Code) :country.name"
+    v-for="(country, index) in countries" :countryAlpha3Code="country.alpha3Code" key="index"
+    v-if="borderingCountry === countryAlpha3Code"
     >
     </bordering-country-item>
   </ul>
