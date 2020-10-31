@@ -1,11 +1,7 @@
 <template>
-  <ul>
-    <bordering-country-item
-      v-for="(country, index) in countryList"
-      :borderingCountries="borderingCountries"
-      key="index"
-    ></bordering-country-item>
-  </ul>
+    <ul>
+        <bordering-country-item v-for="(country, index) in countryList" :borderingCountries="borderingCountries" key="index"></bordering-country-item>
+    </ul>
 </template>
 
 <script>

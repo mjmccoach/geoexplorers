@@ -1,8 +1,8 @@
 <template>
-  <article>
+  <article v-if="country">
     <h1>{{ country.name }}</h1>
     <span>
-      <img src="{{ country.flag }}" alt="The flag of {{ country.name }}" />
+      <img :src="country.flag" :alt="'Flag of ' + country.name" />
     </span>
     <hr />
     <p>
@@ -16,9 +16,9 @@
     </p>
     <p>
       {{ country.name }} is bordered by:
-      <bordering-countries
+      <!-- <bordering-countries
         :borderingCountries="borderingCountries"
-      ></bordering-countries>
+      ></bordering-countries> -->
     </p>
   </article>
 </template>
@@ -28,7 +28,7 @@ import { eventBus } from "@/main.js";
 
 export default {
   name: "country-detail",
-  props: ["selected-country"],
+  props: ["country"],
   components: {},
   methods: {},
 };

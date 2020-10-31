@@ -1,8 +1,15 @@
-<template></template>
+<template>
+  <main>
+    <country-list :countries="countryInfo"></country-list>
+    <country-detail :country="selectedCountry"></country-detail>
+  </main>
+</template>
 
 <script>
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
+import CountryList from "./components/CountryList";
+import CountryDetail from "./components/CountryDetail";
 
 export default {
   name: "app",
@@ -14,6 +21,10 @@ export default {
   },
   mounted() {
     this.fetchCountryInfo();
+
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country;
+    });
   },
   methods: {
     fetchCountryInfo: function () {
@@ -22,6 +33,10 @@ export default {
         .then((data) => (this.countryInfo = data));
     },
   },
+  components: {
+    'country-list': CountryList,
+    'country-detail': CountryDetail
+  }
 };
 </script>
 
