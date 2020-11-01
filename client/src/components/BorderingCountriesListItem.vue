@@ -1,7 +1,7 @@
 <template lang="html">
   <article>
     <div>
-      <li>
+      <li v-on:click='selectCountry'>
         {{ borderingCountry.name }}
       </li>
     </div>
@@ -17,7 +17,7 @@ export default {
   components: {},
   methods: {
     selectCountry() {
-      eventBus.$emit('country-selected', this.country)
+      eventBus.$emit('country-selected', this.borderingCountry)
     }
   },
 };
