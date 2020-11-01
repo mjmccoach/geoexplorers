@@ -14,7 +14,7 @@
     </p>
     <p>
       Learn about the neighbours of {{ country.name }}:
-      <bordering-countries-list :borderingSelectedCountry="country.borders"></bordering-countries-list>
+      <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
   </article>
 </template>
@@ -25,7 +25,7 @@ import BorderingCountriesList from "./BorderingCountriesList.vue"
 
 export default {
   name: "country-detail",
-  props: ["country"],
+  props: ["country", "borderingCountries"],
   components: {
     "bordering-countries-list": BorderingCountriesList
   },

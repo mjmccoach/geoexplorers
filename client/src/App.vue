@@ -1,7 +1,7 @@
 <template>
   <main>
     <country-list :countries="countryInfo"></country-list>
-    <country-detail :country="selectedCountry"></country-detail>
+    <country-detail :country="selectedCountry" :borderingCountries="borderingCountries"></country-detail>
   </main>
 </template>
 
@@ -17,6 +17,7 @@ export default {
     return {
       countryInfo: [],
       selectedCountry: null,
+      borderingCountries: []
     };
   },
   mounted() {
@@ -25,6 +26,9 @@ export default {
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
     });
+    eventBus.$on('country-selected', (country) => {
+      this.borderingCountries = this.findBorderingCountries();
+    });
   },
   methods: {
     fetchCountryInfo: function () {
@@ -32,6 +36,11 @@ export default {
         .then((res) => res.json())
         .then((data) => (this.countryInfo = data));
     },
+    findBorderingCountries: function () {
+      return this.countryInfo.filter((country) => {
+        return this.selectedCountry.borders.includes(country.alpha3Code)
+    })
+    }
   },
   components: {
     'country-list': CountryList,

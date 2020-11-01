@@ -1,8 +1,8 @@
 <template lang="html">
   <article>
     <div>
-      <li v-if="countries.country.alpha3Code === borderingCountry">
-        {{ countries.country.name }}
+      <li>
+        {{ borderingCountry.name }}
       </li>
     </div>
   </article>
@@ -12,12 +12,12 @@
 import { eventBus } from "@/main.js";
 
 export default {
-  name: "bordering-country-list-item",
-  props: ["countries", "borderingCountry"],
+  name: "bordering-countries-list-item",
+  props: ["borderingCountry"],
   components: {},
   methods: {
     selectCountry() {
-      eventBus.$emit('country-selected', this.borderingCountry)
+      eventBus.$emit('country-selected', this.country)
     }
   },
 };

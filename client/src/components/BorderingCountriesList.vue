@@ -1,21 +1,20 @@
 <template lang="html">
-  <ul id="bordering-countries">
-    <bordering-country-list-item
-    v-for="(borderingCountry, index) in countriesBorderingSelectedCountry" :borderingCountry="borderingCountry" key="index"
-    >
-    </bordering-country-list-item>
+  <ul id="bordering-countries-list">
+    <bordering-countries-list-item
+    v-for="(borderingCountry, index) in borderingCountries" :borderingCountry="borderingCountry" key="index">
+    </bordering-countries-list-item>
   </ul>
 </template>
 
 <script>
 import { eventBus } from "@/main.js";
-import BorderingCountryListItem from "./BorderingCountryListItem";
+import BorderingCountriesListItem from "./BorderingCountriesListItem.vue";
 
 export default {
   name: "bordering-countries-list",
-  props: ["countriesBorderingSelectedCountry"],
+  props: ["borderingCountries"],
   components: {
-    "bordering-country-list-item": BorderingCountryListItem
+    "bordering-countries-list-item": BorderingCountriesListItem
   },
   methods: {},
 };
