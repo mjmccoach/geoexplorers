@@ -1,8 +1,8 @@
 <template lang="html">
   <article>
     <div>
-      <li>
-      {{ country.name }}
+      <li v-if="countries.country.alpha3Code === borderingCountry">
+        {{ countries.country.name }}
       </li>
     </div>
   </article>
@@ -10,14 +10,11 @@
 
 <script>
 import { eventBus } from "@/main.js";
-import borderingCountries from "./BorderingCountries.vue"
 
 export default {
-  name: "bordering-country-item",
-  props: ["borderingCountry"],
-  components: {
-    "bordering-countries": borderingCountries
-  },
+  name: "bordering-country-list-item",
+  props: ["countries", "borderingCountry"],
+  components: {},
   methods: {
     selectCountry() {
       eventBus.$emit('country-selected', this.borderingCountry)

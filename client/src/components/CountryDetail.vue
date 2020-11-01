@@ -14,20 +14,20 @@
     </p>
     <p>
       Learn about the neighbours of {{ country.name }}:
-      <bordering-countries :borderingSelectedCountry="country.borders"></bordering-countries>
+      <bordering-countries-list :borderingSelectedCountry="country.borders"></bordering-countries-list>
     </p>
   </article>
 </template>
 
 <script>
 import { eventBus } from "@/main.js";
-import BorderingCountries from "./BorderingCountries.vue"
+import BorderingCountriesList from "./BorderingCountriesList.vue"
 
 export default {
   name: "country-detail",
   props: ["country"],
   components: {
-    "bordering-countries": BorderingCountries
+    "bordering-countries-list": BorderingCountriesList
   },
   methods: {},
 };
