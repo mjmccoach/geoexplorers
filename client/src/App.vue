@@ -26,6 +26,10 @@ export default {
       this.selectedCountry = country;
       this.borderingCountries = this.findBorderingCountries();
     });
+    eventBus.$on('country-select', (country) => {
+      this.selectedCountry = country;
+      this.borderingCountries = this.findBorderingCountries();
+    });
   },
   methods: {
     fetchCountryInfo: function () {

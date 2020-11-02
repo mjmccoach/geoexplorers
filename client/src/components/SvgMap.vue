@@ -23,23 +23,19 @@ export default {
     };
   },
   computed: {
-    matchSelectedCountry: function() {
-      const list = this.countries;
-      const id = this.selectedLocation;
-
-      for (let i=0; i<list.length; i++) {
-        const country = list[i]
-        if(id === country.alpha2Code.toLowerCase()) {
+      selectTheCountry: function() {
+      for (let i=0; i<this.countries.length; i++) {
+        const country = this.countries[i]
+        if(this.selectedLocation === country.alpha2Code.toLowerCase()) {
           this.selectedCountry = country;
+          eventBus.$emit('country-select', this.selectedCountry);
         };
       };
-      return this.selectedCountry
-    },
-    emitCountry() {
-      eventBus.$emit('country-selected', this.selectedCountry);
+
+      
     }
   }
-};
+};  
 </script>
 
 <style src="vue-svg-map/dist/index.css"></style>
