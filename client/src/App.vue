@@ -1,28 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
+    
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { eventBus } from "./main.js";
+import Promises from "./components/Promises";
+import CountrySearch from "./components/CountrySearch";
 
 export default {
-  name: 'App',
+  name: "app",
+  data() {
+    return {
+      countryInfo: [],
+      selectedCountry: null,
+      borderingCountries: []
+    };
+  },
+  mounted() {
+    this.fetchCountryInfo();
+
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country;
+    });
+    eventBus.$on('country-selected', (country) => {
+      this.borderingCountries = this.findBorderingCountries();
+    });
+  },
+  methods: {
+    fetchCountryInfo: function () {
+      fetch("https://restcountries.eu/rest/v2/all")
+        .then((res) => res.json())
+        .then((data) => (this.countryInfo = data));
+    },
+    findBorderingCountries: function () {
+      return this.countryInfo.filter((country) => {
+        return this.selectedCountry.borders.includes(country.alpha3Code)
+    })
+    }
+  },
   components: {
-    HelloWorld
+    
+    'country-search': CountrySearch
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
