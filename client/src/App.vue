@@ -1,5 +1,6 @@
 <template>
   <main>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <section class="main-container">
     <country-search :countries="countryInfo" :country="selectedCountry" ></country-search>
     </section>
@@ -51,6 +52,7 @@ export default {
 
 <style scoped>
 .main-container {
+  font-family: itim;
   display: flex;
   justify-content:space-between;
   padding: 10px;

@@ -1,7 +1,8 @@
 <template>
 <section id="country-detail">
   <article v-if="country">
-      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name"/><span> {{country.name}}</span>
+    <h2>{{country.name}}</h2>
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name"/>
     <p>
       {{ country.name }} is a country in the {{ country.subregion }} part of {{ country.region }}.
     <p>
@@ -63,6 +64,7 @@ export default {
   height: max-content;
   margin: 10px;
   padding: 5px;
+  width: 400px
 }
 
 #country-flag {

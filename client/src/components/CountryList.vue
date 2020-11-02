@@ -38,6 +38,8 @@ export default {
   border: solid 4px darkgreen;
   background-color: aquamarine;
   border-radius: 6px;
-  padding: 5px
+  padding: 5px;
+  width: 400px;
+  margin: 10px;
 }
 </style>
