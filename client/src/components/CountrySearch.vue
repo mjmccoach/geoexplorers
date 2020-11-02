@@ -13,7 +13,7 @@
 	</ul>
 	<ul>
 		<span>Countries associated with:</span>
-		<country-catagories-search>
+		<div>
 			<ul>
 				<region-search
 				v-for="(region, index) in regions" :region="region" :key="index">
@@ -22,13 +22,13 @@
 				:regions="regions" :selectedRegion="selectedRegion">
 				</region-results-list>
 			</ul>
-			<ul>
+			<!-- <ul>
 				<sub-region-search
 				v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
 				</sub-region-search>
-				<region-results-list
+				<sub-region-results-list
 				:subRegions="subRegions" :selectedSubRegion="selectedSubRegion">
-				</region-results-list>
+				</sub-region-results-list>
 			</ul>
 			<ul>
 				<bloc-search
@@ -45,8 +45,8 @@
 				<language-results-list
 				:languages="languages" :selectedLangauge="selectedLanguage">
 				</language-results-list>
-			</ul>
-		</country-catagories-search>
+			</ul> -->
+		</div>
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
@@ -63,23 +63,27 @@ import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
 import FirstLetterResultsList from './FirstLetterResultsList';
 import RegionSearch from './RegionSearch';
-import RegionSearchResultsList from './SubRegionResultsList';
+import RegionResultsList from './RegionResultsList';
 import SubRegionSearch from './SubRegionSearch';
-import SubRegionSearchResultsList from './SubRegionResultsList';
+import SubRegionResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
 import BlocSearchResultsList from './BlocResultsList';
-import LanguageSearch from './LanguageSearch';
-import LanguageSearchResultsList from './LanguageResultsList';
+// import LanguageSearch from './LanguageSearch';
+// import LanguageSearchResultsList from './LanguageResultsList';
  
 
 export default {
 	name: 'country-search',
-	props: ['borderingCountries', 'countries', 'country'],
+	props: ['countries', 'country', 'borderingCountries', 'regions'],
 	data() {
 		return {
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 			selectedFirstLetter: "",
+			selectedRegion: "",
+			// selectedSubRegion: "",
+			// selectedBloc: "",
+			// selectedLanguage: "",
 		};
 	},
 	components : {
@@ -88,11 +92,11 @@ export default {
 		'first-letter-search': FirstLetterSearch,
 		'first-letter-results-list': FirstLetterResultsList,
 		'region-search': RegionSearch,
-		'region-search-results-list': RegionSearchResultsList,
-		'sub-region-search': SubRegionSearch,
-		'sub-region-search-results-list': SubRegionResultsList,
-		'language-search': LanguageSearch,
-		'language-search-results-list': LanguageSearchResultsList,
+		'region-results-list': RegionResultsList,
+		// 'sub-region-search': SubRegionSearch,
+		// 'sub-region-search-results-list': SubRegionResultsList,
+		// 'language-search': LanguageSearch,
+		// 'language-search-results-list': LanguageSearchResultsList,
 	},	
 
 
