@@ -11,39 +11,38 @@
 		:countries="countries" :selectedFirstLetter="selectedFirstLetter">
 		</first-letter-results-list>
 	</ul> -->
-	<ul>
-		<span>Countries associated with:</span>
+		<!-- <span>Countries By Continent:</span>
 		<region-search
 		v-for="(region, index) in regions" :region="region" :key="index">
 		</region-search>
 		<region-results-list
 		:countries="countries" :selectedRegion="selectedRegion">
-		</region-results-list>
-		<!-- <ul>
-			<sub-region-search
-			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
-			</sub-region-search>
-			<sub-region-results-list
-			:subRegions="subRegions" :selectedSubRegion="selectedSubRegion">
-			</sub-region-results-list>
-		</ul>
-		<ul>
-			<bloc-search
-			v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
-			</bloc-search>
-			<bloc-results-list
-			:blocs="blocs" :selectedBloc="selectedBloc">
-			</bloc-results-list>
-		</ul>
-		<ul>
-			<language-search
-			v-for="(language, index) in languages" :language="language" :key="index">
-			</language-search>
-			<language-results-list
-			:languages="languages" :selectedLangauge="selectedLanguage">
-			</language-results-list>
-		</ul> -->
-	</ul>
+		</region-results-list> -->
+
+		<span>Countries By Region:</span>
+		<sub-region-search
+		v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
+		</sub-region-search>
+		<sub-region-results-list
+		:countries="countries" :selectedSubRegion="selectedSubRegion">
+		</sub-region-results-list>
+<!-- 
+		<span>Countries By Political/Economic Bloc:</span>
+		<bloc-search
+		v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
+		</bloc-search>
+		<bloc-results-list
+		:blocs="blocs" :selectedBloc="selectedBloc">
+		</bloc-results-list> -->
+
+		<!-- <span>Countries By Language Spoken:</span>
+		<language-search
+		v-for="(language, index) in languages" :language="language" :key="index">
+		</language-search>
+		<language-results-list
+		:languages="languages" :selectedLangauge="selectedLanguage">
+		</language-results-list> -->
+
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
 		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
@@ -56,12 +55,12 @@ import { eventBus } from '@/main.js';
 
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
-import FirstLetterSearch from './FirstLetterSearch';
-import FirstLetterResultsList from './FirstLetterResultsList';
-import RegionSearch from './RegionSearch';
-import RegionResultsList from './RegionResultsList';
-// import SubRegionSearch from './SubRegionSearch';
-// import SubRegionResultsList from './SubRegionResultsList';
+// import FirstLetterSearch from './FirstLetterSearch';
+// import FirstLetterResultsList from './FirstLetterResultsList';
+// import RegionSearch from './RegionSearch';
+// import RegionResultsList from './RegionResultsList';
+import SubRegionSearch from './SubRegionSearch';
+import SubRegionResultsList from './SubRegionResultsList';
 // import BlocSearch from './BlocSearch';
 // import BlocSearchResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
@@ -76,10 +75,10 @@ export default {
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 			selectedFirstLetter: "",
-			regions: [],
-			selectedRegion: "",
-			// subRegions: [],
-			// selectedSubRegion: "",
+			// regions: [],
+			// selectedRegion: "",
+			subRegions: [],
+			selectedSubRegion: "",
 			// blocs: [],
 			// selectedBloc: "",
 			// languages: [],
@@ -89,16 +88,16 @@ export default {
 	components : {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
-		'first-letter-search': FirstLetterSearch,
-		'first-letter-results-list': FirstLetterResultsList,
-		'region-search': RegionSearch,
-		'region-results-list': RegionResultsList,
-		// 'sub-region-search': SubRegionSearch,
-		// 'sub-region-search-results-list': SubRegionResultsList,
+		// 'first-letter-search': FirstLetterSearch,
+		// 'first-letter-results-list': FirstLetterResultsList,
+		// 'region-search': RegionSearch,
+		// 'region-results-list': RegionResultsList,
+		'sub-region-search': SubRegionSearch,
+		'sub-region-results-list': SubRegionResultsList,
 		// 'bloc-search': BlocSearch,
-		// 'bloc-search-results-list': BlocResultsList,
+		// 'bloc-results-list': BlocResultsList,
 		// 'language-search': LanguageSearch,
-		// 'language-search-results-list': LanguageSearchResultsList,
+		// 'language-results-list': LanguageSearchResultsList,
 	},	
 
 
@@ -112,20 +111,20 @@ export default {
 		}
 	},
 	mounted() {
-		this.getAllRegions();
-		// this.getAllSubRegions();
+		// this.getAllRegions();
+		this.getAllSubRegions();
 		// this.getAllBlocs();
 		// this.getAllLanguages();
 
-		eventBus.$on('first-letter-selected', (letter) => {
-    		this.selectedFirstLetter = letter;
-    });
-		eventBus.$on('region-selected', (region) => {
-    		this.selectedRegion = region;
-    });
-	// 	eventBus.$on('sub-region-selected', (subRegion) => {
-    // 		this.selectedSubRegion = region;
+	// 	eventBus.$on('first-letter-selected', (letter) => {
+    // 		this.selectedFirstLetter = letter;
     // });
+	// 	eventBus.$on('region-selected', (region) => {
+    // 		this.selectedRegion = region;
+    // });
+		eventBus.$on('sub-region-selected', (subRegion) => {
+    		this.selectedSubRegion = subRegion;
+    });
 	// 	eventBus.$on('bloc-selected', (bloc) => {
     // 		this.selectedBloc = bloc;
     // });
@@ -135,16 +134,16 @@ export default {
 	},
 
 	methods: {
-		getAllRegions: function () {
-			let regionArray = [...new Set(this.countries.map(element => element.region))];
-			this.regions = regionArray;
-			console.log(this.regions);
-		},
-		// getAllSubRegions: function () {
-		// 	let distinctArray = [...new Set(this.countries.map(element => element.subRegion))];
-		// 	console.log(distinctArray);
-		// 	distinctArray = this.subRegions;
+		// getAllRegions: function () {
+		// 	let regionArray = [...new Set(this.countries.map(element => element.region))];
+		// 	this.regions = regionArray;
+		// // 	console.log(this.regions);
 		// },
+		getAllSubRegions: function () {
+			let subRegionArray = [...new Set(this.countries.map(element => element.subregion))];
+			this.subRegions = subRegionArray;
+			console.log(this.subRegions);
+		},
 		// getAllBlocs: function () {
 		// 	let distinctArray = [...new Set(this.countries.map(element => element.bloc))];
 		// 	console.log(distinctArray);
