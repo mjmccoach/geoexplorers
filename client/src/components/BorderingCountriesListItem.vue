@@ -2,7 +2,8 @@
   <article>
     <div>
       <li v-on:click='selectCountry'>
-        {{ borderingCountry.name }}
+        <img id="bordering-country-flag" :src="borderingCountry.flag" :alt="'Flag of ' + borderingCountry.name" width="80"/>
+        {{ borderingCountry.name }} 
       </li>
     </div>
   </article>

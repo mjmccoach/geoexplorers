@@ -26,5 +26,8 @@ export default {
   color: red;
 }
 
+ul {
+  list-style: none;
+}
 
 </style>
