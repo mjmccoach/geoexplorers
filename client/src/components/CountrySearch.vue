@@ -11,6 +11,31 @@
 		:countries="countries" :selectedFirstLetter="selectedFirstLetter">
 		</first-letter-results-list>
 	</ul>
+	<ul>
+		<span>Countries associated with:</span>
+		<country-catagories-search>
+			<ul>
+				<region-search
+				v-for="(region, index) in regions" :region="region" :key="index">
+				</region-search>
+			</ul>
+			<ul>
+				<sub-region-search
+				v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
+				</sub-region-search>
+			</ul>
+			<ul>
+				<bloc-search
+				v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
+				</bloc-search>
+			</ul>
+			<ul>
+				<language-search
+				v-for="(language, index) in languages" :language="language" :key="index">
+				</language-search>
+			</ul>
+		</country-catagories-search>
+	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
 		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
@@ -25,6 +50,11 @@ import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
 import FirstLetterResultsList from './FirstLetterResultsList';
+import RegionSearch from './FirstLetterResultsList';
+import SubRegionSearch from './FirstLetterResultsList';
+import BlocSearch from './FirstLetterResultsList';
+import LanguageSearch from './FirstLetterResultsList';
+ 
 
 export default {
 	name: 'country-search',
