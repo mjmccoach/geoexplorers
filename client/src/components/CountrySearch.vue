@@ -74,7 +74,7 @@ import RegionResultsList from './RegionResultsList';
 
 export default {
 	name: 'country-search',
-	props: ['countries', 'country', 'borderingCountries', 'regions', 'subRegions', 'blocs', 'languages'],
+	props: ['countries', 'country', 'borderingCountries'],
 	data() {
 		return {
 			search: '',
@@ -140,14 +140,29 @@ export default {
 
 	methods: {
 		getAllRegions: function () {
-			this.countries.forEach(element, index, array) {
-				console.log(element.region);
-    			console.log(index);
-    			console.log(array);
-			}
-	},
+			let distinctArray = [...new Set(this.countries.map(element => element.region))];
+			console.log(distinctArray);
+			distinctArray = this.regions;
+		},
+		// getAllSubRegions: function () {
+		// 	let distinctArray = [...new Set(this.countries.map(element => element.subRegion))];
+		// 	console.log(distinctArray);
+		// 	distinctArray = this.subRegions;
+		// },
+		// getAllBlocs: function () {
+		// 	let distinctArray = [...new Set(this.countries.map(element => element.bloc))];
+		// 	console.log(distinctArray);
+		// 	distinctArray = this.blocs;
+		// },
+		// getAllLanguages: function () {
+		// 	let distinctArray = [...new Set(this.countries.map(element => element.language))];
+		// 	console.log(distinctArray);
+		// 	distinctArray = this.languages;
+		// },
+	}
+}
 
-};
+
 </script>
 
 <style scoped>

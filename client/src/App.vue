@@ -3,11 +3,8 @@
     <country-search
     :countries="countryInfo" 
     :country="selectedCountry" 
-    :borderingCountries="borderingCountries" 
-    :regions="regions" 
-    :subRegions="subRegions" 
-    :blocs="blocs" 
-    :languages="languages">
+    :borderingCountries="borderingCountries"
+    >
     </country-search>
     
   </main>
