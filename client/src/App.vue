@@ -9,7 +9,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
-import Map from "./components/Map"
+import Map from "./components/Map";
 
 export default {
   name: "app",
@@ -45,7 +45,7 @@ export default {
   components: {
     
     'country-search': CountrySearch,
-    'my-map' : Map
+    'my-map': Map
   }
 };
 </script>
