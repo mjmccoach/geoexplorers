@@ -29,6 +29,15 @@ export default {
 <style scoped>
 .scroll {
   overflow-y: auto;
-  max-height: 400px;
+  list-style: none;
+  max-height: 100px
+}
+
+
+#country-list {
+  border: solid 4px darkgreen;
+  background-color: aquamarine;
+  border-radius: 6px;
+  padding: 5px
 }
 </style>

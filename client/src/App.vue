@@ -1,7 +1,8 @@
 <template>
   <main>
-    <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
-    
+    <section class="main-container">
+    <country-search :countries="countryInfo" :country="selectedCountry" ></country-search>
+    </section>
   </main>
 </template>
 
@@ -48,5 +49,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.main-container {
+  display: flex;
+  justify-content:space-between;
+  padding: 10px;
+  border: solid 4px black;
+  border-radius: 8px;
+}
 </style>

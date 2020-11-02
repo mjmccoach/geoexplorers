@@ -1,9 +1,7 @@
 <template>
+<section id="country-detail">
   <article v-if="country">
-    <h1>{{ country.name }}</h1>
-    <p>
-      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="250"/>
-    </p>
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name"/><span> {{country.name}}</span>
     <p>
       {{ country.name }} is a country in the {{ country.subregion }} part of {{ country.region }}.
     <p>
@@ -12,11 +10,22 @@
     <p>
       The capital of {{ country.name }} is {{ country.capital }}.
     </p>
+
+     <p>
+       Play National Anthem of {{ country.name }}
+
+       <p>
+      <audio :key="this.audioUrl" controls id="player" preload="auto" controlsList="nodownload">
+        <source :src="this.audioUrl" >
+        </audio>
+     </p>
+        
     <p>
       Learn about the neighbours of {{ country.name }}:
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
   </article>
+  </section>
 </template>
 
 <script>
@@ -25,11 +34,20 @@ import BorderingCountriesList from "./BorderingCountriesList.vue"
 
 export default {
   name: "country-detail",
+
   props: ["country", "borderingCountries"],
   components: {
     "bordering-countries-list": BorderingCountriesList
   },
-  methods: {},
+  methods: {
+  },
+
+  computed: {
+    audioUrl() {
+      const lowerAlpha2Code = this.country.alpha2Code.toLowerCase()
+      return `http://www.nationalanthems.info/${lowerAlpha2Code}.mp3`
+    }
+  }
 };
 </script>
 
@@ -38,10 +56,30 @@ export default {
   color: red;
 }
 
+#country-detail {
+  border: solid 4px darkgreen;
+  background-color: yellow;
+  border-radius: 10px;
+  height: max-content;
+  margin: 10px;
+  padding: 5px;
+}
+
+#country-flag {
+  width: 120px;
+  margin-right: 10px;
+  border: solid 2px black;
+  box-shadow: 5px 5px 15px 5px gray;
+  
+  
+}
+
 h1 {
   font-weight: bold;
   text-justify: auto;
 }
+
+
 </style>
 
 //  
