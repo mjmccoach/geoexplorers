@@ -18,21 +18,33 @@
 				<region-search
 				v-for="(region, index) in regions" :region="region" :key="index">
 				</region-search>
+				<region-results-list
+				:regions="regions" :selectedRegion="selectedRegion">
+				</region-results-list>
 			</ul>
 			<ul>
 				<sub-region-search
 				v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
 				</sub-region-search>
+				<region-results-list
+				:subRegions="subRegions" :selectedSubRegion="selectedSubRegion">
+				</region-results-list>
 			</ul>
 			<ul>
 				<bloc-search
 				v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
 				</bloc-search>
+				<bloc-results-list
+				:blocs="blocs" :selectedBloc="selectedBloc">
+				</bloc-results-list>
 			</ul>
 			<ul>
 				<language-search
 				v-for="(language, index) in languages" :language="language" :key="index">
 				</language-search>
+				<language-results-list
+				:languages="languages" :selectedLangauge="selectedLanguage">
+				</language-results-list>
 			</ul>
 		</country-catagories-search>
 	</ul>
@@ -50,10 +62,18 @@ import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
 import FirstLetterResultsList from './FirstLetterResultsList';
-import RegionSearch from './FirstLetterResultsList';
-import SubRegionSearch from './FirstLetterResultsList';
-import BlocSearch from './FirstLetterResultsList';
-import LanguageSearch from './FirstLetterResultsList';
+import RegionSearch from './RegionSearch';
+import RegionSearch from './';
+import RegionSearch from './';
+import SubRegionSearch from './SubRegionSearch';
+import SubRegionSearch from './';
+import SubRegionSearch from './';
+import BlocSearch from './BlocSearch';
+import BlocSearch from './';
+import BlocSearch from './';
+import LanguageSearch from './LanguageSearch';
+import LanguageSearch from './';
+import LanguageSearch from './';
  
 
 export default {
