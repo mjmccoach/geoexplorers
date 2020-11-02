@@ -4,6 +4,7 @@
       <!-- it's flag is <img src=""https://restcountries.eu/data/afg.svg"" alt="flag"></-->
       </p>
   <button v-on:click="picker()">Random Country!</button>
+  <p v-if="randomCountryOnTimer">The country of the day is {{randomCountryOnTimer.name}}</p>
 </div>
 </template>
 
@@ -15,15 +16,29 @@ export default {
     data() {
         return {
             randomCountry: null,
+            randomCountryOnTimer: null,
         }
+    },
+
+    mounted() {
+        this.timerForCountry()
     },
 
     methods: {
     picker: function(){
       var chosenNumber = Math.floor(Math.random() * this.countryInfo.length);
       this.randomCountry = this.countryInfo[chosenNumber];
+    },
+
+    timerForCountry: function() {
+        setInterval(() => {
+            const chosenNumber = Math.floor(Math.random() * this.countryInfo.length)
+            this.randomCountryOnTimer = this.countryInfo[chosenNumber];
+        }, 3000)
     }
-}
+
+    // ,
+    }
 };
 
 </script>
