@@ -1,6 +1,8 @@
 <template>
   <main>
     <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
+    <svg-map :countries="countryInfo"></svg-map>
+
     
   </main>
 </template>
@@ -9,6 +11,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
+import SvgMap from "./components/SvgMap";
 
 export default {
   name: "app",
@@ -42,8 +45,8 @@ export default {
     }
   },
   components: {
-    
-    'country-search': CountrySearch
+    'country-search': CountrySearch,
+    'svg-map': SvgMap
   }
 };
 </script>
