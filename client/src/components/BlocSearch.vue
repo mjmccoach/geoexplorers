@@ -4,7 +4,7 @@
         v-on:click="handleBlocSelectionClick"
         v-if="bloc"
         >
-        <span id="blocs"> {{ bloc }} </span>
+        <span id="blocs"> {{ bloc.name }} </span>
         </li>
     </div>
 </template>
@@ -14,7 +14,7 @@ import {eventBus} from "@/main.js";
 
 export default {
     name: "bloc-search",
-    props: [],
+    props: ['blocs'],
     components: {},
     methods: {
         handleBlocSelectionClick() {
@@ -27,3 +27,4 @@ export default {
 <style lang="css" scoped>
 
 </style>
+
