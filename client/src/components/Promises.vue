@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     
+=======
+  
+>>>>>>> vue_start
 </template>
 
 <script>
@@ -29,4 +33,8 @@ export default {
 
 <style>
 
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> vue_start
