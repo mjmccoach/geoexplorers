@@ -16,8 +16,10 @@
 
 <script>
 import { eventBus} from '@/main.js';
+
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
+import FirstLetterSearch from './FirstLetterSearch';
 
 export default {
 	name: 'country-search',
@@ -31,6 +33,7 @@ export default {
 	components : {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
+		'first-letter-search': FirstLetterSearch,
 	},	
 
 

@@ -1,10 +1,8 @@
 <template>
     <div>
-        <li
-          v-on:click='handleFirstLetterSelection'
-        >
-        <span>
-            countries starting with firstLetter
+        <li v-on:click='handleFirstLetterSelection'>
+        <span id="alphabet">
+            {{ letter }}
         </span>
         </li>
     </div>
@@ -15,7 +13,7 @@ import { eventBus } from "@/main.js";
 
 export default {
     name: 'first-letter-search',
-    props: [],
+    props: ['letter'],
     methods: {
         handleFirstLetterSelection() {
             eventBus.$emit('first-letter-selected', this.letter)
