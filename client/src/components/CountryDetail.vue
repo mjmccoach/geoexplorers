@@ -4,7 +4,7 @@
     <p>
       <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="250"/>
     </p>
-    <p>
+    <!-- <p>
       {{ country.name }}, also known as {{ country.altSpellings[1] }}, is a country in the {{ country.subregion }} part of {{ country.region }}.
     <p>
       {{ country.name }} has a population of {{ country.population }} people spread over a surface area of {{ country.area }} square miles.
@@ -29,7 +29,7 @@
     <p v-if="country.borders.length < 1">
       {{ country.name }} does not have land borders with any other countries.
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
-    </p>
+    </p> -->
   </article>
 </template>
 
