@@ -1,5 +1,168 @@
-<<<<<<< HEAD
-<mxfile host="Electron" modified="2020-10-31T15:06:07.760Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.7.9 Chrome/85.0.4183.121 Electron/10.1.3 Safari/537.36" etag="VN_g_W1XZS7RymwnXYDT" version="13.7.9" type="device"><diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">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</diagram></mxfile>
-=======
-<mxfile host="Electron" modified="2020-10-31T11:46:21.759Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.7.9 Chrome/85.0.4183.121 Electron/10.1.3 Safari/537.36" etag="sdj5GrAhIxINuiQ82Dci" version="13.7.9" type="device"><diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">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</diagram></mxfile>
->>>>>>> vue_start
+<mxfile host="65bd71144e" modified="2020-11-02T20:15:54.259Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="CNrB0suYNDThRH4Zp0vT" version="13.6.5">
+    <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+        <mxGraphModel dx="1058" dy="679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--17" value="Promises" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="600" y="15.5" width="160" height="120" as="geometry">
+                        <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--18" value="All fetch actions" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--17" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--19" value="Takes no props" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--17" vertex="1">
+                    <mxGeometry y="52" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--20" value="Will eventBus back to &#10;App.vue" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--17" vertex="1">
+                    <mxGeometry y="78" width="160" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-7" value="Search.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="60" y="200" width="160" height="160" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-8" value="Props: country list" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-7" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-9" value="Passes down filtered list &#10;as props to country list &#10;component" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="r4_yZJP243nvZPv99Okp-7" vertex="1">
+                    <mxGeometry y="52" width="160" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-15" value="Methods: filters country list&#10;based on input" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-7" vertex="1">
+                    <mxGeometry y="110" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="App.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="60" y="20.5" width="160" height="110" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--1" value="Holds main country info" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="zkfFHV4jXpPFQw0GAbJ--2" value="Passes down props to &#10;Search.vue" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+                    <mxGeometry y="52" width="160" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-16" value="listItem.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="540" y="200" width="170" height="148" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-17" value="Props: a country object from&#10;list" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-16" vertex="1">
+                    <mxGeometry y="26" width="170" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-18" value="eventBus selected country to &#10;app.vue" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="r4_yZJP243nvZPv99Okp-16" vertex="1">
+                    <mxGeometry y="70" width="170" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-22" value="eventBus selected country" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r4_yZJP243nvZPv99Okp-16" target="zkfFHV4jXpPFQw0GAbJ--2" edge="1">
+                    <mxGeometry x="-0.1051" y="-14" relative="1" as="geometry">
+                        <mxPoint x="420" y="150" as="sourcePoint"/>
+                        <mxPoint x="340" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="450" y="150"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-23" value="eventBus API data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--17" target="zkfFHV4jXpPFQw0GAbJ--0" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="420" y="150" as="sourcePoint"/>
+                        <mxPoint x="340" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-24" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="r4_yZJP243nvZPv99Okp-7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="140" y="120" as="sourcePoint"/>
+                        <mxPoint x="240" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-25" value="Props: country list &amp;amp; selected country" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="r4_yZJP243nvZPv99Okp-24" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-26" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r4_yZJP243nvZPv99Okp-7" target="r4_yZJP243nvZPv99Okp-11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="270" y="390" as="sourcePoint"/>
+                        <mxPoint x="370" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-27" value="Props:&lt;br&gt;filtered list" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="r4_yZJP243nvZPv99Okp-26" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-28" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r4_yZJP243nvZPv99Okp-11" target="r4_yZJP243nvZPv99Okp-16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="380" as="sourcePoint"/>
+                        <mxPoint x="600" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-29" value="Props:&lt;br&gt;country" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="r4_yZJP243nvZPv99Okp-28" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-30" value="Detail.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="60" y="410" width="160" height="110" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-31" value="Props: selected country" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-30" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-33" value="Methods: outputs desired &#10;details on the selected &#10;country to the web page" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-30" vertex="1">
+                    <mxGeometry y="52" width="160" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-35" value="" style="endArrow=classic;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r4_yZJP243nvZPv99Okp-7" target="r4_yZJP243nvZPv99Okp-30" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="390" as="sourcePoint"/>
+                        <mxPoint x="330" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-36" value="Props: selected country" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="r4_yZJP243nvZPv99Okp-35" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="r4_yZJP243nvZPv99Okp-37">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="470" as="sourcePoint"/>
+                        <mxPoint x="480" y="470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="290" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1" value="Props:&lt;br&gt;country list" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="10.85" y="1.1799999999999997" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="" style="endArrow=classic;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="r4_yZJP243nvZPv99Okp-37" target="r4_yZJP243nvZPv99Okp-16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="350" as="sourcePoint"/>
+                        <mxPoint x="590" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="Props:&lt;br&gt;country" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-37" value="SvgMap.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="300" y="200" width="160" height="110" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-38" value="Props: country list" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-37" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Passes down country&#10;as props to list item&#10;component" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="r4_yZJP243nvZPv99Okp-37">
+                    <mxGeometry y="52" width="160" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-11" value="List.vue" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="300" y="360" width="160" height="110" as="geometry">
+                        <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-12" value="Props: filtered country list" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="r4_yZJP243nvZPv99Okp-11" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4_yZJP243nvZPv99Okp-13" value="Passes down country&#10;as props to list item&#10;component" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="r4_yZJP243nvZPv99Okp-11" vertex="1">
+                    <mxGeometry y="52" width="160" height="58" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
