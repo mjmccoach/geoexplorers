@@ -2,7 +2,8 @@
     <div>
         <ul>
             <region-results-list-item
-            v-for="(region, index) in regions" :region="region" :key="index"
+            v-for="(country, index) in countries" :country="country" :key="index"
+            v-if="country.region === selectedRegion"
             >
             </region-results-list-item>
         </ul>
@@ -16,7 +17,7 @@ import RegionResultsListItem from './RegionResultsListItem';
 
 export default {
     name: "region-results-list",
-    props: ['regions'],
+    props: ['countries', 'selectedRegion'],
     components: {
         'region-results-list-item': RegionResultsListItem,
     }

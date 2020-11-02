@@ -1,6 +1,6 @@
 <template lang="html">
     <div>
-        <li v-on:click='handleFirstLetterSelection'>
+        <li v-on:click='handleFirstLetterSelectClick'>
             <span id="alphabet">
                 {{ letter }}
             </span>
@@ -15,7 +15,7 @@ export default {
     name: 'first-letter-search',
     props: ['letter'],
     methods: {
-        handleFirstLetterSelection() {
+        handleFirstLetterSelectClick() {
             eventBus.$emit('first-letter-selected', this.letter)
         }
     }

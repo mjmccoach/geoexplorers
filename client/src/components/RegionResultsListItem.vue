@@ -1,9 +1,9 @@
 <template lang="html">
     <div>
         <li
-        v-on:click='handleRegionSelectClick'
+        v-on:click='handleCountrySelectClick'
         >
-        <span> {{ region }}
+        <span> {{ country.name }}
         </span>
         </li>
     </div>
@@ -14,11 +14,11 @@ import { eventBus } from '@/main.js';
 
 export default {
     name: 'region-results-list-item',
-    props: ['region'],
+    props: ['country'],
     components: {},
     methods: {
-        handleRegionSelectClick: function () {
-            eventBus.$emit("region-selected", this.region)
+        handleCountrySelectClick: function () {
+            eventBus.$emit("country-selected", this.country)
         }
     }
 }

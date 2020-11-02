@@ -1,6 +1,9 @@
 <template lang="html">
     <div>
-        <li v-on:click='handleRegionSelectClick'>
+        <li
+        v-on:click='handleRegionSelectClick'
+        v-if="region"
+        >
             <span id="regions">
                 {{ region }}
             </span>

@@ -17,7 +17,7 @@
 		v-for="(region, index) in regions" :region="region" :key="index">
 		</region-search>
 		<region-results-list
-		:regions="regions" :selectedRegion="selectedRegion">
+		:countries="countries" :selectedRegion="selectedRegion">
 		</region-results-list>
 		<!-- <ul>
 			<sub-region-search
@@ -136,10 +136,9 @@ export default {
 
 	methods: {
 		getAllRegions: function () {
-			let distinctArray = [...new Set(this.countries.map(element => element.region))];
-			// console.log(distinctArray);
-			this.regions = distinctArray;
-			console.log(this.regions)
+			let regionArray = [...new Set(this.countries.map(element => element.region))];
+			this.regions = regionArray;
+			console.log(this.regions);
 		},
 		// getAllSubRegions: function () {
 		// 	let distinctArray = [...new Set(this.countries.map(element => element.subRegion))];
