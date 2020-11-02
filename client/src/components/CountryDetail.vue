@@ -12,8 +12,16 @@
     <p>
       The capital of {{ country.name }} is {{ country.capital }}.
     </p>
-    <p v-if="country.borders.length > 0">
-      Learn about the neighbours of {{ country.name }}:
+    <p v-if="country.borders.length > 1">
+      Learn about one of the {{ country.borders.length }} neighbours of {{ country.name }}:
+      <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
+    </p>
+    <p v-if="country.borders.length === 1">
+      Learn about the only neighbour of {{ country.name }}:
+      <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
+    </p>
+    <p v-if="country.borders.length < 1">
+      {{ country.name }} does not have land borders with any other countries.
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
   </article>
