@@ -3,6 +3,7 @@
         <li
         v-on:click='handleCountrySelectClick'
         >
+        <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="80"/></span>
         <span> {{ country.name }} </span>
         </li>
     </div>
