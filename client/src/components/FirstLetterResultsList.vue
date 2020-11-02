@@ -2,8 +2,8 @@
     <div>
         <ul>
             <first-letter-results-list-item
-            v-if="selectedFirstLetter === country.name(toUpperCase)"
             v-for="(country, index) in countries" :country="country" :key="index"
+            v-if="country.name.startsWith(selectedFirstLetter)"
             >
             </first-letter-results-list-item>    
         </ul>

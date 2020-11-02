@@ -5,10 +5,10 @@
 	<ul id="alphabet-list">
 		<span>Countries starting with:</span>
 		<first-letter-search
-		v-for="(letter, index) in alphabet" :letter="letter" :key="index">
+		v-for="(letter, index) in alphabet" :letter="letter" :key="letter.index">
 		</first-letter-search>
 		<first-letter-results-list
-		v-for="(country, index) in countries" :country="country" :selectedFirstLetter="selectedFirstLetter" :key="index">
+		:countries="countries" :selectedFirstLetter="selectedFirstLetter">
 		</first-letter-results-list>
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
