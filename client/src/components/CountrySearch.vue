@@ -63,17 +63,13 @@ import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
 import FirstLetterResultsList from './FirstLetterResultsList';
 import RegionSearch from './RegionSearch';
-import RegionSearch from './';
-import RegionSearch from './';
+import RegionSearchResultsList from './SubRegionResultsList';
 import SubRegionSearch from './SubRegionSearch';
-import SubRegionSearch from './';
-import SubRegionSearch from './';
+import SubRegionSearchResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
-import BlocSearch from './';
-import BlocSearch from './';
+import BlocSearchResultsList from './BlocResultsList';
 import LanguageSearch from './LanguageSearch';
-import LanguageSearch from './';
-import LanguageSearch from './';
+import LanguageSearchResultsList from './LanguageResultsList';
  
 
 export default {
@@ -91,6 +87,12 @@ export default {
 		'country-list' : CountryList,
 		'first-letter-search': FirstLetterSearch,
 		'first-letter-results-list': FirstLetterResultsList,
+		'region-search': RegionSearch,
+		'region-search-results-list': RegionSearchResultsList,
+		'sub-region-search': SubRegionSearch,
+		'sub-region-search-results-list': SubRegionResultsList,
+		'language-search': LanguageSearch,
+		'language-search-results-list': LanguageSearchResultsList,
 	},	
 
 
