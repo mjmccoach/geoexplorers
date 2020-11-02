@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
     <div>
         <li v-on:click='handleFirstLetterSelection'>
         <span id="alphabet">
@@ -22,6 +22,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>
