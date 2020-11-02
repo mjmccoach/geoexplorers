@@ -7,9 +7,9 @@
 		<first-letter-search
 		v-for="(letter, index) in alphabet" :letter="letter" :key="index">
 		</first-letter-search>
-		<first-letter-results
-		v-for="(country, index) in countries" :country="country" :key="index">
-		</first-letter-results>
+		<first-letter-results-list
+		v-for="(country, index) in countries" :country="country" :selectedFirstLetter="selectedFirstLetter" :key="index">
+		</first-letter-results-list>
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
@@ -24,7 +24,7 @@ import { eventBus } from '@/main.js';
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
-import FirstLetterResults from './FirstLetterResults';
+import FirstLetterResultsList from './FirstLetterResultsList';
 
 export default {
 	name: 'country-search',
@@ -40,7 +40,7 @@ export default {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
 		'first-letter-search': FirstLetterSearch,
-		'first-letter-results': FirstLetterResults,
+		'first-letter-results-list': FirstLetterResultsList,
 	},	
 
 
