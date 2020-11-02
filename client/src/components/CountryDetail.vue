@@ -6,7 +6,7 @@
     <p>
       {{ country.name }} is a country in the {{ country.subregion }} part of {{ country.region }}.
     <p>
-      {{ country.name }} has a population of {{ country.population }} people spread over a surface area of {{ country.area }} square miles.
+      {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles.
     </p>
     <p>
       The capital of {{ country.name }} is {{ country.capital }}.
@@ -16,10 +16,15 @@
        Play National Anthem of {{ country.name }}
 
        <p>
-      <audio :key="this.audioUrl" controls id="player" preload="auto" controlsList="nodownload">
+      <audio :key="this.audioUrl" id="player" preload="auto">
         <source :src="this.audioUrl" >
         </audio>
-     </p>
+        <div>
+        <button onclick="document.getElementById('player').play()">Play</button> 
+        <button onclick="document.getElementById('player').load()">Stop</button>
+        <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+        <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+  </div>
         
     <p>
       Learn about the neighbours of {{ country.name }}:
@@ -81,7 +86,12 @@ h1 {
   text-justify: auto;
 }
 
-
+button {
+  color: yellow;
+  margin-right: 3px;
+  background-color: blue;
+  font-family: itim;
+}
 </style>
 
 //  
