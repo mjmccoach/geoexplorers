@@ -1,6 +1,14 @@
 <template>
   <main>
-    <country-search :countries="countryInfo" :country="selectedCountry" :borderingCountries="borderingCountries"></country-search>
+    <country-search
+    :countries="countryInfo" 
+    :country="selectedCountry" 
+    :borderingCountries="borderingCountries" 
+    :regions="regions" 
+    :subRegions="subRegions" 
+    :blocs="blocs" 
+    :languages="languages">
+    </country-search>
     
   </main>
 </template>
@@ -17,7 +25,11 @@ export default {
     return {
       countryInfo: [],
       selectedCountry: null,
-      borderingCountries: []
+      borderingCountries: [],
+      regions: [],
+      subRegions: [],
+      blocs: [],
+      languages: [],
     };
   },
   mounted() {

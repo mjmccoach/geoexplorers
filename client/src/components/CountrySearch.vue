@@ -113,7 +113,19 @@ export default {
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
     });
-
+		eventBus.$on('region-selected', (region) => {
+    		this.selectedRegion = region;
+    });
+	// 	eventBus.$on('sub-region-selected', (subRegion) => {
+    // 		this.selectedSubRegion = region;
+    // });
+	// 	eventBus.$on('bloc-selected', (bloc) => {
+    // 		this.selectedBloc = bloc;
+    // });
+	// 	eventBus.$on('language-selected', (language) => {
+    // 		this.selectedLanguage = language;
+	// });
+	
 	},
 
 	methods: {
