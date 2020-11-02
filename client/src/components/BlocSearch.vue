@@ -1,13 +1,29 @@
-<template>
-  
+<template lang="html">
+    <div>
+        <li
+        v-on:click="handleBlocSelectionClick"
+        v-if="bloc"
+        >
+        <span id="blocs"> {{ bloc }} </span>
+        </li>
+    </div>
 </template>
 
 <script>
-export default {
+import {eventBus} from "@/main.js";
 
+export default {
+    name: "bloc-search",
+    props: [],
+    components: {},
+    methods: {
+        handleBlocSelectionClick() {
+            eventbus.$emit('bloc-selected', this.bloc);
+        }
+    }
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 
 </style>

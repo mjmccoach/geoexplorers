@@ -62,7 +62,7 @@ import CountryDetail from './CountryDetail';
 // import SubRegionSearch from './SubRegionSearch';
 // import SubRegionResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
-import BlocSearchResultsList from './BlocResultsList';
+import BlocResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
 // import LanguageSearchResultsList from './LanguageResultsList';
  
@@ -79,6 +79,7 @@ export default {
 			// selectedRegion: "",
 			// subRegions: [],
 			// selectedSubRegion: "",
+			objBlocs: [],
 			blocs: [],
 			selectedBloc: "",
 			// languages: [],
@@ -147,15 +148,20 @@ export default {
 		// 	console.log(this.subRegions);
 		// },
 		getAllBlocs: function () {
-			let blocArray = [...new Set(this.countries.map(element => element.bloc))];
+			let objblocArray = [...new Set(this.countries.map(element => element.regionalBlocs[0]))];
+			objblocArray.sort();
+			this.objBlocs = objblocArray;
+
+			let blocArray = [...new Set(this.objBlocs.map(element => element.name))]
 			blocArray.sort()
 			this.blocs = blocArray;
-			console.log(this.blocArray);
+			console.log(this.blocArray)
 		},
 		// getAllLanguages: function () {
-		// 	let distinctArray = [...new Set(this.countries.map(element => element.language))];
-		// 	console.log(distinctArray);
-		// 	distinctArray = this.languages;
+		// 	let languagesArray = [...new Set(this.countries.map(element => element.languages[0]))];
+		// 	languagesArray.sort();
+		// 	this.languages = languagesArray;
+		//	console.log(languagesArray);
 		// },
 	}
 }
