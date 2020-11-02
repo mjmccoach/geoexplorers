@@ -2,10 +2,14 @@
 
 <div id="app">
   <div class="search-wrapper">
-	<ul>
+	<ul id="alphabet-list">
+		<span>Countries starting with:</span>
 		<first-letter-search
 		v-for="(letter, index) in alphabet" :letter="letter" :key="index">
 		</first-letter-search>
+		<first-letter-results
+		v-for="(country, index) in countries" :country="country" :key="index">
+		</first-letter-results>
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
@@ -15,11 +19,12 @@
 </template>
 
 <script>
-import { eventBus} from '@/main.js';
+import { eventBus } from '@/main.js';
 
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
+import FirstLetterResults from './FirstLetterResults';
 
 export default {
 	name: 'country-search',
@@ -27,13 +32,15 @@ export default {
 	data() {
 		return {
 			search: '',
-			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+			selectedFirstLetter: "",
 		};
 	},
 	components : {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
 		'first-letter-search': FirstLetterSearch,
+		'first-letter-results': FirstLetterResults,
 	},	
 
 
@@ -46,7 +53,16 @@ export default {
 			})
 		}
 	},
-	methods: {}
+	mounted() {
+		eventBus.$on('first-letter-selected', (letter) => {
+    		this.selectedFirstLetter = letter;
+    });
+
+	},
+
+	methods: {
+		
+	},
 
 };
 </script>
@@ -57,16 +73,9 @@ export default {
 	color: red;
 }
 
-ul {
+#alphabet-list {
 	list-style: none;
-	text-align: center;
-}
-
-.alphabetical-selector {
-	list-style-type: none;
-	padding:0px;
-	cursor: pointer;
-	width: 20%;
+	text-align: left;
 }
 
 .search-wrapper {
