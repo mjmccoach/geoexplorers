@@ -7,7 +7,7 @@
     <p>
       {{ country.name }} is a country in the {{ country.subregion }} part of {{ country.region }}.
     <p>
-      {{ country.name }} has a population of {{ country.population }} spread over a surface area of {{ country.area }} square miles.
+      {{ country.name }} has a population of {{ country.population }} people spread over a surface area of {{ country.area }} square miles.
     </p>
     <p>
       The capital of {{ country.name }} is {{ country.capital }}.
