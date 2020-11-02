@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <main>
     <country-search
     :countries="countryInfo" 
@@ -26,10 +26,6 @@ export default {
       countryInfo: [],
       selectedCountry: null,
       borderingCountries: [],
-      regions: [],
-      subRegions: [],
-      blocs: [],
-      languages: [],
     };
   },
   mounted() {
@@ -41,12 +37,13 @@ export default {
     eventBus.$on('country-selected', (country) => {
       this.borderingCountries = this.findBorderingCountries();
     });
+
   },
   methods: {
     fetchCountryInfo: function () {
       fetch("https://restcountries.eu/rest/v2/all")
         .then((res) => res.json())
-        .then((data) => (this.countryInfo = data));
+        .then((data) => (this.countryInfo = data))
     },
     findBorderingCountries: function () {
       return this.countryInfo.filter((country) => {
@@ -62,5 +59,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css" scoped>
 </style>

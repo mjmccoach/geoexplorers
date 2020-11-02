@@ -64,25 +64,29 @@ import FirstLetterSearch from './FirstLetterSearch';
 import FirstLetterResultsList from './FirstLetterResultsList';
 import RegionSearch from './RegionSearch';
 import RegionResultsList from './RegionResultsList';
-import SubRegionSearch from './SubRegionSearch';
-import SubRegionResultsList from './SubRegionResultsList';
-import BlocSearch from './BlocSearch';
-import BlocSearchResultsList from './BlocResultsList';
+// import SubRegionSearch from './SubRegionSearch';
+// import SubRegionResultsList from './SubRegionResultsList';
+// import BlocSearch from './BlocSearch';
+// import BlocSearchResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
 // import LanguageSearchResultsList from './LanguageResultsList';
  
 
 export default {
 	name: 'country-search',
-	props: ['countries', 'country', 'borderingCountries', 'regions'],
+	props: ['countries', 'country', 'borderingCountries', 'regions', 'subRegions', 'blocs', 'languages'],
 	data() {
 		return {
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 			selectedFirstLetter: "",
+			regions: [],
 			selectedRegion: "",
+			// subRegions: [],
 			// selectedSubRegion: "",
+			// blocs: [],
 			// selectedBloc: "",
+			// languages: [],
 			// selectedLanguage: "",
 		};
 	},
@@ -95,6 +99,8 @@ export default {
 		'region-results-list': RegionResultsList,
 		// 'sub-region-search': SubRegionSearch,
 		// 'sub-region-search-results-list': SubRegionResultsList,
+		// 'bloc-search': BlocSearch,
+		// 'bloc-search-results-list': BlocResultsList,
 		// 'language-search': LanguageSearch,
 		// 'language-search-results-list': LanguageSearchResultsList,
 	},	
@@ -110,6 +116,11 @@ export default {
 		}
 	},
 	mounted() {
+		this.getAllRegions();
+		// this.getAllSubRegions();
+		// this.getAllBlocs();
+		// this.getAllLanguages();
+
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
     });
@@ -125,11 +136,15 @@ export default {
 	// 	eventBus.$on('language-selected', (language) => {
     // 		this.selectedLanguage = language;
 	// });
-	
 	},
 
 	methods: {
-		
+		getAllRegions: function () {
+			this.countries.forEach(element, index, array) {
+				console.log(element.region);
+    			console.log(index);
+    			console.log(array);
+			}
 	},
 
 };
