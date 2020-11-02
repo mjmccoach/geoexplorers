@@ -1,9 +1,6 @@
 <template>
   <main>
     <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
-    <svg-map :countries="countryInfo"></svg-map>
-
-    
   </main>
 </template>
 
@@ -11,7 +8,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
-import SvgMap from "./components/SvgMap";
+
 
 export default {
   name: "app",
@@ -27,8 +24,6 @@ export default {
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
-    });
-    eventBus.$on('country-selected', (country) => {
       this.borderingCountries = this.findBorderingCountries();
     });
   },
@@ -45,8 +40,7 @@ export default {
     }
   },
   components: {
-    'country-search': CountrySearch,
-    'svg-map': SvgMap
+    'country-search': CountrySearch
   }
 };
 </script>

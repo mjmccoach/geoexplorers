@@ -4,15 +4,17 @@
   <div class="search-wrapper">
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
+		<svg-map :countries="countries"></svg-map>
 		<country-detail :country="country"></country-detail>
   </div>
 </div>
 </template>
 
 <script>
-import { eventBus} from '@/main.js';
+import { eventBus } from '@/main.js';
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
+import SvgMap from "./SvgMap";
 
 export default {
 	name: 'country-search',
@@ -25,8 +27,8 @@ export default {
 	components : {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
+		'svg-map': SvgMap
 	},	
-
 
 	computed : {
 		filteredList() {

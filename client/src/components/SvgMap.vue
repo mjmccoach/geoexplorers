@@ -7,6 +7,7 @@
 <script>
 import { RadioSvgMap } from "vue-svg-map";
 import World from "@svg-maps/world";
+import { eventBus } from "@/main.js";
 
 export default {
   name: "svg-map",
@@ -32,6 +33,10 @@ export default {
           this.selectedCountry = country;
         };
       };
+      return this.selectedCountry
+    },
+    emitCountry() {
+      eventBus.$emit('country-selected', this.selectedCountry);
     }
   }
 };
