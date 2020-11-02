@@ -1,6 +1,7 @@
 <template>
   <main>
     <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
+    <random-country :countryInfo="countryInfo"></random-country>
     
   </main>
 </template>
@@ -9,6 +10,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
+import RandomCountry from "./components/RandomCountry";
 
 export default {
   name: "app",
@@ -16,7 +18,7 @@ export default {
     return {
       countryInfo: [],
       selectedCountry: null,
-      borderingCountries: []
+      borderingCountries: [],
     };
   },
   mounted() {
@@ -39,11 +41,12 @@ export default {
       return this.countryInfo.filter((country) => {
         return this.selectedCountry.borders.includes(country.alpha3Code)
     })
-    }
+    },
   },
   components: {
     
-    'country-search': CountrySearch
+    'country-search': CountrySearch,
+    'random-country':RandomCountry,
   }
 };
 </script>
