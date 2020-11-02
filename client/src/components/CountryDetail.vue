@@ -61,7 +61,7 @@ export default {
   border: solid 4px darkgreen;
   background-color: yellow;
   border-radius: 10px;
-  height: max-content;
+  height: 475px;
   margin: 10px;
   padding: 5px;
   width: 400px
