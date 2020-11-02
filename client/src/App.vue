@@ -1,7 +1,7 @@
 <template>
   <main>
     <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
-    
+    <my-map></my-map>
   </main>
 </template>
 
@@ -9,6 +9,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
+import Map from "./components/Map"
 
 export default {
   name: "app",
@@ -43,7 +44,8 @@ export default {
   },
   components: {
     
-    'country-search': CountrySearch
+    'country-search': CountrySearch,
+    'my-map' : Map
   }
 };
 </script>
