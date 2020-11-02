@@ -12,7 +12,7 @@
     <p>
       The capital of {{ country.name }} is {{ country.capital }}.
     </p>
-    <p>
+    <p v-if="country.borders.length > 0">
       Learn about the neighbours of {{ country.name }}:
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
