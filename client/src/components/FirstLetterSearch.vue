@@ -1,9 +1,9 @@
 <template lang="html">
     <div>
         <li v-on:click='handleFirstLetterSelection'>
-        <span id="alphabet">
-            {{ letter }}
-        </span>
+            <span id="alphabet">
+                {{ letter }}
+            </span>
         </li>
     </div>
 </template>

@@ -2,7 +2,7 @@
 
 <div id="app">
   <div class="search-wrapper">
-	<ul id="alphabet-list">
+	<!-- <ul id="alphabet-list">
 		<span>Countries starting with:</span>
 		<first-letter-search
 		v-for="(letter, index) in alphabet" :letter="letter" :key="index">
@@ -10,43 +10,39 @@
 		<first-letter-results-list
 		:countries="countries" :selectedFirstLetter="selectedFirstLetter">
 		</first-letter-results-list>
-	</ul>
+	</ul> -->
 	<ul>
 		<span>Countries associated with:</span>
-		<div>
-			<ul>
-				<region-search
-				v-for="(region, index) in regions" :region="region" :key="index">
-				</region-search>
-				<region-results-list
-				:regions="regions" :selectedRegion="selectedRegion">
-				</region-results-list>
-			</ul>
-			<!-- <ul>
-				<sub-region-search
-				v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
-				</sub-region-search>
-				<sub-region-results-list
-				:subRegions="subRegions" :selectedSubRegion="selectedSubRegion">
-				</sub-region-results-list>
-			</ul>
-			<ul>
-				<bloc-search
-				v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
-				</bloc-search>
-				<bloc-results-list
-				:blocs="blocs" :selectedBloc="selectedBloc">
-				</bloc-results-list>
-			</ul>
-			<ul>
-				<language-search
-				v-for="(language, index) in languages" :language="language" :key="index">
-				</language-search>
-				<language-results-list
-				:languages="languages" :selectedLangauge="selectedLanguage">
-				</language-results-list>
-			</ul> -->
-		</div>
+		<region-search
+		v-for="(region, index) in regions" :region="region" :key="index">
+		</region-search>
+		<region-results-list
+		:regions="regions" :selectedRegion="selectedRegion">
+		</region-results-list>
+		<!-- <ul>
+			<sub-region-search
+			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
+			</sub-region-search>
+			<sub-region-results-list
+			:subRegions="subRegions" :selectedSubRegion="selectedSubRegion">
+			</sub-region-results-list>
+		</ul>
+		<ul>
+			<bloc-search
+			v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
+			</bloc-search>
+			<bloc-results-list
+			:blocs="blocs" :selectedBloc="selectedBloc">
+			</bloc-results-list>
+		</ul>
+		<ul>
+			<language-search
+			v-for="(language, index) in languages" :language="language" :key="index">
+			</language-search>
+			<language-results-list
+			:languages="languages" :selectedLangauge="selectedLanguage">
+			</language-results-list>
+		</ul> -->
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
@@ -141,8 +137,9 @@ export default {
 	methods: {
 		getAllRegions: function () {
 			let distinctArray = [...new Set(this.countries.map(element => element.region))];
-			console.log(distinctArray);
-			distinctArray = this.regions;
+			// console.log(distinctArray);
+			this.regions = distinctArray;
+			console.log(this.regions)
 		},
 		// getAllSubRegions: function () {
 		// 	let distinctArray = [...new Set(this.countries.map(element => element.subRegion))];
