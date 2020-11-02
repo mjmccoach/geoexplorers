@@ -23,6 +23,9 @@
         :url="url"
         :attribution="attribution"
       />
+      <l-tile-layer
+        :url="layer2"
+      />
       <l-marker :lat-lng="withPopup">
         <l-popup>
           <div @click="innerClick">
@@ -59,7 +62,7 @@
 
 <script>
 import { latLng } from "leaflet";
-import { LMap, LTileLayer, LMarker, LPopup, LTooltip,LIcon } from "vue2-leaflet";
+import { LMap, LTileLayer, LMarker, LPopup, LTooltip,LIcon, LGeoJson } from "vue2-leaflet";
 
 export default {
   name: "my-map",
@@ -69,13 +72,15 @@ export default {
     LMarker,
     LPopup,
     LTooltip,
-    LIcon
+    LIcon,
+    LGeoJson,
   },
   data() {
     return {
       zoom: 3,
       center: latLng(47.41322, -1.219482),
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      url: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+      layer2: 'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       withPopup: latLng(47.41322, -1.219482),
@@ -87,6 +92,8 @@ export default {
         zoomSnap: 0.5
       },
       showMap: true,
+      geojson: null,
+      fillColor: "#e4ce7f",
     };
   },
   methods: {
@@ -99,8 +106,9 @@ export default {
     showLongText() {
       this.showParagraph = !this.showParagraph;
     }
-  }
-};
+  },
+  
+}
 </script>
 
 <style>
