@@ -1,7 +1,7 @@
 <template lang="html">
   <ul id="bordering-countries-list">
     <bordering-countries-list-item
-    v-for="(borderingCountry, index) in borderingCountries" :borderingCountry="borderingCountry" key="index">
+    v-for="(borderingCountry, index) in borderingCountries" :borderingCountry="borderingCountry" :key="index">
     </bordering-countries-list-item>
   </ul>
 </template>
