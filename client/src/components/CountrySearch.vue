@@ -2,51 +2,11 @@
 
 <div id="app">
   <div class="search-wrapper">
-	<ul class="alphabetical-selector">
-		<li>
-			<span v-on:click'handleLetterClick'>A </span>
-			<span v-on:click'handleLetterClick'>B </span>
-			<span v-on:click'handleLetterClick'>C </span>
-			<span v-on:click'handleLetterClick'>D </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>E </span>
-			<span v-on:click'handleLetterClick'>F </span>
-			<span v-on:click'handleLetterClick'>G </span>
-			<span v-on:click'handleLetterClick'>H </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>I </span>
-			<span v-on:click'handleLetterClick'>J </span>
-			<span v-on:click'handleLetterClick'>K </span>
-			<span v-on:click'handleLetterClick'>L </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>M </span>
-			<span v-on:click'handleLetterClick'>N </span>
-			<span v-on:click'handleLetterClick'>O </span>
-			<span v-on:click'handleLetterClick'>P </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>Q </span>
-			<span v-on:click'handleLetterClick'>R </span>
-			<span v-on:click'handleLetterClick'>S </span>
-			<span v-on:click'handleLetterClick'>T </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>U </span>
-			<span v-on:click'handleLetterClick'>V </span>
-			<span v-on:click'handleLetterClick'>W </span>
-			<span v-on:click'handleLetterClick'>X </span>
-		</li>
-		<li>
-			<span v-on:click'handleLetterClick'>Y </span>
-			<span v-on:click'handleLetterClick'>Z </span>
-		</li>
+	<ul>
 	</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
-		<country-detail :country="country"></country-detail>
+		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
   </div>
 </div>
 </template>
@@ -58,7 +18,7 @@ import CountryDetail from './CountryDetail';
 
 export default {
 	name: 'country-search',
-	props: ['countries', 'country'],
+	props: ['borderingCountries', 'countries', 'country'],
 	data() {
 		return {
 			search: '',
@@ -81,7 +41,6 @@ export default {
 		}
 	},
 	methods: {}
-	}
 
 };
 </script>
