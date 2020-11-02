@@ -136,11 +136,13 @@ export default {
 	methods: {
 		// getAllRegions: function () {
 		// 	let regionArray = [...new Set(this.countries.map(element => element.region))];
+		//	regionArray.sort();
 		// 	this.regions = regionArray;
 		// // 	console.log(this.regions);
 		// },
 		getAllSubRegions: function () {
 			let subRegionArray = [...new Set(this.countries.map(element => element.subregion))];
+			subRegionArray.sort();
 			this.subRegions = subRegionArray;
 			console.log(this.subRegions);
 		},
