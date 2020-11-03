@@ -8,30 +8,25 @@ v-if="dataReady"
 			<span>Countries starting with:</span>
 			<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :key="index"></first-letter-search>
 			<first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list>
+
+			<!-- <span>Countries By Continent:</span>
+			<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
+			<region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list>
+	
+			<span>Countries By Region:</span>
+			<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
+			<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list> -->
+
+			<!-- <span>Countries By Political/Economic Bloc:</span>
+			<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="index"></bloc-search>
+			<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
+
+			<span>Countries By Language Spoken:</span>
+			<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
+			<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
 		</ul>
-		<button v-on:click="displayAdvancedSearch">Advanced Search</button>
-		<div class="advanced-search">
-			<ul>
-				<!-- <li>Countries By Continent:</li>
-				<ul><region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search></ul>
-				<ul><region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list></ul>
-		
-				<li>Countries By Region:</li>
-				<ul><sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search></ul
-				<ul><sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list></ul> -->
-
-				<!-- <li>Countries By Political/Economic Bloc:</li>
-				<ul><bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index"></bloc-search></ul>
-				<ul><bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list></ul>
-
-				<li>Countries By Language Spoken:</li>
-				<ul><language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search></ul>
-				<ul><language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list></ul> -->
-
-				<li><input type="text" v-model="search" placeholder="Search Countries.."/></li>
-				<li><country-list :countries="filteredList"></country-list></li>
-			</ul>
-		</div>
+    <input type="text" v-model="search" placeholder="Search Countries.."/>
+		<country-list :countries="filteredList"></country-list>
 		<svg-map :countries="countries"></svg-map>
 		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
   </div>
@@ -154,7 +149,6 @@ export default {
 			}
 			let distinctBlocArray = [...new Set(objblocArray)];
 			console.log(distinctBlocArray)
-			distinctBlocArray.sort();
 			this.blocs = distinctBlocArray
 		},
 
@@ -170,7 +164,6 @@ export default {
 			}
 			let distinctLangArray = [...new Set(objlangArray)];
 			console.log(distinctLangArray);
-			distinctLangArray.sort();
 			this.languages = distinctLangArray;
 		},
 
