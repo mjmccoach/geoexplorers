@@ -1,8 +1,14 @@
 <template>
-  <div class="map-container">
+  <div >
+    <div class="map-country-name" >  
+      <span v-if="!selectedCountry">The World Map</span>
+      <span v-if="selectedCountry">Selected Country: {{ selectedCountry.name }} </span>
+    </div>
+    <div class="map-container">
     <panZoom :options="{minZoom: 0.8, maxZoom: 6}">
       <radio-svg-map v-on:click="selectTheCountry()" v-model="selectedLocation" :map="World" />
     </panZoom>
+    </div>
   </div>
     
 </template>
@@ -25,6 +31,11 @@ export default {
       selectedCountry: null
     };
   },
+  mounted() {
+    eventBus.$on('map-location-selected', (country) => {
+      this.selectedLocation = country.alpha2Code.toLowerCase();
+  })
+  },
   methods: {
       selectTheCountry: function() {
       for (let i=0; i<this.countries.length; i++) {
@@ -34,11 +45,8 @@ export default {
           eventBus.$emit('map-click', this.selectedCountry);
         };
       };
-
-      
-    }
-  }
-};  
+    },
+}}
 </script>
 
 <style src="../styles/map.css">

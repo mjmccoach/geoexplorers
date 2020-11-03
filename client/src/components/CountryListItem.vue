@@ -15,6 +15,7 @@ export default {
   methods: {
     handleClick: function (event) {
       eventBus.$emit("country-selected", this.country);
+      eventBus.$emit("map-location-selected", this.country);
     },
   },
 };
