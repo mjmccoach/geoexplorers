@@ -47,7 +47,7 @@
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
 		<svg-map :countries="countries"></svg-map>
-		<country-detail :country="country"></country-detail>
+		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
   </div>
 </div>
 </template>

@@ -14,7 +14,7 @@ export default {
   name: "bordering-countries-list",
   props: ["borderingCountries"],
   components: {
-    "bordering-countries-list-item": BorderingCountriesListItem
+    "bordering-countries-list-item": BorderingCountriesListItem,
   },
   methods: {},
 };
