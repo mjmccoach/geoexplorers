@@ -1,9 +1,18 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
-      <random-country :countryInfo="countryInfo">
-        </random-country>
-        </header>
+      <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
+      <img class ="globeimage"src="../src/assets/earth.svg" alt="globe" width=100px>
+      <nav class="navbar">
+        <ul>
+          <li>About</li>
+          <li>Quiz</li>
+          <li>Country of the Day</li>
+          <li><random-country :countryInfo="countryInfo">
+        </random-country></li>
+        </ul>
+      </nav>
+    </header>
     <section class="main-container">
     
     <country-search
@@ -82,9 +91,27 @@ export default {
 .main-container {
   font-family: itim;
   display: flex;
-  justify-content:space-evenly;
+  /* justify-content:space-evenly; */
   padding: 10px;
   border: solid 4px black;
   border-radius: 8px;
+}
+.title {
+  text-align: center;
+  color:white;
+  font-size: 50px;
+  font-family: itim;
+
+}
+.globeimage {
+  margin-left: 20px;
+  height: 150px; 
+  width:150px;
+}
+.navbar{
+  color:white;
+  font-size: 20px;
+  font-family: itim;
+
 }
 </style>

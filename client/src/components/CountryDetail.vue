@@ -19,32 +19,36 @@
 
     <!-- // INFO ABOUT POPULATION & AREA -->
     <p>
-      {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles.
+      &#128200; {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles.
     </p>
 
     <!-- // INFO ABOUT LANGUAGE, NATIONALITY & CURRENCY -->
     <p>
-      <span v-if="country.languages.length !== 0">
-      Most people in {{ country.name }} speak {{ country.languages[0].name }}, 
+      <span v-if="country.languages.length > 0">
+      &#128483; Most people in {{ country.name }} speak {{ country.languages[0].name }}
       </span>
       <span v-if="country.demonym !==  null">
-      call themselves {{ country.demonym }} 
+      and call themselves {{ country.demonym }}. 
       </span>
-      <span v-if="country.currencies.length !== 0">
-      and use the {{ country.currencies[0].name }} as money.
+      <p>
+      <span v-if="country.currencies.length >0">
+      &#128176;They use the {{ country.currencies[0].name }} as money.
       </span>
     </p>
 
     <!-- // INFO ABOUT REGIONAL BLOCS -->
-    <p v-if="country.regionalBlocs.length !== 0">
-      {{ country.name }} is part of the {{ country.regionalBlocs[0].name }}.
+    <p v-if="country.regionalBlocs.length > 0">
+      &#127760; {{ country.name }} is part of the {{ country.regionalBlocs[0].name }}.
     </p>
+        
+    <!-- // INFO ABOUT CAPITAL CITY -->
+    <p>
+      &#127963; The capital of {{ country.name }} is {{ country.capital }}.
+    <p>
+      &#127926; Play National Anthem of {{ country.name }}.
 
-     <p>
-       Play National Anthem of {{ country.name }}
-
-       <p>
-      <audio :key="this.audioUrl" id="player" preload="auto">
+    </p>
+        <audio :key="this.audioUrl" id="player" preload="auto">
         <source :src="this.audioUrl" >
         </audio>
         <div>
@@ -53,11 +57,6 @@
         <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
         <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
   </div>
-        
-    <!-- // INFO ABOUT CAPITAL CITY -->
-    <p>
-      The capital of {{ country.name }} is {{ country.capital }}.
-    </p>
 
     <!-- // INFO ABOUT BORDERING COUNTRIES -->
     <p v-if="country.borders.length > 1">
@@ -106,9 +105,10 @@ export default {
 
 #country-detail {
   border: solid 4px darkgreen;
-  background-color: yellow;
+  background: rgb(255,215,6);
+  background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);  
   border-radius: 10px;
-  height: 475px;
+  height: max-content;
   margin: 10px;
   padding: 5px;
   width: 400px
@@ -116,15 +116,22 @@ export default {
 
 #country-flag {
   width: 120px;
-  margin-right: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 2px black;
-  box-shadow: 5px 5px 15px 5px gray;
+  box-shadow: 5px 5px 15px 5px black;
   
   
 }
 
 h1 {
   font-weight: bold;
+  text-emphasis: none;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 10px;
   text-justify: auto;
 }
 

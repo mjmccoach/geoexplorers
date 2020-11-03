@@ -15,6 +15,7 @@ export default {
   methods: {
     handleClick: function (event) {
       eventBus.$emit("country-selected", this.country);
+      eventBus.$emit("map-location-selected", this.country);
     },
   },
 };
@@ -25,8 +26,8 @@ li {
   cursor: pointer;
 }
 
-li:hover, h1:hover, a:hover {
+/* li:hover, h1:hover, a:hover {
   background-color: yellow;
 
-}
+} */
 </style>
