@@ -28,7 +28,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped >
 body {
   width: 100%;
   min-height: 100vh;
@@ -36,14 +36,14 @@ body {
   justify-content: center;
   align-items: center;
   background: #f7f7f7;
-  font-family: 'Montserrat',sans-serif;
-  font-weight: 500;
+  font-family: itim;
+  font-size: 15px;
   color: #000;
 }
 #app {
   min-width: 200px;
-  height: 200px;
-  border-radius: 20px;
+  height: 100px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ button {
   background: #1b7e28;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 15px;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
