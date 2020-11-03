@@ -1,7 +1,7 @@
 <template>
   <div class="map-container">
     <panZoom :options="{minZoom: 0.8, maxZoom: 6}">
-      <radio-svg-map v-model="selectedLocation" :map="World" />
+      <radio-svg-map v-on:click="selectTheCountry()" v-model="selectedLocation" :map="World" />
     </panZoom>
   </div>
     
@@ -25,7 +25,7 @@ export default {
       selectedCountry: null
     };
   },
-  computed: {
+  methods: {
       selectTheCountry: function() {
       for (let i=0; i<this.countries.length; i++) {
         const country = this.countries[i]
