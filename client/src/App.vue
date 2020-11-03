@@ -2,7 +2,7 @@
   <main>
     <header class="title">
       <strong>Welcome GeoExplorers!!</strong>
-      <img class ="globeimage"src="../src/assets/globalbob.png" alt="globe" width=100px>
+      <img class ="globeimage"src="../src/assets/earth.svg" alt="globe" width=100px>
     </header>
     <section>
       <random-country :countryInfo="countryInfo">
@@ -87,10 +87,13 @@ export default {
 .title {
   text-align: center;
   color:white;
-  font-size: 40px;
+  font-size: 70px;
+  font-family: itim;
 
 }
 .globeimage {
   margin-left: 20px;
+  height: 150px; 
+  width:150px;
 }
 </style>
