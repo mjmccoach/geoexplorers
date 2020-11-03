@@ -31,6 +31,11 @@ export default {
       selectedCountry: null
     };
   },
+  mounted() {
+    eventBus.$on('map-location-selected', (country) => {
+      this.selectedLocation = country.alpha2Code.toLowerCase();
+  })
+  },
   methods: {
       selectTheCountry: function() {
       for (let i=0; i<this.countries.length; i++) {
@@ -40,14 +45,7 @@ export default {
           eventBus.$emit('map-click', this.selectedCountry);
         };
       };
-      console.log(event.clientX); // x coordinate
-        console.log(event.clientY);
     },
-    someMethod(event) {
-        // clientX/Y gives the coordinates relative to the viewport in CSS pixels.
-        console.log(event.clientX); // x coordinate
-        console.log(event.clientY);
-  }
 }}
 </script>
 
