@@ -16,6 +16,7 @@ import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
 import CountryDetail from "./components/CountryDetail";
 
+
 export default {
   name: "app",
   data() {
@@ -30,8 +31,10 @@ export default {
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
+      this.borderingCountries = this.findBorderingCountries();
     });
-    eventBus.$on('country-selected', (country) => {
+    eventBus.$on('map-click', (country) => {
+      this.selectedCountry = country;
       this.borderingCountries = this.findBorderingCountries();
     });
 
@@ -49,9 +52,7 @@ export default {
     }
   },
   components: {
-    
-    'country-search': CountrySearch,
-    'country-detail': CountryDetail
+    'country-search': CountrySearch
   }
 };
 </script>

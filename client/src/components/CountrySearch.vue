@@ -46,7 +46,8 @@
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
-		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
+		<svg-map :countries="countries"></svg-map>
+		<country-detail :country="country"></country-detail>
   </div>
 </div>
 </template>
@@ -67,6 +68,9 @@ import BlocResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
 // import LanguageSearchResultsList from './LanguageResultsList';
  
+import CountryList from './CountryList';
+import CountryDetail from './CountryDetail';
+import SvgMap from "./SvgMap";
 
 export default {
 	name: 'country-search',
@@ -99,8 +103,8 @@ export default {
 		'bloc-results-list': BlocResultsList,
 		// 'language-search': LanguageSearch,
 		// 'language-results-list': LanguageSearchResultsList,
+		'svg-map': SvgMap
 	},	
-
 
 	computed : {
 		filteredList() {
