@@ -1,7 +1,7 @@
 <template>
     <div>
-        <li v-on:click='handleBlocSelectionClick'>
-            <span> {{ country.bloc }} </span>
+        <li v-on:click='handleCountrySelectionClick'>
+            <span> {{ country.name }} </span>
         </li>
     </div>
 </template>
@@ -14,8 +14,8 @@ export default {
     props: ['country'],
     components: {},
     methods: {
-        handleBlocSelectionClick: function() {
-            eventBus.$emit("bloc-selected", this.bloc);
+        handleCountrySelectionClick: function() {
+            eventBus.$emit("country-selected", this.country);
         }
     }
 }

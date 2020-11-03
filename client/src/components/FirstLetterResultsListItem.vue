@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style>
+
+
+
 #country-flag {
   border: solid 1px black
 }

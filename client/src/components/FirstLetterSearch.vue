@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
         <li v-on:click='handleFirstLetterSelectClick'>
-            <span id="alphabet">
+            <span>
                 {{ letter }}
             </span>
         </li>
@@ -23,5 +23,20 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
+#alphabet {
+    color: black;
+    border: 2px solid black;
+    background: rgb(112, 206, 112);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 2px;
+}
+
+#alphabet:hover {
+  background-color: yellow;
+}
+
 
 </style>
