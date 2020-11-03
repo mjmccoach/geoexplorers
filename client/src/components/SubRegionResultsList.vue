@@ -3,7 +3,7 @@
         <ul>
             <sub-region-results-list-item
             v-for="(country, index) in countries" :country="country" :key="index"
-            v-if="country.subregion === selectedSubRegion"
+            v-if="country.subregion === selectedSubRegion && country.subregion !== ''"
             >
             </sub-region-results-list-item>
         </ul>
