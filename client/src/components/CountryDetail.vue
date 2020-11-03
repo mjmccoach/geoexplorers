@@ -72,6 +72,8 @@
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
     &#128187;<a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
+
+    
   </article>
   </section>
 </template>
@@ -101,6 +103,7 @@ export default {
     }
 
   }
+  
 };
 </script>
 
