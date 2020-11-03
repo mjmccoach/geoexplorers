@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <panZoom>
     <radio-svg-map v-model="selectedLocation" :map="World" />
-  </div>
+  </panZoom>
 </template>
 
 <script>
@@ -38,4 +38,4 @@ export default {
 };  
 </script>
 
-<style src="vue-svg-map/dist/index.css"></style>
+<style src="../styles/map.css"></style>
