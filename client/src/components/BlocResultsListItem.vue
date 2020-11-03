@@ -1,7 +1,7 @@
 <template>
     <div>
         <li v-on:click='handleBlocSelectionClick'>
-            <span> {{ country.bloc }} </span>
+            <span> {{ country.regionalBlocs[0].name }} </span>
         </li>
     </div>
 </template>

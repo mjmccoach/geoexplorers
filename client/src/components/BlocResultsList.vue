@@ -3,7 +3,7 @@
         <ul>
             <bloc-results-list-item
             v-for="(country, index) in countries" :country="country" :key="index"
-            v-if="country.bloc === selectedBloc"    
+            v-if="country.regionalBlocs[0].name === selectedBloc"    
             >
             </bloc-results-list-item>
         </ul>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import BlockResultsListItem from './BlocResultsListItem';
+import BlocResultsListItem from './BlocResultsListItem';
 
 export default {
     name: "bloc-results-list",
     props: ['countries', 'selectedBloc'],
     components: {
-        'block-results-list-item': BlockResultsListItem,
+        'bloc-results-list-item': BlocResultsListItem,
     }
 }
 </script>

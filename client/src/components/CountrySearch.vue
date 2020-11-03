@@ -35,13 +35,13 @@
 			:countries="countries" :selectedBloc="selectedBloc">
 			</bloc-results-list>
 
-			<!-- <span>Countries By Language Spoken:</span>
+			<span>Countries By Language Spoken:</span>
 			<language-search
-			v-for="(language, index) in languages" :language="language" :key="index">
+			v-for="(language, index) in languages" :language="language" :key="'language' + index">
 			</language-search>
 			<language-results-list
-			:languages="languages" :selectedLangauge="selectedLanguage">
-			</language-results-list> -->
+			:countries="countries" :selectedLangauge="selectedLanguage">
+			</language-results-list>
 
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
@@ -115,7 +115,7 @@ export default {
 	mounted() {
 		this.getAllRegions();
 		this.getAllSubRegions();
-		// this.getAllBlocs();
+		this.getAllBlocs();
 		// this.getAllLanguages();
 
 		eventBus.$on('first-letter-selected', (letter) => {
@@ -130,9 +130,9 @@ export default {
 		eventBus.$on('bloc-selected', (bloc) => {
     		this.selectedBloc = bloc;
     });
-	// 	eventBus.$on('language-selected', (language) => {
-    // 		this.selectedLanguage = language;
-	// });
+		eventBus.$on('language-selected', (language) => {
+    		this.selectedLanguage = language;
+	});
 	},
 
 	methods: {
@@ -151,17 +151,29 @@ export default {
 		},
 
 
-		// getAllBlocs: function () {
-		// 	for (country in this.countries) {
-		// 		if (country.regionalBlocs[0].name) {
-		// 			let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0].name))]
-		// 			}
-		// 	}
+		getAllBlocs: function () {
 
-		// 	objblocArray.sort();
-		// 	this.blocs = objblocArray;
-		// 	console.log(this.blocs);
-		// },
+			for (let i=0; i<this.countries.length; i++) {
+				// let objblocArray = [];
+				const country = this.countries[i]
+				if (country.regionalBlocs.length === 1) {
+					console.log(this.countries[i].regionalBlocs[0].name)
+					let objblocArray = []
+					objblocArray.push(this.countries[i].regionalBlocs[0].name)
+					console.log(objblocArray)
+					let distinctArray = [...new Set(objblocArray.map(element => element.name))];
+					// console.log(distinctArray)
+
+				// this.blocs = objblocArray;
+				// console.log(this.blocs);
+
+			}
+			}
+
+			// objblocArray.sort();
+			// this.blocs = objblocArray;
+			// console.log(this.blocs);
+		},
 
 		// getAllLanguages: function () {
 		// 	let languagesArray = [...new Set(this.countries.map(element => element.languages[0]))];
