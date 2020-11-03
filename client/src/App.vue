@@ -25,6 +25,11 @@
     >
     </country-search>
     </section>
+
+    <footer class = "footer">
+      <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
+    </footer>
+
   </main>
 </template>
 
@@ -113,13 +118,21 @@ export default {
   font-family: itim;
   list-style: none;
 
+
+}
+main > header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  word-spacing: normal;
+
 }
 main > header > nav > ul > li {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  margin: 0;
+  /* justify-content: end;
+  margin: 0; */
 }
 /* main >header {
   display: grid;
@@ -128,7 +141,7 @@ main > header > nav > ul > li {
   word-spacing: normal;
 } */
 .stage {
-        border-bottom: 3px solid rgb(21, 143, 51);
+        /* border-bottom: 3px solid rgb(21, 143, 51); */
         display: flex;
         height: 330px;
         width: 100%;
@@ -155,6 +168,13 @@ main > header > nav > ul > li {
         57%  { transform: scale(1,1)      translateY(-7px); }
         64%  { transform: scale(1,1)      translateY(0); }
         100% { transform: scale(1,1)      translateY(0); }
+    }
+
+    .copyright{
+      color:white;
+      font-size: 20px;
+      font-family: itim;
+
     }
 
 </style>
