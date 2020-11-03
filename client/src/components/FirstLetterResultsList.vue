@@ -48,8 +48,11 @@ ul {
   background-color: aquamarine;
   border-radius: 6px;
   padding: 5px;
+  height: 120px;
   width: 400px;
-  margin: 10px;
+  margin-left: 10px;
+
+  overflow: hidden
 }
 
 </style>

@@ -28,6 +28,7 @@ export default {
 
 ul {
   list-style: none;
+  
 }
 
 </style>

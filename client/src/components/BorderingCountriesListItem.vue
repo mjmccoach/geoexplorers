@@ -1,12 +1,10 @@
 <template lang="html">
-  <article>
-    <div>
+  <span>
       <li v-on:click='selectCountry'>
-        <img id="bordering-country-flag" :src="borderingCountry.flag" :alt="'Flag of ' + borderingCountry.name" width="80"/>
+        <img id="bordering-country-flag" :src="borderingCountry.flag" :alt="'Flag of ' + borderingCountry.name"/>
         {{ borderingCountry.name }} 
       </li>
-    </div>
-  </article>
+  </span>
 </template>
 
 <script>
@@ -24,14 +22,20 @@ export default {
 };
 </script>
 
-<style lang = "css" scoped>
+<style scoped>
 
-.testing {
-  color: red;
+span{
+  display: inline-block;
+  justify-content: space-between;
+  margin-right: 15px;
+	
 }
 
-p {
-  color: purple;
+#bordering-country-flag {
+  border: 1px black solid;
+  width: 30px;
 }
+
+
 
 </style>

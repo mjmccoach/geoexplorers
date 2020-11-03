@@ -91,10 +91,10 @@ export default {
 .main-container {
   font-family: itim;
   display: flex;
-  /* justify-content:space-evenly; */
+  justify-content: center;
   padding: 10px;
-  border: solid 4px black;
-  border-radius: 8px;
+  /* border: solid 4px black;
+  border-radius: 8px; */
 }
 .title {
   text-align: center;

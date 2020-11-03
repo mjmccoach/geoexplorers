@@ -32,7 +32,7 @@
       </span>
       <p>
       <span v-if="country.currencies.length >0">
-      &#128176;They use the {{ country.currencies[0].name }} as money.
+      &#128176;They use the {{ country.currencies[0].name }} ({{ country.currencies[0].symbol }}) as money .
       </span>
     </p>
 
@@ -60,11 +60,11 @@
 
     <!-- // INFO ABOUT BORDERING COUNTRIES -->
     <p v-if="country.borders.length > 1">
-      Learn about one of the {{ country.borders.length }} neighbours of {{ country.name }}:
+      &#128218; Learn more about one of the {{ country.borders.length }} neighbours of {{ country.name }}:
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
     <p v-if="country.borders.length === 1">
-      Learn about the only neighbour of {{ country.name }}:
+      &#128218; Learn more about the only neighbour of {{ country.name }}:
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
     <p v-if="country.borders.length < 1">
@@ -111,7 +111,7 @@ export default {
   height: max-content;
   margin: 10px;
   padding: 5px;
-  width: 400px
+  width: 800px
 }
 
 #country-flag {
