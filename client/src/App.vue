@@ -1,9 +1,13 @@
 <template lang="html">
   <main>
-    <header>
+    <header class="title">
+      <strong>Welcome GeoExplorers!!</strong>
+      <img class ="globeimage"src="../src/assets/globalbob.png" alt="globe" width=100px>
+    </header>
+    <section>
       <random-country :countryInfo="countryInfo">
         </random-country>
-        </header>
+        </section>
     <section class="main-container">
     
     <country-search
@@ -79,5 +83,14 @@ export default {
   padding: 10px;
   border: solid 4px black;
   border-radius: 8px;
+}
+.title {
+  text-align: center;
+  color:white;
+  font-size: 40px;
+
+}
+.globeimage {
+  margin-left: 20px;
 }
 </style>
