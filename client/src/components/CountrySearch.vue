@@ -150,7 +150,6 @@ export default {
 			// console.log(this.subRegions);
 		},
 
-
 		getAllBlocs: function () {
 			let objblocArray = [];
 
@@ -158,12 +157,12 @@ export default {
 				const country = this.countries[i]
 				if (country.regionalBlocs.length !== 0) {
 					// console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
-					objblocArray.push(this.countries[i].regionalBlocs[0].name)
+					objblocArray.push(this.countries[i].regionalBlocs[0].name);
 				}
 			}
 			let distinctBlocArray = [...new Set(objblocArray)];
-			// console.log(distinctBlocArray);
-			this.blocs = distinctBlocArray;
+			// console.log(distinctBlocArray)
+			this.blocs = distinctBlocArray
 		},
 
 		getAllLanguages: function () {
