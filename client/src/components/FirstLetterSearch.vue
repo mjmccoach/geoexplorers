@@ -1,7 +1,7 @@
 <template lang="html">
     <div>
         <li v-on:click='handleFirstLetterSelectClick'>
-            <span id="alphabet">
+            <span>
                 {{ letter }}
             </span>
         </li>
