@@ -11,7 +11,7 @@
 			:countries="countries" :selectedFirstLetter="selectedFirstLetter">
 			</first-letter-results-list>
 
-			<span>Countries By Continent:</span>
+			<!-- <span>Countries By Continent:</span>
 			<region-search
 			v-for="(region, index) in regions" :region="region" :key="index">
 			</region-search>
@@ -33,7 +33,7 @@
 			</bloc-search>
 			<bloc-results-list
 			:countries="countries" :selectedBloc="selectedBloc">
-			</bloc-results-list>
+			</bloc-results-list> -->
 
 			<!-- <span>Countries By Language Spoken:</span>
 			<language-search
