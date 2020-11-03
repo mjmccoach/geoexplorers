@@ -1,7 +1,5 @@
 <template>
   <section id="country-list">
-    <h1>Click a country for more info</h1>
-
     <ul class="scroll">
       <country-list-item
         v-for="(country, index) in countries" :country="country" :key="index" 
@@ -27,6 +25,6 @@ export default {
 <style scoped>
 .scroll {
   overflow-y: auto;
-  max-height: 400px;
+  height: 110px;
 }
 </style>

@@ -67,9 +67,6 @@ import BlocSearch from './BlocSearch';
 import BlocResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
 // import LanguageSearchResultsList from './LanguageResultsList';
- 
-import CountryList from './CountryList';
-import CountryDetail from './CountryDetail';
 import SvgMap from "./SvgMap";
 
 export default {
@@ -154,11 +151,12 @@ export default {
 		},
 
 		getAllBlocs: function () {
-			let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0]))];
-			let namedBlocs = [...new Set(objblocArray.map(object => object.name))];
-			namedBlocs.sort();
-			this.blocs = namedBlocs;
-			console.log(namedBlocs);
+			if(this.countries.apply(object => regionalBlocs[0].name)) {
+				let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0].name))]
+			}
+			objblocArray.sort();
+			this.blocs = objblocArray;
+			console.log(this.blocs);
 		},
 
 		// getAllLanguages: function () {
