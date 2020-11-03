@@ -1,16 +1,18 @@
 <template lang="html">
   <main>
-    <random-country :countryInfo="countryInfo"></random-country>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <header>
+      <random-country :countryInfo="countryInfo">
+        </random-country>
+        </header>
     <section class="main-container">
-    </section>
+    
     <country-search
     :countries="countryInfo" 
     :country="selectedCountry" 
     :borderingCountries="borderingCountries"
     >
     </country-search>
-    
+    </section>
   </main>
 </template>
 
@@ -69,10 +71,11 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 .main-container {
   font-family: itim;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
   padding: 10px;
   border: solid 4px black;
   border-radius: 8px;

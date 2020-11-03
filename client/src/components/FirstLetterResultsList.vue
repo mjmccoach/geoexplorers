@@ -1,6 +1,6 @@
 <template lang="html">
-    <div>
-        <ul>
+    <div id="filter-list">
+        <ul class="scroll">
             <first-letter-results-list-item
             v-for="(country, index) in countries" :country="country" :key="index"
             v-if="country.name.startsWith(selectedFirstLetter)"
@@ -26,12 +26,25 @@ export default {
 
 <style lang="css" scoped>
 
-.testing {
-    color: red;
-}
-
 ul {
     list-style: none;
+
+}
+.scroll {
+  overflow-y: auto;
+  list-style: none;
+  padding: 2px;
+  max-height: 100px
+}
+
+
+#filter-list {
+  border: solid 4px darkgreen;
+  background-color: aquamarine;
+  border-radius: 6px;
+  padding: 5px;
+  width: 400px;
+  margin: 10px;
 }
 
 </style>
