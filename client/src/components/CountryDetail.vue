@@ -71,6 +71,7 @@
       {{ country.name }} does not have land borders with any other countries.
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
+    &#128187;<a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
   </article>
   </section>
 </template>
@@ -93,7 +94,12 @@ export default {
     audioUrl() {
       const lowerAlpha2Code = this.country.alpha2Code.toLowerCase()
       return `http://www.nationalanthems.info/${lowerAlpha2Code}.mp3`
+    },
+    wikiUrl() {
+      const countryLink = this.country.name
+      return `https://en.wikipedia.org/wiki/${countryLink}`
     }
+
   }
 };
 </script>
