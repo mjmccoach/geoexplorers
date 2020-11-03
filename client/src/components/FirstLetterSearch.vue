@@ -28,11 +28,14 @@ export default {
 #alphabet {
     color: black;
     border: 2px solid black;
-    background: rgb(234,250,254);
-    background: linear-gradient(180deg, rgba(234,250,254,1) 58%, rgb(33, 207, 220) 100%);
+    background: rgb(112, 206, 112);
     border-radius: 3px;
     padding: 5px;
-    margin: 2px;  
+    margin: 2px;
+}
+
+#alphabet:hover {
+  background-color: yellow;
 }
 
 

@@ -22,7 +22,7 @@
 }
 
 .map-container {
-  background-color: rgb(87, 101, 252);
+  background-image: url("http://hypersurge.github.io/publicpages/images/waterSeamlessLoop.gif");
   width: 1200px; 
   height: auto; 
   border:4px solid black;
