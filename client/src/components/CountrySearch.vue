@@ -17,18 +17,13 @@ v-if="dataReady"
 			<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
 			<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list>
 
-			<span>Countries By Political/Economic Bloc:</span>
+			<!-- <span>Countries By Political/Economic Bloc:</span>
 			<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="index"></bloc-search>
 			<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
 
 			<span>Countries By Language Spoken:</span>
-			<language-search
-			v-for="(language, index) in languages" :language="language" :key="'language' + index">
-			</language-search>
-			<language-results-list
-			:countries="countries" :selectedLangauge="selectedLanguage">
-			</language-results-list> -->
-
+			<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
+			<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
