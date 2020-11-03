@@ -35,13 +35,13 @@
 			:countries="countries" :selectedBloc="selectedBloc">
 			</bloc-results-list>
 
-			<!-- <span>Countries By Language Spoken:</span>
+			<span>Countries By Language Spoken:</span>
 			<language-search
 			v-for="(language, index) in languages" :language="language" :key="'language' + index">
 			</language-search>
 			<language-results-list
 			:countries="countries" :selectedLangauge="selectedLanguage">
-			</language-results-list> -->
+			</language-results-list>
 
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
@@ -65,8 +65,8 @@ import SubRegionSearch from './SubRegionSearch';
 import SubRegionResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
 import BlocResultsList from './BlocResultsList';
-// import LanguageSearch from './LanguageSearch';
-// import LanguageSearchResultsList from './LanguageResultsList';
+import LanguageSearch from './LanguageSearch';
+import LanguageSearchResultsList from './LanguageResultsList';
 import SvgMap from "./SvgMap";
 
 export default {
@@ -83,8 +83,8 @@ export default {
 			selectedSubRegion: "",
 			blocs: [],
 			selectedBloc: "",
-			// languages: [],
-			// selectedLanguage: "",
+			languages: [],
+			selectedLanguage: "",
 		};
 	},
 	components : {
@@ -181,7 +181,7 @@ export default {
 			this.languages = distinctLangArray;
 		}
 	}
-
+}
 
 </script>
 
