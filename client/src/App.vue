@@ -1,13 +1,18 @@
 <template lang="html">
   <main>
-    <header class="title">
-      <strong>Welcome GeoExplorers!!</strong>
+    <header>
+      <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
       <img class ="globeimage"src="../src/assets/earth.svg" alt="globe" width=100px>
+      <nav class="navbar">
+        <ul>
+          <li>About</li>
+          <li>Quiz</li>
+          <li>Country of the Day</li>
+          <li><random-country :countryInfo="countryInfo">
+        </random-country></li>
+        </ul>
+      </nav>
     </header>
-    <section>
-      <random-country :countryInfo="countryInfo">
-        </random-country>
-        </section>
     <section class="main-container">
     
     <country-search
@@ -87,7 +92,7 @@ export default {
 .title {
   text-align: center;
   color:white;
-  font-size: 70px;
+  font-size: 50px;
   font-family: itim;
 
 }
@@ -95,5 +100,11 @@ export default {
   margin-left: 20px;
   height: 150px; 
   width:150px;
+}
+.navbar{
+  color:white;
+  font-size: 20px;
+  font-family: itim;
+
 }
 </style>

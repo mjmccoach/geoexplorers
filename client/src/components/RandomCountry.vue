@@ -45,7 +45,7 @@ body {
 }
 p {
   font-size: 10px;
-  color: #101110;
+  color:white;
 }
 /* button {
   border: none;
