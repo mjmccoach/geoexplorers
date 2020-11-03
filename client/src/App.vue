@@ -128,7 +128,7 @@ main > header > nav > ul > li {
   word-spacing: normal;
 } */
 .stage {
-        border-bottom: 3px solid #444;
+        border-bottom: 3px solid rgb(21, 143, 51);
         display: flex;
         height: 330px;
         width: 100%;
