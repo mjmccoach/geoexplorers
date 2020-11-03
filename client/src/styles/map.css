@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   stroke: rgb(0, 0, 0);
-  stroke-width: 0.2;
+  stroke-width: 0.4;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -18,13 +18,29 @@
 }
     
 .svg-map__location[aria-checked="true"] {
-  fill: #f04fff;
+  fill: #ff4f5b;
 }
 
 .map-container {
-  background-color: rgb(131, 70, 201);
-  width: 75vw; 
+  background-image: url("http://hypersurge.github.io/publicpages/images/waterSeamlessLoop.gif");
+  width: 1200px; 
   height: auto; 
-  border:1px solid black; 
+  border:4px solid black;
+  border-radius: 14px; 
   overflow:hidden;
+  text-align: center;
+}
+
+.map-country-name {
+  width: 75vw;
+  height: 20px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black; 
+  text-align: center;
+}
+
+.map-country-name > span {
+  margin: 0;
 }
