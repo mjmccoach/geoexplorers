@@ -1,7 +1,7 @@
 <template>
     <div>
         <li v-on:click='handleCountrySelectionClick'>
-            <span> {{ country.languages[0].name }} </span>
+            <span> {{ country.name }} </span>
         </li>
     </div>
 </template>

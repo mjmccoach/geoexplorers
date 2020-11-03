@@ -18,8 +18,9 @@ export default {
     props: ['countries', 'selectedLanguage'],
     components: {
         'language-results-list-item': LanguageResultsListItem,
-    }
-}
+    },
+    methods: {},
+};
 </script>
 
 <style>
