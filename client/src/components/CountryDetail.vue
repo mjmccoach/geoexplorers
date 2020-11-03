@@ -24,19 +24,19 @@
 
     <!-- // INFO ABOUT LANGUAGE, NATIONALITY & CURRENCY -->
     <p>
-      <span v-if="country.languages.length > 0">
+      <span v-if="country.languages.length !== 0">
       Most people in {{ country.name }} speak {{ country.languages[0].name }}, 
       </span>
       <span v-if="country.demonym !==  null">
       call themselves {{ country.demonym }} 
       </span>
-      <span v-if="country.currencies.length >0">
+      <span v-if="country.currencies.length !== 0">
       and use the {{ country.currencies[0].name }} as money.
       </span>
     </p>
 
     <!-- // INFO ABOUT REGIONAL BLOCS -->
-    <p v-if="country.regionalBlocs.length > 0">
+    <p v-if="country.regionalBlocs.length !== 0">
       {{ country.name }} is part of the {{ country.regionalBlocs[0].name }}.
     </p>
 

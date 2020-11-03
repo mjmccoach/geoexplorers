@@ -5,7 +5,7 @@
 		<ul id="alphabet-list">
 			<span>Countries starting with:</span>
 			<first-letter-search
-			v-for="(letter, index) in alphabet" :letter="letter" :key="index">
+			v-for="(letter, index) in alphabet" :letter="letter" :key="'letter' + index">
 			</first-letter-search>
 			<first-letter-results-list
 			:countries="countries" :selectedFirstLetter="selectedFirstLetter">
@@ -13,7 +13,7 @@
 
 			<span>Countries By Continent:</span>
 			<region-search
-			v-for="(region, index) in regions" :region="region" :key="index">
+			v-for="(region, index) in regions" :region="region" :key="'region' + index">
 			</region-search>
 			<region-results-list
 			:countries="countries" :selectedRegion="selectedRegion">
@@ -21,7 +21,7 @@
 	
 			<span>Countries By Region:</span>
 			<sub-region-search
-			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
+			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="'subRegion' + index">
 			</sub-region-search>
 			<sub-region-results-list
 			:countries="countries" :selectedSubRegion="selectedSubRegion">
@@ -29,25 +29,25 @@
 
 			<span>Countries By Political/Economic Bloc:</span>
 			<bloc-search
-			v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
+			v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index">
 			</bloc-search>
 			<bloc-results-list
 			:countries="countries" :selectedBloc="selectedBloc">
 			</bloc-results-list>
 
-			<!-- <span>Countries By Language Spoken:</span>
+			<span>Countries By Language Spoken:</span>
 			<language-search
-			v-for="(language, index) in languages" :language="language" :key="index">
+			v-for="(language, index) in languages" :language="language" :key="'language' + index">
 			</language-search>
 			<language-results-list
-			:languages="languages" :selectedLangauge="selectedLanguage">
-			</language-results-list> -->
+			:countries="countries" :selectedLangauge="selectedLanguage">
+			</language-results-list>
 
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
 		<svg-map :countries="countries"></svg-map>
-		<country-detail :country="country"></country-detail>
+		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
   </div>
 </div>
 </template>
@@ -65,8 +65,8 @@ import SubRegionSearch from './SubRegionSearch';
 import SubRegionResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
 import BlocResultsList from './BlocResultsList';
-// import LanguageSearch from './LanguageSearch';
-// import LanguageSearchResultsList from './LanguageResultsList';
+import LanguageSearch from './LanguageSearch';
+import LanguageSearchResultsList from './LanguageResultsList';
 import SvgMap from "./SvgMap";
 
 export default {
@@ -83,8 +83,8 @@ export default {
 			selectedSubRegion: "",
 			blocs: [],
 			selectedBloc: "",
-			// languages: [],
-			// selectedLanguage: "",
+			languages: [],
+			selectedLanguage: "",
 		};
 	},
 	components : {
@@ -98,8 +98,8 @@ export default {
 		'sub-region-results-list': SubRegionResultsList,
 		'bloc-search': BlocSearch,
 		'bloc-results-list': BlocResultsList,
-		// 'language-search': LanguageSearch,
-		// 'language-results-list': LanguageSearchResultsList,
+		'language-search': LanguageSearch,
+		'language-results-list': LanguageSearchResultsList,
 		'svg-map': SvgMap
 	},	
 
@@ -116,7 +116,7 @@ export default {
 		this.getAllRegions();
 		this.getAllSubRegions();
 		this.getAllBlocs();
-		// this.getAllLanguages();
+		this.getAllLanguages();
 
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
@@ -130,9 +130,9 @@ export default {
 		eventBus.$on('bloc-selected', (bloc) => {
     		this.selectedBloc = bloc;
     });
-	// 	eventBus.$on('language-selected', (language) => {
-    // 		this.selectedLanguage = language;
-	// });
+		eventBus.$on('language-selected', (language) => {
+    		this.selectedLanguage = language;
+	});
 	},
 
 	methods: {
@@ -147,26 +147,41 @@ export default {
 			let subRegionArray = [...new Set(this.countries.map(element => element.subregion))];
 			subRegionArray.sort();
 			this.subRegions = subRegionArray;
-			console.log(this.subRegions);
+			// console.log(this.subRegions);
 		},
+
 
 		getAllBlocs: function () {
-			let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0]))];
-			let namedBlocs = [...new Set(objblocArray.map(object => object.name))];
-			namedBlocs.sort();
-			this.blocs = namedBlocs;
-			console.log(namedBlocs);
+			let objblocArray = [];
+
+			for (let i=0; i<this.countries.length; i++) {
+				const country = this.countries[i]
+				if (country.regionalBlocs.length !== 0) {
+					// console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
+					objblocArray.push(this.countries[i].regionalBlocs[0].name)
+				}
+			}
+			let distinctBlocArray = [...new Set(objblocArray)];
+			// console.log(distinctBlocArray);
+			this.blocs = distinctBlocArray;
 		},
 
-		// getAllLanguages: function () {
-		// 	let languagesArray = [...new Set(this.countries.map(element => element.languages[0]))];
-		// 	languagesArray.sort();
-		// 	this.languages = languagesArray;
-		//	console.log(languagesArray);
-		// },
+		getAllLanguages: function () {
+			let objlangArray = [];
+
+			for (let i=0; i<this.countries.length; i++) {
+				const country = this.countries[i]
+				if (country.languages.length !== 0) {
+					// console.log(`The country is ${country.name} and the language bloc length is ${country.languages.length}.`)
+					objlangArray.push(this.countries[i].languages[0].name)
+				}
+			}
+			let distinctLangArray = [...new Set(objlangArray)];
+			// console.log(distinctLangArray);
+			this.languages = distinctLangArray;
+		}
 	}
 }
-
 
 </script>
 

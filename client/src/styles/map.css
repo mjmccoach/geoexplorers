@@ -8,7 +8,7 @@
 }
   
 .svg-map__location {
-  fill: #24f1d6;
+  fill: rgb(42, 182, 42);
   cursor: pointer; 
 }
     
@@ -22,6 +22,7 @@
 }
 
 .map-container {
+  background-color: rgb(131, 70, 201);
   width: 75vw; 
   height: auto; 
   border:1px solid black; 
