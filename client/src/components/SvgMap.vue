@@ -42,4 +42,6 @@ export default {
 </script>
 
 <style src="../styles/map.css">
+
+
 </style>

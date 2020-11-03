@@ -18,13 +18,14 @@
 }
     
 .svg-map__location[aria-checked="true"] {
-  fill: #f04fff;
+  fill: #ff4f5b;
 }
 
 .map-container {
-  background-color: blue;
-  width: 75vw; 
+  background-color: rgb(87, 101, 252);
+  width: 1200px; 
   height: auto; 
-  border:1px solid black; 
+  border:9px solid black;
+  border-radius: 14px; 
   overflow:hidden;
 }

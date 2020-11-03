@@ -75,7 +75,7 @@ export default {
 .main-container {
   font-family: itim;
   display: flex;
-  justify-content:space-evenly;
+  /* justify-content:space-evenly; */
   padding: 10px;
   border: solid 4px black;
   border-radius: 8px;

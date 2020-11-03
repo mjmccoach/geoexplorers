@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <p v-if="randomCountry">The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>! 
-      <!-- it's flag is <img src=""https://restcountries.eu/data/afg.svg"" alt="flag"></-->
+     <span><img id="country-flag" :src="randomCountry.flag" width="40"/></span>
       </p>
   <button v-on:click="picker()">Random Country!</button>
 </div>
@@ -32,10 +32,7 @@ export default {
 body {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f7f7f7;
+
   font-family: itim;
   font-size: 15px;
   color: #000;
@@ -44,19 +41,13 @@ body {
   min-width: 200px;
   height: 100px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #fff;
   box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
 }
 p {
-  font-size: 2em;
-  text-align: center;
+  font-size: 10px;
   color: #101110;
 }
-button {
+/* button {
   border: none;
   background: #1b7e28;
   color: #fff;
@@ -66,6 +57,15 @@ button {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
+} */
+
+button {
+  color: yellow;
+  margin-right: 3px;
+  background-color: darkblue;
+  font-family: itim;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 </style>
