@@ -177,9 +177,14 @@ export default {
 }
 
 #alphabet-list {
+	display: flex;
+	
+
 	list-style: none;
 	text-align: left;
 }
+
+
 
 .search-wrapper {
 	display: block;

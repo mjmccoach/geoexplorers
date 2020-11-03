@@ -1,9 +1,9 @@
 <template lang="html">
     <div>
-        <li
+        <li 
         v-on:click='handleCountrySelectClick'
         >
-        <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="80"/></span>
+        <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
         <span> {{ country.name }} </span>
         </li>
     </div>
@@ -25,6 +25,8 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-
+<style>
+#country-flag {
+  border: solid 1px black
+}
 </style>

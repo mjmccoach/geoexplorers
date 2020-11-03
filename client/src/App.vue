@@ -1,15 +1,18 @@
 <template lang="html">
   <main>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <header>
+      <random-country :countryInfo="countryInfo">
+        </random-country>
+        </header>
     <section class="main-container">
-    </section>
+    
     <country-search
     :countries="countryInfo" 
     :country="selectedCountry" 
     :borderingCountries="borderingCountries"
     >
     </country-search>
-    
+    </section>
   </main>
 </template>
 
@@ -17,6 +20,7 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
+import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
 
 
@@ -47,24 +51,31 @@ export default {
       fetch("https://restcountries.eu/rest/v2/all")
         .then((res) => res.json())
         .then((data) => (this.countryInfo = data))
+        .then(()=>{
+          var chosenNumber = Math.floor(Math.random() * this.countryInfo.length);
+          this.selectedCountry = this.countryInfo[chosenNumber];
+        })
     },
     findBorderingCountries: function () {
       return this.countryInfo.filter((country) => {
         return this.selectedCountry.borders.includes(country.alpha3Code)
     })
-    }
+    },
   },
   components: {
-    'country-search': CountrySearch
+    
+    'country-search': CountrySearch,
+    'random-country':RandomCountry,
   }
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 .main-container {
   font-family: itim;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
   padding: 10px;
   border: solid 4px black;
   border-radius: 8px;
