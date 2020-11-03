@@ -152,22 +152,23 @@ export default {
 
 
 		getAllBlocs: function () {
+			let objblocArray = [];
 
 			for (let i=0; i<this.countries.length; i++) {
-				// let objblocArray = [];
 				const country = this.countries[i]
-				if (country.regionalBlocs.length === 1) {
-					console.log(this.countries[i].regionalBlocs[0].name)
-					let objblocArray = []
-					objblocArray.push(this.countries[i].regionalBlocs[0].name)
-					console.log(objblocArray)
-					let distinctArray = [...new Set(objblocArray.map(element => element.name))];
-					// console.log(distinctArray)
+				if (country.regionalBlocs.length !== 0) {
+					console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
 
+					// console.log(this.countries[i].regionalBlocs[0].name)
+					objblocArray.push(this.countries[i].regionalBlocs[0].name)
+					// console.log(objblocArray)
+				}
 				// this.blocs = objblocArray;
 				// console.log(this.blocs);
-				}
 			}
+		let distinctArray = [...new Set(objblocArray)];
+		console.log(distinctArray)
+		this.blocs = distinctArray;
 		},
 
 		// getAllLanguages: function () {
