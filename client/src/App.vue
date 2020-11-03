@@ -95,7 +95,7 @@ export default {
 .title {
   text-align: center;
   color:white;
-  font-size: 45px;
+  font-size: 70px;
   font-family: itim;
 
 }
