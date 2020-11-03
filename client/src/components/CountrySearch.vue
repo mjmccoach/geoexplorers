@@ -157,12 +157,12 @@ export default {
 			for (let i=0; i<this.countries.length; i++) {
 				const country = this.countries[i]
 				if (country.regionalBlocs.length !== 0) {
-					console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
+					// console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
 					objblocArray.push(this.countries[i].regionalBlocs[0].name)
 				}
 			}
 			let distinctBlocArray = [...new Set(objblocArray)];
-			console.log(distinctBlocArray);
+			// console.log(distinctBlocArray);
 			this.blocs = distinctBlocArray;
 		},
 

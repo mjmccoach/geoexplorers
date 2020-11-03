@@ -1,6 +1,6 @@
 <template>
     <div>
-        <li v-on:click='handleLanguageSelectionClick'>
+        <li v-on:click='handleCountrySelectionClick'>
             <span> {{ country.languages[0].name }} </span>
         </li>
     </div>
@@ -14,8 +14,8 @@ export default {
     props: ['country'],
     components: {},
     methods: {
-        handleLanguageSelectionClick: function() {
-            eventBus.$emit("language-selected", this.language);
+        handleCountrySelectionClick: function() {
+            eventBus.$emit("country-selected", this.country);
         }
     }
 }
