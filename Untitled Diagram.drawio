@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-03T15:23:35.210Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="lErwbxjJw1mi_ddSkI_j" version="13.8.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-03T15:28:18.875Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="LO_3Jh62DfQh_XNw8kDR" version="13.8.8" type="github">
   <diagram id="bNvZfeywgjpNPPodTFvU" name="Page-1">
     <mxGraphModel dx="1426" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -102,10 +102,10 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-32" value="&lt;font color=&quot;#4d9900&quot;&gt;eventBus Emit Select Letter&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Props: [letter]&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="320" y="880" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-33" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [FirstLetterResultsListItem]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-33" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [FirstLetterResultsListItem]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="880" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-34" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;Exports to parent list.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-34" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Exports to parent list.&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="720" y="880" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-35" value="FirstLetterSearch" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
@@ -120,7 +120,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-38" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Region&lt;br&gt;&lt;br&gt;&lt;/span&gt;Props: [region]" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1120" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-40" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [RegionResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-40" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [RegionResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="1120" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-42" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Exports to parent list.&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
@@ -147,7 +147,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-50" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="1560" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-51" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [SubRegionResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-51" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [SubRegionResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="1360" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-52" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -159,7 +159,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-54" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="1320" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-55" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [BlocResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-55" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [BlocResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="1600" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-56" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -201,7 +201,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-68" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Language&lt;br&gt;&lt;br&gt;&lt;/span&gt;Props: [language]" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1840" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-69" value="&lt;span&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [LanguageResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-69" value="Filters list of countries according to selected parameter&lt;span&gt;&lt;br&gt;&lt;br&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [LanguageResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="1840" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-70" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250)&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Exports to parent list.&lt;/font&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
@@ -228,8 +228,8 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-89" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="760" y="40" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-90" value="d" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="760" y="80" width="160" height="120" as="geometry" />
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-90" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [CountryListItem]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="760" y="80" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-91" value="&lt;b&gt;BorderingCountriesList&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="760" y="40" width="160" height="40" as="geometry" />
@@ -237,8 +237,8 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-93" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1000" y="40" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-94" value="d" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="80" width="160" height="120" as="geometry" />
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-94" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays bordering countries&lt;br&gt;&lt;br&gt;Props: [borderingCountry]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Exports to parent list.&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="80" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-95" value="&lt;b&gt;BorderingCountriesListItem&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1000" y="40" width="160" height="40" as="geometry" />
@@ -255,10 +255,10 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-106" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="640" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-107" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-107" value="Filters list of countries according to selected parameter&lt;br&gt;&lt;br&gt;&lt;span&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [CountryListItem]&lt;/font&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="520" y="640" width="160" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-108" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;Exports to parent list.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-108" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Country&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;Displays 1 country which meets the filter criteria&lt;br&gt;&lt;br&gt;Props: [country]&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Exports to parent list.&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="720" y="640" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-109" value="CountryDetail" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
@@ -597,6 +597,18 @@
         </mxCell>
         <mxCell id="AwZCCvGzalZecO2XpGkN-8" value="&lt;i&gt;&lt;b&gt;Props Sent Down:&lt;br&gt;&lt;br&gt;Countries&lt;br&gt;Country&lt;br&gt;&lt;br&gt;FirstLetter&lt;br&gt;Region&lt;br&gt;SubRegion&lt;br&gt;Bloc&lt;br&gt;Language&lt;br&gt;&lt;br&gt;SelectedFirstLetter&lt;br&gt;SelectedRegion&lt;br&gt;SelectedSubRegion&lt;br&gt;SelectedBloc&lt;br&gt;SelectedLanguage&lt;br&gt;&lt;/b&gt;&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="24.5" y="585" width="111" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="AwZCCvGzalZecO2XpGkN-9" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC6600;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="190" as="sourcePoint" />
+            <mxPoint x="923" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AwZCCvGzalZecO2XpGkN-11" value="" style="endArrow=none;html=1;strokeWidth=2;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endFill=0;startArrow=classic;startFill=1;strokeColor=#0000FF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MGGLy1dyiqGOnvXCq7jh-94">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="990" y="160" as="sourcePoint" />
+            <mxPoint x="920" y="160" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
