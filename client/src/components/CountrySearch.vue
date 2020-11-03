@@ -67,9 +67,6 @@ import BlocSearch from './BlocSearch';
 import BlocResultsList from './BlocResultsList';
 // import LanguageSearch from './LanguageSearch';
 // import LanguageSearchResultsList from './LanguageResultsList';
- 
-import CountryList from './CountryList';
-import CountryDetail from './CountryDetail';
 import SvgMap from "./SvgMap";
 
 export default {
