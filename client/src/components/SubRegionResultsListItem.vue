@@ -2,7 +2,6 @@
     <div>
         <li
         v-on:click="handleCountrySelectClick"
-        v-if="subRegion"
         >
         <span> {{ country.name }}</span>
         </li>

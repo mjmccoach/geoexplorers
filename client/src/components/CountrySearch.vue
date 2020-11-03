@@ -115,7 +115,7 @@ export default {
 	mounted() {
 		this.getAllRegions();
 		this.getAllSubRegions();
-		this.getAllBlocs();
+		// this.getAllBlocs();
 		// this.getAllLanguages();
 
 		eventBus.$on('first-letter-selected', (letter) => {
@@ -150,14 +150,18 @@ export default {
 			console.log(this.subRegions);
 		},
 
-		getAllBlocs: function () {
-			if(this.countries.apply(object => regionalBlocs[0].name)) {
-				let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0].name))]
-			}
-			objblocArray.sort();
-			this.blocs = objblocArray;
-			console.log(this.blocs);
-		},
+
+		// getAllBlocs: function () {
+		// 	for (country in this.countries) {
+		// 		if (country.regionalBlocs[0].name) {
+		// 			let objblocArray = [...new Set(this.countries.map(object => object.regionalBlocs[0].name))]
+		// 			}
+		// 	}
+
+		// 	objblocArray.sort();
+		// 	this.blocs = objblocArray;
+		// 	console.log(this.blocs);
+		// },
 
 		// getAllLanguages: function () {
 		// 	let languagesArray = [...new Set(this.countries.map(element => element.languages[0]))];
