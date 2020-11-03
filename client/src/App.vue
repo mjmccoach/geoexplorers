@@ -1,9 +1,6 @@
 <template lang="html">
   <main>
-<<<<<<< HEAD
-    <country-search :countries="countryInfo" :country="selectedCountry"></country-search>
     <random-country :countryInfo="countryInfo"></random-country>
-=======
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <section class="main-container">
     </section>
@@ -13,7 +10,6 @@
     :borderingCountries="borderingCountries"
     >
     </country-search>
->>>>>>> develop
     
   </main>
 </template>
@@ -53,6 +49,10 @@ export default {
       fetch("https://restcountries.eu/rest/v2/all")
         .then((res) => res.json())
         .then((data) => (this.countryInfo = data))
+        .then(()=>{
+          var chosenNumber = Math.floor(Math.random() * this.countryInfo.length);
+          this.selectedCountry = this.countryInfo[chosenNumber];
+        })
     },
     findBorderingCountries: function () {
       return this.countryInfo.filter((country) => {
@@ -61,13 +61,9 @@ export default {
     },
   },
   components: {
-<<<<<<< HEAD
     
     'country-search': CountrySearch,
     'random-country':RandomCountry,
-=======
-    'country-search': CountrySearch
->>>>>>> develop
   }
 };
 </script>
