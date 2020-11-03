@@ -15,7 +15,7 @@ v-if="dataReady"
 
 			<span>Countries By Continent:</span>
 			<region-search
-			v-for="(region, index) in regions" :region="region" :key="'region' + index">
+			v-for="(region, index) in regions" :region="region" :key="index">
 			</region-search>
 			<region-results-list
 			:countries="countries" :selectedRegion="selectedRegion">
@@ -29,7 +29,7 @@ v-if="dataReady"
 			:countries="countries" :selectedSubRegion="selectedSubRegion">
 			</sub-region-results-list>
 
-			<span>Countries By Political/Economic Bloc:</span>
+			<!-- <span>Countries By Political/Economic Bloc:</span>
 			<bloc-search
 			v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index">
 			</bloc-search>
@@ -43,7 +43,7 @@ v-if="dataReady"
 			</language-search>
 			<language-results-list
 			:countries="countries" :selectedLangauge="selectedLanguage">
-			</language-results-list>
+			</language-results-list> -->
 
 		</ul>
     <input type="text" v-model="search" placeholder="Search Countries.."/>
@@ -81,13 +81,13 @@ export default {
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 			selectedFirstLetter: "",
-			regions: [],
+			regions: ["", "Africa", "Americas", "Asia", "Europe", "Oceania", "Polar"],
 			selectedRegion: "",
-			subRegions: [],
+			subRegions: ["", "Australia and New Zealand", "Caribbean", "Central America", "Central Asia", "Eastern Africa", "Eastern Asia", "Eastern Europe", "Melanesia", "Micronesia", "Middle Africa", "Northern Africa", "Northern America", "Northern Europe", "Polynesia", "South America", "South-Eastern Asia", "Southern Africa", "Southern Asia", "Southern Europe", "Western Africa", "Western Asia", "Western Europe"],
 			selectedSubRegion: "",
-			blocs: [],
+			blocs: ["South Asian Association for Regional Cooperation", "European Union", "Central European Free Trade Agreement", "African Union", "Caribbean Community", "Union of South American Nations", "Eurasian Economic Union", "Arab League", "Association of Southeast Asian Nations", "North American Free Trade Agreement", "Pacific Alliance", "Central American Integration System", "European Free Trade Association"],
 			selectedBloc: "",
-			languages: [],
+			languages: ["Pashto", "Swedish", "Albanian", "Arabic", "English", "Catalan", "Portuguese", "Spanish", "Armenian", "Dutch", "German", "Azerbaijani", "Bengali", "Belarusian", "French", "Dzongkha", "Bosnian", "Norwegian", "Malay", "Bulgarian", "Khmer", "Chinese", "Croatian", "Greek (modern)", "Czech", "Danish", "Tigrinya", "Estonian", "Amharic", "Faroese", "Finnish", "Georgian", "Kalaallisut", "Latin", "Hungarian", "Icelandic", "Hindi", "Indonesian", "Persian (Farsi)", "Irish", "Hebrew (modern)", "Italian", "Japanese", "Kazakh", "Kyrgyz", "Lao", "Latvian", "Lithuanian", "Macedonian", "Malaysian", "Divehi", "Maltese", "Romanian", "Mongolian", "Serbian", "Burmese", "Nepali", "Korean", "Polish", "Russian", "Kinyarwanda", "Samoan", "Slovak", "Slovene", "Somali", "Afrikaans", "Sinhalese", "Tajik", "Swahili", "Thai", "Turkish", "Turkmen", "Ukrainian", "Uzbek", "Bislama", "Vietnamese"],
 			selectedLanguage: "",
 		};
 	},
@@ -117,10 +117,10 @@ export default {
 		}
 	},
 	mounted() {
-		this.getAllRegions();
-		this.getAllSubRegions();
-		this.getAllBlocs();
-		this.getAllLanguages();
+		// this.getAllRegions();
+		// this.getAllSubRegions();
+		// this.getAllBlocs();
+		// this.getAllLanguages();
 
 		this.bananaCheck();
 		this.dataReady = true;
@@ -147,14 +147,14 @@ export default {
 			let regionArray = [...new Set(this.countries.map(element => element.region))];
 			regionArray.sort();
 			this.regions = regionArray;
-		// 	console.log(this.regions);
+			console.log(this.regions);
 		},
 
 		getAllSubRegions: function () {
 			let subRegionArray = [...new Set(this.countries.map(element => element.subregion))];
 			subRegionArray.sort();
 			this.subRegions = subRegionArray;
-			// console.log(this.subRegions);
+			console.log(this.subRegions);
 		},
 
 		getAllBlocs: function () {
@@ -168,7 +168,7 @@ export default {
 				}
 			}
 			let distinctBlocArray = [...new Set(objblocArray)];
-			// console.log(distinctBlocArray)
+			console.log(distinctBlocArray)
 			this.blocs = distinctBlocArray
 		},
 
@@ -183,7 +183,7 @@ export default {
 				}
 			}
 			let distinctLangArray = [...new Set(objlangArray)];
-			// console.log(distinctLangArray);
+			console.log(distinctLangArray);
 			this.languages = distinctLangArray;
 		},
 
