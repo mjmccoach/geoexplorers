@@ -1,7 +1,10 @@
 <template>
-  <panZoom>
-    <radio-svg-map v-model="selectedLocation" :map="World" />
-  </panZoom>
+  <div class="map-container">
+    <panZoom :options="{minZoom: 0.8, maxZoom: 6}">
+      <radio-svg-map v-model="selectedLocation" :map="World" />
+    </panZoom>
+  </div>
+    
 </template>
 
 <script>
@@ -38,4 +41,5 @@ export default {
 };  
 </script>
 
-<style src="../styles/map.css"></style>
+<style src="../styles/map.css">
+</style>
