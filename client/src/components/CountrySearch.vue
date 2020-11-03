@@ -117,6 +117,7 @@ export default {
 		}
 	},
 	mounted() {
+		// These method calls are greyed out to have arrays be reliably populated until styling is complete.
 		// this.getAllRegions();
 		// this.getAllSubRegions();
 		// this.getAllBlocs();
