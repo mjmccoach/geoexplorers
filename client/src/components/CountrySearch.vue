@@ -150,6 +150,7 @@ export default {
 			}
 			let distinctBlocArray = [...new Set(objblocArray)];
 			console.log(distinctBlocArray)
+			distinctBlocArray.sort();
 			this.blocs = distinctBlocArray
 		},
 
@@ -165,6 +166,7 @@ export default {
 			}
 			let distinctLangArray = [...new Set(objlangArray)];
 			console.log(distinctLangArray);
+			distinctLangArray.sort();
 			this.languages = distinctLangArray;
 		},
 
