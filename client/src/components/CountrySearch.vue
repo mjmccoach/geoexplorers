@@ -65,8 +65,8 @@ import SubRegionSearch from './SubRegionSearch';
 import SubRegionResultsList from './SubRegionResultsList';
 import BlocSearch from './BlocSearch';
 import BlocResultsList from './BlocResultsList';
-// import LanguageSearch from './LanguageSearch';
-// import LanguageSearchResultsList from './LanguageResultsList';
+import LanguageSearch from './LanguageSearch';
+import LanguageSearchResultsList from './LanguageResultsList';
 import SvgMap from "./SvgMap";
 
 export default {
@@ -83,8 +83,8 @@ export default {
 			selectedSubRegion: "",
 			blocs: [],
 			selectedBloc: "",
-			// languages: [],
-			// selectedLanguage: "",
+			languages: [],
+			selectedLanguage: "",
 		};
 	},
 	components : {
@@ -98,8 +98,8 @@ export default {
 		'sub-region-results-list': SubRegionResultsList,
 		'bloc-search': BlocSearch,
 		'bloc-results-list': BlocResultsList,
-		// 'language-search': LanguageSearch,
-		// 'language-results-list': LanguageSearchResultsList,
+		'language-search': LanguageSearch,
+		'language-results-list': LanguageSearchResultsList,
 		'svg-map': SvgMap
 	},	
 
@@ -116,7 +116,7 @@ export default {
 		this.getAllRegions();
 		this.getAllSubRegions();
 		this.getAllBlocs();
-		// this.getAllLanguages();
+		this.getAllLanguages();
 
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
@@ -166,21 +166,13 @@ export default {
 
 				// this.blocs = objblocArray;
 				// console.log(this.blocs);
-
+				}
 			}
-			}
-
-			// objblocArray.sort();
-			// this.blocs = objblocArray;
-			// console.log(this.blocs);
 		},
 
-		// getAllLanguages: function () {
-		// 	let languagesArray = [...new Set(this.countries.map(element => element.languages[0]))];
-		// 	languagesArray.sort();
-		// 	this.languages = languagesArray;
-		//	console.log(languagesArray);
-		// },
+		getAllLanguages: function () {
+			return null
+		}
 	}
 }
 
