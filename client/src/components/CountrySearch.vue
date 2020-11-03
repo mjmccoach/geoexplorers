@@ -1,6 +1,8 @@
 <template>
 
-<div id="app">
+<div id="app"
+v-if="dataReady"
+>
   	<div class="search-wrapper">
 		<ul id="alphabet-list">
 			<span>Countries starting with:</span>
@@ -74,6 +76,8 @@ export default {
 	props: ['countries', 'country', 'borderingCountries'],
 	data() {
 		return {
+			dataReady: false,
+			bananaData: "",
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
 			selectedFirstLetter: "",
@@ -117,6 +121,9 @@ export default {
 		this.getAllSubRegions();
 		this.getAllBlocs();
 		this.getAllLanguages();
+
+		this.bananaCheck();
+		this.dataReady = true;
 
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
@@ -178,6 +185,10 @@ export default {
 			let distinctLangArray = [...new Set(objlangArray)];
 			// console.log(distinctLangArray);
 			this.languages = distinctLangArray;
+		},
+
+		bananaCheck: function() {
+			this.bananaData = "Banana";
 		}
 	}
 }

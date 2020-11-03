@@ -18,7 +18,7 @@
     </p>
 
     <!-- // INFO ABOUT POPULATION & AREA -->
-    <p>
+    <p v-if="country.population !== null && country.area !== null">
       {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles.
     </p>
 

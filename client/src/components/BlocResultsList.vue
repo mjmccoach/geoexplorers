@@ -2,9 +2,7 @@
     <div>
         <ul>
             <bloc-results-list-item
-            v-for="(country, index) in countries" :country="country" :key="index"
-            v-if="country.regionalBloc[0].name === selectedBloc"    
-            >
+            v-for="(country, index) in countries" :country="country" :key="index"            
             </bloc-results-list-item>
         </ul>
     </div>
@@ -25,3 +23,4 @@ export default {
 <style>
 
 </style>
+// v-if="country.regionalBlocs[0].name === selectedBloc" 

@@ -1,5 +1,5 @@
 <template lang="html">
-  <main>
+  <main v-if="appDataReady">
     <header>
       <random-country :countryInfo="countryInfo">
         </random-country>
@@ -28,13 +28,17 @@ export default {
   name: "app",
   data() {
     return {
+      appDataReady: false,
+      appBanana: "",
       countryInfo: [],
       selectedCountry: null,
       borderingCountries: [],
     };
   },
-  mounted() {
-    this.fetchCountryInfo();
+  async mounted() {
+    await this.fetchCountryInfo();
+    this.fetchAppBanana();
+    this.appDataReady = true;
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
@@ -61,6 +65,9 @@ export default {
         return this.selectedCountry.borders.includes(country.alpha3Code)
     })
     },
+    fetchAppBanana: function () {
+      this.appBanana = "Banana"
+    }
   },
   components: {
     
