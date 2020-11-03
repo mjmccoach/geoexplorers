@@ -5,7 +5,7 @@
 		<ul id="alphabet-list">
 			<span>Countries starting with:</span>
 			<first-letter-search
-			v-for="(letter, index) in alphabet" :letter="letter" :key="index">
+			v-for="(letter, index) in alphabet" :letter="letter" :key="'letter' + index">
 			</first-letter-search>
 			<first-letter-results-list
 			:countries="countries" :selectedFirstLetter="selectedFirstLetter">
@@ -13,7 +13,7 @@
 
 			<span>Countries By Continent:</span>
 			<region-search
-			v-for="(region, index) in regions" :region="region" :key="index">
+			v-for="(region, index) in regions" :region="region" :key="'region' + index">
 			</region-search>
 			<region-results-list
 			:countries="countries" :selectedRegion="selectedRegion">
@@ -21,7 +21,7 @@
 	
 			<span>Countries By Region:</span>
 			<sub-region-search
-			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index">
+			v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="'subRegion' + index">
 			</sub-region-search>
 			<sub-region-results-list
 			:countries="countries" :selectedSubRegion="selectedSubRegion">
@@ -29,7 +29,7 @@
 
 			<span>Countries By Political/Economic Bloc:</span>
 			<bloc-search
-			v-for="(bloc, index) in blocs" :bloc="bloc" :key="index">
+			v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index">
 			</bloc-search>
 			<bloc-results-list
 			:countries="countries" :selectedBloc="selectedBloc">
