@@ -98,8 +98,8 @@ export default {
 		'sub-region-results-list': SubRegionResultsList,
 		'bloc-search': BlocSearch,
 		'bloc-results-list': BlocResultsList,
-		// 'language-search': LanguageSearch,
-		// 'language-results-list': LanguageSearchResultsList,
+		'language-search': LanguageSearch,
+		'language-results-list': LanguageSearchResultsList,
 		'svg-map': SvgMap
 	},	
 
@@ -116,7 +116,7 @@ export default {
 		this.getAllRegions();
 		this.getAllSubRegions();
 		this.getAllBlocs();
-		// this.getAllLanguages();
+		this.getAllLanguages();
 
 		eventBus.$on('first-letter-selected', (letter) => {
     		this.selectedFirstLetter = letter;
@@ -130,9 +130,9 @@ export default {
 		eventBus.$on('bloc-selected', (bloc) => {
     		this.selectedBloc = bloc;
     });
-	// 	eventBus.$on('language-selected', (language) => {
-    // 		this.selectedLanguage = language;
-	// });
+		eventBus.$on('language-selected', (language) => {
+    		this.selectedLanguage = language;
+	});
 	},
 
 	methods: {
@@ -147,7 +147,7 @@ export default {
 			let subRegionArray = [...new Set(this.countries.map(element => element.subregion))];
 			subRegionArray.sort();
 			this.subRegions = subRegionArray;
-			console.log(this.subRegions);
+			// console.log(this.subRegions);
 		},
 
 
@@ -158,21 +158,27 @@ export default {
 				const country = this.countries[i]
 				if (country.regionalBlocs.length !== 0) {
 					console.log(`The country is ${country.name} and the regional bloc length is ${country.regionalBlocs.length}.`)
-
-					// console.log(this.countries[i].regionalBlocs[0].name)
 					objblocArray.push(this.countries[i].regionalBlocs[0].name)
-					// console.log(objblocArray)
 				}
-				// this.blocs = objblocArray;
-				// console.log(this.blocs);
 			}
-		let distinctArray = [...new Set(objblocArray)];
-		console.log(distinctArray)
-		this.blocs = distinctArray;
+			let distinctBlocArray = [...new Set(objblocArray)];
+			console.log(distinctBlocArray);
+			this.blocs = distinctBlocArray;
 		},
 
-		// getAllLanguages: function () {
-		// 	return null
+		getAllLanguages: function () {
+			let objlangArray = [];
+
+			for (let i=0; i<this.countries.length; i++) {
+				const country = this.countries[i]
+				if (country.languages.length !== 0) {
+					console.log(`The country is ${country.name} and the language bloc length is ${country.languages.length}.`)
+					objlangArray.push(this.countries[i].languages[0].name)
+				}
+			}
+			let distinctLangArray = [...new Set(objlangArray)];
+			console.log(distinctLangArray);
+			this.languages = distinctLangArray;
 		}
 	}
 
