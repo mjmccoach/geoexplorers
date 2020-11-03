@@ -1,5 +1,7 @@
 <template>
-  <li v-on:click="handleClick">
+  <li 
+  v-if="country"
+  v-on:click="handleClick">
     <span>{{ country.name }}</span>
   </li>
 </template>

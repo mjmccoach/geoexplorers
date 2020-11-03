@@ -4,9 +4,7 @@
 
     <ul class="scroll">
       <country-list-item
-        v-for="(country, index) in countries"
-        :key="index"
-        :country="country"
+        v-for="(country, index) in countries" :country="country" :key="index" 
       >
       </country-list-item>
     </ul>

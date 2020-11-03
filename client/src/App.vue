@@ -1,9 +1,15 @@
-<template>
+<template lang="html">
   <main>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <section class="main-container">
-    <country-search :countries="countryInfo" :country="selectedCountry" ></country-search>
     </section>
+    <country-search
+    :countries="countryInfo" 
+    :country="selectedCountry" 
+    :borderingCountries="borderingCountries"
+    >
+    </country-search>
+    
   </main>
 </template>
 
@@ -11,6 +17,8 @@
 import { eventBus } from "./main.js";
 import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
+import CountryDetail from "./components/CountryDetail";
+
 
 export default {
   name: "app",
@@ -18,7 +26,7 @@ export default {
     return {
       countryInfo: [],
       selectedCountry: null,
-      borderingCountries: []
+      borderingCountries: [],
     };
   },
   mounted() {
@@ -26,16 +34,19 @@ export default {
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
-    });
-    eventBus.$on('country-selected', (country) => {
       this.borderingCountries = this.findBorderingCountries();
     });
+    eventBus.$on('map-click', (country) => {
+      this.selectedCountry = country;
+      this.borderingCountries = this.findBorderingCountries();
+    });
+
   },
   methods: {
     fetchCountryInfo: function () {
       fetch("https://restcountries.eu/rest/v2/all")
         .then((res) => res.json())
-        .then((data) => (this.countryInfo = data));
+        .then((data) => (this.countryInfo = data))
     },
     findBorderingCountries: function () {
       return this.countryInfo.filter((country) => {
@@ -44,7 +55,6 @@ export default {
     }
   },
   components: {
-    
     'country-search': CountrySearch
   }
 };
