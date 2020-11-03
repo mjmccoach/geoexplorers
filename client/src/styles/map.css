@@ -25,6 +25,21 @@
   background-color: rgb(131, 70, 201);
   width: 75vw; 
   height: auto; 
-  border:1px solid black; 
-  overflow:hidden;
+  border: 1px solid black; 
+  overflow: hidden;
+  text-align: center;
+}
+
+.map-country-name {
+  width: 75vw;
+  height: 20px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black; 
+  text-align: center;
+}
+
+.map-country-name > span {
+  margin: 0;
 }
