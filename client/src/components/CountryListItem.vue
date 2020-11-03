@@ -1,7 +1,6 @@
 <template>
-  <li 
-  v-if="country"
-  v-on:click="handleClick">
+  <li v-if="country" v-on:click="handleClick">
+    <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
     <span>{{ country.name }}</span>
   </li>
 </template>
@@ -26,6 +25,9 @@ li {
   cursor: pointer;
 }
 
+#country-flag {
+  border: solid 1px black
+}
 /* li:hover, h1:hover, a:hover {
   background-color: yellow;
 

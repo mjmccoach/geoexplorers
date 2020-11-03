@@ -27,7 +27,6 @@
 
 <script>
 import { eventBus } from "./main.js";
-import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
