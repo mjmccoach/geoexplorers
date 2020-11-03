@@ -17,6 +17,7 @@
 			</region-search>
 			<region-results-list
 			:countries="countries" :selectedRegion="selectedRegion">
+			</region-results-list>
 	
 			<span>Countries By Region:</span>
 			<sub-region-search
@@ -154,7 +155,6 @@ export default {
 			namedBlocs.sort();
 			this.blocs = namedBlocs;
 			console.log(namedBlocs);
-
 		},
 
 		// getAllLanguages: function () {
