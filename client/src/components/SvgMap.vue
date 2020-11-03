@@ -28,7 +28,7 @@ export default {
         const country = this.countries[i]
         if(this.selectedLocation === country.alpha2Code.toLowerCase()) {
           this.selectedCountry = country;
-          eventBus.$emit('country-select', this.selectedCountry);
+          eventBus.$emit('map-click', this.selectedCountry);
         };
       };
 

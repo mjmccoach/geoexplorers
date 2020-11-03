@@ -26,7 +26,7 @@ export default {
       this.selectedCountry = country;
       this.borderingCountries = this.findBorderingCountries();
     });
-    eventBus.$on('country-select', (country) => {
+    eventBus.$on('map-click', (country) => {
       this.selectedCountry = country;
       this.borderingCountries = this.findBorderingCountries();
     });
