@@ -1,5 +1,7 @@
 <template>
-  <li v-on:click="handleClick">
+  <li 
+  v-if="country"
+  v-on:click="handleClick">
     <span>{{ country.name }}</span>
   </li>
 </template>
@@ -21,5 +23,10 @@ export default {
 <style>
 li {
   cursor: pointer;
+}
+
+li:hover, h1:hover, a:hover {
+  background-color: yellow;
+
 }
 </style>

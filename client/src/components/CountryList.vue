@@ -4,9 +4,7 @@
 
     <ul class="scroll">
       <country-list-item
-        v-for="(country, index) in countries"
-        :key="index"
-        :country="country"
+        v-for="(country, index) in countries" :country="country" :key="index" 
       >
       </country-list-item>
     </ul>
@@ -29,6 +27,17 @@ export default {
 <style scoped>
 .scroll {
   overflow-y: auto;
-  max-height: 400px;
+  list-style: none;
+  max-height: 100px
+}
+
+
+#country-list {
+  border: solid 4px darkgreen;
+  background-color: aquamarine;
+  border-radius: 6px;
+  padding: 5px;
+  width: 400px;
+  margin: 10px;
 }
 </style>
