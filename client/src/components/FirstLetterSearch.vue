@@ -24,6 +24,7 @@ export default {
 
 <style lang="css" scoped>
 
+
 #alphabet {
     color: black;
     border: 2px solid black;
@@ -31,8 +32,8 @@ export default {
     background: linear-gradient(180deg, rgba(234,250,254,1) 58%, rgb(33, 207, 220) 100%);
     border-radius: 3px;
     padding: 5px;
-    margin: 2px;
-   
+    margin: 2px;  
 }
+
 
 </style>

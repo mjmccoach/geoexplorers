@@ -25,8 +25,8 @@ li {
   cursor: pointer;
 }
 
-li:hover, h1:hover, a:hover {
+/* li:hover, h1:hover, a:hover {
   background-color: yellow;
 
-}
+} */
 </style>

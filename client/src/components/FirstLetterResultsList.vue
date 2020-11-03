@@ -1,7 +1,7 @@
 <template lang="html">
     <div id="filter-list">
         <ul class="scroll">
-            <first-letter-results-list-item
+            <first-letter-results-list-item id="highlight"
             v-for="(country, index) in countries" :country="country" :key="index"
             v-if="country.name.startsWith(selectedFirstLetter)"
             >
@@ -28,8 +28,10 @@ export default {
 
 ul {
     list-style: none;
-
 }
+
+
+
 .scroll {
   overflow-y: auto;
   list-style: none;
@@ -37,6 +39,9 @@ ul {
   max-height: 100px
 }
 
+#highlight:hover {
+  background-color: yellow;
+}
 
 #filter-list {
   border: solid 4px darkgreen;
