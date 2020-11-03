@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-03T15:51:28.325Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="yj1BwkR41drxn2ihQPgZ" version="13.8.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-03T16:05:05.785Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="ojmQ00UJhDdxp8ulRg3t" version="13.8.8" type="github">
   <diagram id="bNvZfeywgjpNPPodTFvU" name="Page-1">
-    <mxGraphModel dx="1426" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="570" dy="330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -96,7 +96,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-31" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="840" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-32" value="&lt;font color=&quot;#4d9900&quot;&gt;eventBus Emit Select Letter&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Finds countries which match the search parameter.&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [letter]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-32" value="&lt;font color=&quot;#4d9900&quot;&gt;eventBus Emit Select Letter&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Displays All Letters&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [letter]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="320" y="880" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-33" value="&lt;b&gt;Filters list of countries according to selected parameter&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [countries, selectedFirstLetter]&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [FirstLetterResultsListItem]&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
@@ -114,7 +114,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-37" value="FirstLetterResutsListItem" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="720" y="840" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-38" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Region&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [region]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Finds countries which match the search parameter.&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-38" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Region&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [region]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Displays All Regions&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1120" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-40" value="&lt;b&gt;Filters list of countries according to selected parameter&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [countries, selectedRegion]&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [RegionResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
@@ -132,13 +132,13 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-46" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="1080" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-47" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select SubRegion&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [subregion]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Finds countries which match the search parameter.&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-47" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select SubRegion&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [subregion]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Displays All SubRegions&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1360" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-48" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="1320" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-49" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Bloc&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [bloc]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Finds countries which match the search parameter.&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-49" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Bloc&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [bloc]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Displays all Blocs&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1600" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-50" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -195,7 +195,7 @@
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-67" value="BlocResultsListItem" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="720" y="1560" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="MGGLy1dyiqGOnvXCq7jh-68" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Language&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [language]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Finds countries which match the search parameter.&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+        <mxCell id="MGGLy1dyiqGOnvXCq7jh-68" value="&lt;span style=&quot;color: rgb(77 , 153 , 0)&quot;&gt;eventBus Emit Select Language&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [language]&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;b&gt;Displays all Languages&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="320" y="1840" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="MGGLy1dyiqGOnvXCq7jh-69" value="&lt;b&gt;Filters list of countries according to selected parameter&lt;/b&gt;&lt;span&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0000ff&quot;&gt;Props: [countries, selectedLanguage]&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#cc6600&quot;&gt;Components: [LanguageResultsListItem]&lt;/font&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
