@@ -172,12 +172,12 @@ export default {
 			for (let i=0; i<this.countries.length; i++) {
 				const country = this.countries[i]
 				if (country.languages.length !== 0) {
-					console.log(`The country is ${country.name} and the language bloc length is ${country.languages.length}.`)
+					// console.log(`The country is ${country.name} and the language bloc length is ${country.languages.length}.`)
 					objlangArray.push(this.countries[i].languages[0].name)
 				}
 			}
 			let distinctLangArray = [...new Set(objlangArray)];
-			console.log(distinctLangArray);
+			// console.log(distinctLangArray);
 			this.languages = distinctLangArray;
 		}
 	}
