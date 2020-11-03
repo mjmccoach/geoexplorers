@@ -8,24 +8,27 @@ v-if="dataReady"
 			<span>Countries starting with:</span>
 			<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :key="index"></first-letter-search>
 			<first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list>
-
-			<span>Countries By Continent:</span>
-			<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
-			<region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list>
-	
-			<span>Countries By Region:</span>
-			<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
-			<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list>
-
-			<!-- <span>Countries By Political/Economic Bloc:</span>
-			<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index"></bloc-search>
-			<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
-
-			<span>Countries By Language Spoken:</span>
-			<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
-			<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
-
 		</ul>
+		<div class="advanced-search">
+			<ul>
+				<!-- <li>Countries By Continent:</li>
+				<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
+				<region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list>
+		
+				<li>Countries By Region:</li>
+				<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
+				<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list> -->
+
+				<!-- <li>Countries By Political/Economic Bloc:</li>
+				<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="'bloc' + index"></bloc-search>
+				<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
+
+				<li>Countries By Language Spoken:</li>
+				<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
+				<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
+			</ul>
+		</div>
+		
     <input type="text" v-model="search" placeholder="Search Countries.."/>
 		<country-list :countries="filteredList"></country-list>
 		<svg-map :countries="countries"></svg-map>
