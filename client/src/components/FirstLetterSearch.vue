@@ -20,27 +20,24 @@ export default {
 
 <style lang="css" scoped>
 
-
-
 #alphabet {
     color: black;
-    font-family: itim;
-      font-size: 18px;
-
+    font-family: 'Varela Round';
+    font-size: 17px;
     border: 2px solid black;
     background: rgb(112, 206, 112);
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 5px;
     margin: 2px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition:0.9s ease-in-out;
 
+    box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 
 #alphabet:hover {
   background-color: yellow;
-  transition:0.9s;
+  cursor: pointer;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }
-
-
 
 </style>

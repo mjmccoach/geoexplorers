@@ -161,7 +161,7 @@ header{
 /* .navbar{
   color:white;
   font-size: 20px;
-  font-family: itim;
+    font-family: 'Varela Round';
   list-style: none;
 
 
@@ -220,7 +220,7 @@ header{
       color:rgba(0, 84, 42, 0.797);
 
       font-size: 20px;
-      font-family: itim;
+    font-family: 'Varela Round';
 
     }
     main >footer {

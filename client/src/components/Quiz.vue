@@ -256,7 +256,7 @@ $trans_duration: 0.3s;
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 body {
-    font-family: itim;
+    font-family: 'Varela Round';
     font-size: 14px;
     height: 100vh;
     /* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
@@ -274,7 +274,7 @@ body {
 }
 
 .subtitle {
-   font-family: itim;
+    font-family: 'Varela Round';
    font-weight: normal;
 }
 .animated {
@@ -301,8 +301,8 @@ body {
   display: flex;
 	border-radius: 0.5rem;
 	overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  font-family: itim;
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
+  font-family: 'Varela Round';
   border: solid 4px black;
 
 }	
@@ -316,7 +316,7 @@ body {
     
 .progress{
   background-color: hotpink;
-  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 
   }
 	
@@ -397,17 +397,19 @@ body {
     cursor: pointer;
     color: rgba(0,0,0,0.85);
     border:2px solid;
-    font-family: itim;
+    font-family: 'Varela Round';
     font-size: 25px;
-      transition:0.9s;
-    	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition:0.9s;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 
     }
 .is-selected{
   background-color:#ff4f5b;
 }
 .option:hover {
-    background-color:#f8ca00
+    background-color:#f8ca00;
+    box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+
     }
 
 .subtitle{
@@ -442,21 +444,24 @@ body {
 .pagination:hover {
     cursor: pointer;
     
+    
 }
 .button{
 	padding: 0.5rem 1rem;
 	border: 2px solid rgba(0,0,0,0.5);
 	border-radius: 5rem;
 	margin: 0 0.25rem;
-  transition:0.5s;
+  transition:0.9s ease-in-out;
   background-color:teal;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 
 }
 		
 .button:hover{
     cursor: pointer;
     background-color:#f8ca00;
+    box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+
 }
 .progress-container{
   background-color: teal;

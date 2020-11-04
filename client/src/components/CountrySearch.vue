@@ -220,7 +220,7 @@ export default {
 }
 
 .search-wrapper input {
-	font-family: itim;
+    font-family: 'Varela Round';
 	width: 400px;
 	background: rgb(112, 206, 112);
 	max-width: 400px;
@@ -236,12 +236,12 @@ export default {
 }
 
 .search-wrapper input:hover {
-	transition:0.8s;
+  transition:0.9s ease-in-out;
 	background-color: rgba(255, 255, 0, 0.667);
 }
 
 .search-wrapper input::-moz-selection {
-	transition:0.1s;
+  transition:0.9s ease-in-out;
 	background-color: rgba(255, 255, 0, 0.667);
 }
 

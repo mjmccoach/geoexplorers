@@ -1,11 +1,11 @@
 <template>
 <div id="app">
   <div class="random-country-wrapper">
-    <button v-on:click="picker()">Random Capital!</button>
+    <button v-on:click="picker()">Random Capital:</button>
     <span
     class="random-country-text"
-    v-if="randomCountry.capital">
-      The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>!
+    v-if="randomCountry">
+      The Capital city of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>!
       <!-- <img id="random-country-flag" :src="randomCountry.flag"/> -->
 
     </span>
@@ -34,15 +34,16 @@ export default {
 
 </script>
 
-<style scoped >
+<style scoped>
+
 body {
   width: 100%;
   min-height: 100vh;
-
-  font-family: itim;
+  font-family: 'Varela Round';
   font-size: 15px;
   color: #000;
 }
+
 #app {
   display: flex;
 	flex-wrap: wrap;
@@ -53,53 +54,51 @@ body {
 
 random-country-wrapper {
   display: flex;
-  align-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 680px;
-  
-
 }
 
 button {
+  align-self: flex-start;
   color:black;
-  margin-right: auto;
-  background-color:teal;
-  font-family: itim;
+  margin-right: 3px;
+  background: rgb(112, 206, 112);
+  font-family: 'Varela Round';
   cursor: pointer;
   font-size: 20px;
   box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
   padding: 10px 10px;
-  border-radius: 20px;
+  border-radius: 21px;
+  transition:0.9s ease-in-out;
+
   border: 4px solid black;
-  height: 70px;
-  width: 180px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 50px;
+  width: 250px;
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 
 button:hover {
-    transition:0.8s;
     background-color: yellow;
+    box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }
 
-span {
-  font-family: itim;
+.random-country-text {
+  font-family: 'Varela Round';
   font-size: 20px;
   align-self: center;
   color:black;
   height: 50px;
-  min-width: 500px;
-  margin-left: auto;
+  width: 550px;
 }
 
 #random-country-flag {
   align-self: flex-end;
-  height: 70px;
+  height: 80px;
   /* width: 100px; */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 /* button {
   border: none;

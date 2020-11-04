@@ -21,31 +21,38 @@ export default {
 </script>
 
 <style scoped>
+
 .border-box{
-  font-family: itim;
+  font-family: 'Varela Round';
   font-size: 18px;
   cursor: pointer;
   color: black;
   border: 2px solid black;
-  border-radius: 3px;
+  border-radius: 5px;
   background: rgb(112, 206, 112);
   margin: 11px;
   padding: 4px;
-  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition:0.9s ease-in-out;
+
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 
-.border-box:hover {
-  transition:0.9s;
+.border-box:hover #country-flag{
   background-color: yellow;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }
 
 .border-box img{
 display:inline-block;
 vertical-align: middle;
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-
+box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
+
+/* .border-box img:hover {
+  transition:0.9s ease-in-out;
+  background-color: yellow;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+} */
 
 #country-flag {
   border: solid 0.5px black;

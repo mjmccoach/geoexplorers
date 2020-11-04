@@ -43,8 +43,7 @@ export default {
   margin-block-start: 0;
 	margin-block-end: 0;
   padding-inline-start: 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-  
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
+
 </style>

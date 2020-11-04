@@ -30,15 +30,10 @@ span{
   margin-right: 15px;
 }
 
-button:hover {
-  background-color: yellow;
-  transition:0.9s;
-}
-
 button {
   height: 40px;
   width: auto;
-  font-family: itim;
+  font-family: 'Varela Round';
   font-size: 18px;
   cursor: pointer;
   color: black;
@@ -47,14 +42,22 @@ button {
   background: rgb(112, 206, 112);
   margin: 11px;
   padding: 4px;
-  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition:0.9s ease-in-out;
+
+  border-radius: 8px;
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 
+button:hover {
+  background-color: yellow;
+  transition:0.9s ease-in-out;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+}
 
 #bordering-country-flag {
   border: 1px black solid;
   width: 30px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 
 }
 
