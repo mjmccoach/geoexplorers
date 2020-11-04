@@ -1,20 +1,19 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
-      <div class="dummy-div"></div>
-      <h1 class="title">GeoExplorers</h1> 
+      <div class="intro-title-container">
+        <div class="dummy-div"></div>
+        <h1 class="intro-title">Welcome <span id="geoexplorer-text">GeoExplorers!</span></h1>
+        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
+      </div>
       <random-country :countryInfo="countryInfo"></random-country>
     </header>
 
-    <div class="page-intro">
-      <div class="intro-title-container">
-        <h3 class="intro-title">Welcome <span id="geoexplorer-text">GeoExplorers!</span></h3>
-        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
-      </div>
+    <article class="page-intro">
       <div>
-        <p class="intro-text">Are you ready to explore? Click and zoom on the map below or use the search fields to find a country 🔎</p>
+        <p class="intro-text">Are you ready to <strong>explore</strong>? Click and zoom on the map below or use the search fields to find a country 🔎</p>
       </div>
-    </div>
+    </article>
 
     <section class="main-container">
       
@@ -27,7 +26,7 @@
 
     </section>
 
-    <footer>
+    <footer >
       <h1 class="copyright">Brought to you by &#169 <span class="logo">MAAAD EDUCATION</span></h1>
     </footer>
 
@@ -108,23 +107,23 @@ header {
   background-color: none;
   background: none;
   align-items: center;
-  padding: 25px;
+  padding: 80px 25px 25px 25px;
   margin: 0;
 }
 
-.dummy-div {
-  width: 200px;
-}
-
-header > h1 {
+header h1 {
   color:white;
   font-size: 50px;
   font-family: lemon;
 }
 
+.dummy-div {
+  width: 300px;
+}
+
 .page-intro {
   background-color: teal;
-  padding-top: 120px;
+  /* padding-top: 120px; */
   width: 70vw;
   margin: auto;
   border: 4px solid black;
@@ -135,12 +134,6 @@ header > h1 {
   display: flex;
   flex-direction: row nowrap;
   justify-content: center;
-}
-
-.intro-title {
-  font-size: 40px;
-  font-family: lemon;
-  color: white;
 }
 
 .intro-text {

@@ -1,5 +1,5 @@
 <template>
-  <li class="border-box" v-if="country" v-on:click="handleClick">
+  <li class="border-box" v-if="country" v-on:click="handleClick" v-scroll-to="'#svg-map-box'">
       <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name">
       {{ country.name }}
   </li>
@@ -21,7 +21,8 @@ export default {
 </script>
 
 <style scoped>
-.border-box{
+
+.border-box {
   cursor: pointer;
   color: black;
   border: 2px solid black;
@@ -34,7 +35,6 @@ export default {
 .border-box img{
 display:inline-block;
 vertical-align: middle;
-
 }
 
 #country-flag {
@@ -44,12 +44,6 @@ vertical-align: middle;
   width: 30px;
   object-fit: cover;
 }
-/* li:hover, h1:hover, a:hover {
-  background-color: yellow;
-
-} */
-
-
 
 .border-box:hover {
   background-color: yellow;
