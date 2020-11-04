@@ -282,8 +282,8 @@ body {
 }
 
 .container{
-  margin: 0 0.5rem;
-  width: 49%;
+  margin: 10px 0px 0px 10px
+  
     
 }
 
