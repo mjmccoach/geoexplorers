@@ -1,6 +1,6 @@
 <template>
-<section id="country-detail">
-  <article v-if="country">
+<section id="country-detail-container" v-if="country">
+  <article id="country-detail">
     
     <!-- // BASIC INFO -->
     <h1>{{ country.name }}</h1>
@@ -112,6 +112,10 @@ export default {
   color: red;
 }
 
+#country-detail-container {
+  width: 49%;
+}
+
 #country-detail {
   border: solid 4px darkgreen;
   background: rgb(255,215,6);
@@ -120,7 +124,7 @@ export default {
   height: max-content;
   margin: 10px;
   padding: 5px;
-  width: 800px
+  width: 700px;
 }
 
 #country-flag {
@@ -151,5 +155,3 @@ button {
   font-family: itim;
 }
 </style>
-
-//  

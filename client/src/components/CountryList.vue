@@ -1,7 +1,9 @@
 <template>
+  <div class="country-list-wrapper">
     <ul class="scroll" id="country-list">
       <country-list-item v-for="(country, index) in countries" :country="country" :key="index"></country-list-item>
     </ul>
+  </div>  
 </template>
 
 <script>
@@ -24,10 +26,14 @@ export default {
 </script>
 
 <style scoped>
+.country-list-wrapper {
+  width: 49%;
+}
+
 .scroll {
   overflow-y: auto;
   list-style: none;
-  max-height: 100px
+  max-height: 100px;
 }
 
 #country-list {

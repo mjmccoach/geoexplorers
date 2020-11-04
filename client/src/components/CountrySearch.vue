@@ -1,6 +1,6 @@
 <template>	
   <div class="search-wrapper" id="app" v-if="dataReady">
-		<div>
+		<div class="search-box-alpha-container">
 			<input type="text" v-model="search" v-on:keyup="resetSelectedCountry" placeholder="Search or select first letter..." />
 			<ul id="alphabet-list">
 				<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :countries="countries" :key="index"></first-letter-search>
@@ -198,6 +198,7 @@ export default {
 .search-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
 	
 }
 #alphabet-list {
@@ -215,9 +216,7 @@ export default {
 	border: 4px solid black;
 	background: teal;
 	border-radius: 8px;
-
 }
-
 
 .search-wrapper input {
 	font-family: inherit;
@@ -229,6 +228,10 @@ export default {
 	font-size: 1.2rem;
 	padding: 7px;
 	margin:10px;
+}
+
+.search-box-alpha-container {
+	width: 49%;
 }
 </style>
 ​

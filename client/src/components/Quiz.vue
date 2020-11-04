@@ -2,9 +2,9 @@
 
 <!--container-->
 <section class="container">
-    <button @click="showQuiz">
+    <!-- <button @click="showQuiz">
         Play Quiz!
-      </button>
+      </button> -->
 	<!--questionBox-->
 	<div class="questionBox" id="quiz">
 
@@ -281,7 +281,8 @@ body {
 }
 
 .container{
-	margin: 0 0.5rem;
+  margin: 0 0.5rem;
+  width: 49%;
     
 }
 
