@@ -405,6 +405,8 @@ body {
     }
 .is-selected{
   background-color:#ff4f5b;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+
 }
 .option:hover {
     background-color:#f8ca00;
@@ -421,6 +423,8 @@ body {
 }
 .option::selection {
     background-color: #00E676;
+    box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+
     }
 
 .questionFooter {
@@ -468,6 +472,8 @@ body {
 }
 .is-selected{
   background-color: #ff4f5b;
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+
 }
 .subtitle{
   font-size: 50px;

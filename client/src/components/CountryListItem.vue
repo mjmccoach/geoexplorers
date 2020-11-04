@@ -60,6 +60,8 @@ box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
   height: 20px;
   width: 30px;
   object-fit: cover;
+  transition:0.9s ease-in-out;
+
 }
 /* li:hover, h1:hover, a:hover {
   background-color: yellow;

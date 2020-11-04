@@ -136,7 +136,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   border: solid 2px black;
-  box-shadow: 3px 3px 13px 3px rgba(0, 0, 0, 0.667);
+  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }
 
 h1 {
