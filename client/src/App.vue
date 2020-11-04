@@ -143,6 +143,8 @@ header{
   flex-wrap: nowrap;
   justify-content: center;
   margin-top: 80px;
+  border-bottom:0;
+  background-color: teal;
 }
 /* main > header {
   display: grid;
