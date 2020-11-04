@@ -16,11 +16,12 @@
           
         </ul>
       </nav> -->
+      <li><random-country :countryInfo="countryInfo">
+        </random-country></li>
     </header>
 
     <section class="main-container">
-      <li><random-country :countryInfo="countryInfo">
-        </random-country></li>
+      
     
       <country-search
       :countries="countryInfo" 
