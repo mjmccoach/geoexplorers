@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <button v-on:click="picker()">Random Country!</button>
+  <button v-on:click="picker()">Random Capital!</button>
    <p v-if="randomCountry">The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>! 
      <span><img id="country-flag" :src="randomCountry.flag" width="40"/></span>
       </p>

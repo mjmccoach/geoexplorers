@@ -16,8 +16,8 @@
           
         </ul>
       </nav> -->
-      <li><random-country :countryInfo="countryInfo">
-        </random-country></li>
+      <random-country :countryInfo="countryInfo">
+        </random-country>
     </header>
 
     <section class="main-container">
@@ -115,7 +115,6 @@ export default {
   border-radius: 8px; */
 }
 .title {
-  flex-grow:1;
   color:white;
   font-size: 60px;
   font-family: lemon;
