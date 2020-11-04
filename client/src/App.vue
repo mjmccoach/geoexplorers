@@ -1,18 +1,18 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
+      <div class="dummy-div"></div>
       <h1 class="title">GeoExplorers</h1> 
       <random-country :countryInfo="countryInfo"></random-country>
     </header>
 
     <div class="page-intro">
-
       <div class="intro-title-container">
         <h3 class="intro-title">Welcome <span id="geoexplorer-text">GeoExplorers!</span></h3>
         <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
       <div>
-        <p class="intro-text">Are you ready to explore? Click and zoom on the map below or use the search fields to find a country.</p>
+        <p class="intro-text">Are you ready to explore? Click and zoom on the map below or use the search fields to find a country 🔎</p>
       </div>
     </div>
 
@@ -27,8 +27,8 @@
 
     </section>
 
-    <footer class = "footer">
-      <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
+    <footer>
+      <h1 class="copyright">Brought to you by &#169 <span class="logo">MAAAD EDUCATION</span></h1>
     </footer>
 
   </main>
@@ -101,13 +101,19 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 header {
-  display:flex;
-  margin: 2px;
+  display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom:0;
   background-color: none;
   background: none;
+  align-items: center;
+  padding: 25px;
+  margin: 0;
+}
+
+.dummy-div {
+  width: 200px;
 }
 
 header > h1 {
@@ -127,18 +133,19 @@ header > h1 {
 
 .intro-title-container {
   display: flex;
-}
-
-.intro-title, .intro-text  {
-  font-family: 'Varela Round';
-  color: white;
+  flex-direction: row nowrap;
+  justify-content: center;
 }
 
 .intro-title {
-  
+  font-size: 40px;
+  font-family: lemon;
+  color: white;
 }
 
 .intro-text {
+  color: white;
+  font-family: 'Varela Round';
   font-size: 30px;
   text-align: center;
   padding: 0 20px 0 20px;
@@ -153,8 +160,7 @@ header > h1 {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   height: 140px;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
+  transform-origin: top;
   width: 140px;
 }
 
@@ -187,7 +193,12 @@ footer {
 
 .copyright{
   color:white;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: 'Varela Round';
+}
+
+.logo {
+  font-size: 24px;
   font-family: itim;
 }
 
