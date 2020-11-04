@@ -1,9 +1,6 @@
 <template lang="html">
     <div>
-        <li
-        v-on:click='handleRegionSelectClick'
-        v-if="region"
-        >
+        <li v-on:click='handleRegionSelection'>
             <span id="regions">
                 {{ region }}
             </span>
@@ -18,7 +15,7 @@ export default {
     name: 'region-search',
     props: ['region'],
     methods: {
-        handleRegionSelectClick() {
+        handleRegionSelection() {
             eventBus.$emit('region-selected', this.region)
         }
     }
@@ -26,9 +23,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
-.testing {
-    color: red;
-}
 
 </style>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <main>
+  <main v-if="appDataReady">
     <header>
       <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
 
@@ -35,7 +35,6 @@
 
 <script>
 import { eventBus } from "./main.js";
-import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
@@ -45,13 +44,17 @@ export default {
   name: "app",
   data() {
     return {
+      appDataReady: false,
+      appBanana: "",
       countryInfo: [],
       selectedCountry: null,
       borderingCountries: [],
     };
   },
-  mounted() {
-    this.fetchCountryInfo();
+  async mounted() {
+    await this.fetchCountryInfo();
+    this.fetchAppBanana();
+    this.appDataReady = true;
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country;
@@ -78,6 +81,9 @@ export default {
         return this.selectedCountry.borders.includes(country.alpha3Code)
     })
     },
+    fetchAppBanana: function () {
+      this.appBanana = "Banana"
+    }
   },
   components: {
     
