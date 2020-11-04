@@ -22,6 +22,7 @@
     >
     </country-search>
     </section>
+    <quiz></quiz>
   </main>
 </template>
 
@@ -31,6 +32,7 @@ import Promises from "./components/Promises";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
+import Quiz from "./components/Quiz";
 
 
 export default {
@@ -75,6 +77,7 @@ export default {
     
     'country-search': CountrySearch,
     'random-country':RandomCountry,
+    'quiz' : Quiz,
   }
 };
 </script>
