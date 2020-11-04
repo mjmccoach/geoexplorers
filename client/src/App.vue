@@ -113,7 +113,7 @@ export default {
   border-radius: 8px; */
 }
 .title {
-  
+  display:inline-flexbox;
   color:white;
   font-size: 60px;
   font-family: lemon;
@@ -136,9 +136,9 @@ export default {
 } */
 .header{
   display:flex;
-  margin: 5px;
+  margin: 2px;
   flex-wrap: nowrap;
-  justify-content: center;
+
 }
 main > header {
   display: grid;
@@ -166,6 +166,8 @@ main > header {
         display: flex;
         height: 275px;
         width: 100%;
+        justify-content: flex-end;
+        
 }
 
 .globe {

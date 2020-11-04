@@ -385,12 +385,15 @@ body {
     margin-bottom: 12px;
     transition: $trans_duration;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
     color: rgba(0,0,0,0.85);
-    border: transparent 1px solid;
+    border:1px solid;
     font-family: itim;
     font-size: 25px;
     }
+.is-selected{
+  background-color:#ff4f5b;
+}
 .option:hover {
     background-color:#f8ca00
     }
@@ -441,7 +444,9 @@ body {
 .progress-container{
   background-color: teal;
 }
-
+.subtitle{
+  font-size: 50px;
+}
 
 
 </style>
