@@ -104,12 +104,12 @@ export default {
 			};
 		}
 	},
-	mounted() {
+	async mounted() {
 		// These method calls are greyed out to have arrays be reliably populated until styling is complete.
-		// this.getAllRegions();
-		// this.getAllSubRegions();
-		// this.getAllBlocs();
-		// this.getAllLanguages();
+		// await this.getAllRegions();
+		// await this.getAllSubRegions();
+		// await this.getAllBlocs();
+		// await this.getAllLanguages();
 
 		this.bananaCheck();
 		this.dataReady = true;

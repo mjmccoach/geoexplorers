@@ -55,6 +55,7 @@ export default {
   },
   async mounted() {
     await this.fetchCountryInfo();
+    
     this.fetchAppBanana();
     this.appDataReady = true;
 
@@ -76,6 +77,8 @@ export default {
         .then(()=>{
           var chosenNumber = Math.floor(Math.random() * this.countryInfo.length);
           this.selectedCountry = this.countryInfo[chosenNumber];
+          this.borderingCountries = this.findBorderingCountries();
+
         })
     },
     findBorderingCountries: function () {
