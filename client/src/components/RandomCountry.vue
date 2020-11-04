@@ -1,9 +1,9 @@
 <template>
 <div id="app">
-  <p v-if="randomCountry">The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>! 
+  <button v-on:click="picker()">Random Country!</button>
+   <p v-if="randomCountry">The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>! 
      <span><img id="country-flag" :src="randomCountry.flag" width="40"/></span>
       </p>
-  <button v-on:click="picker()">Random Country!</button>
 </div>
 </template>
 
@@ -38,13 +38,14 @@ body {
   color: #000;
 }
 #app {
-  min-width: 200px;
+  /* min-width: 200px;
   height: 100px;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
+  border-radius: 10px;*/
+  /* box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5); */
+
 }
 p {
-  font-size: 10px;
+  font-size: 20px;
   color:white;
 }
 /* button {
@@ -60,12 +61,16 @@ p {
 } */
 
 button {
-  color: yellow;
+  color:white;
   margin-right: 3px;
-  background-color: darkblue;
+  background-color: rgb(44, 159, 235);
   font-family: itim;
   cursor: pointer;
   font-size: 20px;
+  box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
+  padding: 10px 10px;
+  border-radius: 5px;
+
 }
 
 </style>

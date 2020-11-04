@@ -3,7 +3,7 @@
         <ul class="scroll">
             <first-letter-results-list-item id="highlight"
             v-for="(country, index) in countries" :country="country" :key="index"
-            v-if="country.name.startsWith(selectedFirstLetter)"
+            v-if="country.name.startsWith(selectedLetter)"
             >
             </first-letter-results-list-item>    
         </ul>
@@ -17,7 +17,7 @@ import FirstLetterResultsListItem from "./FirstLetterResultsListItem.vue";
 
 export default {
     name: 'first-letter-results-list',
-    props: ['countries', 'selectedFirstLetter'],
+    props: ['countries', 'selectedLetter'],
     components: {
         "first-letter-results-list-item": FirstLetterResultsListItem,
     },
