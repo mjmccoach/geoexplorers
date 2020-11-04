@@ -108,11 +108,9 @@ export default {
 
 .main-container {
   font-family: 'Varela Round';
-  display: flex;
-  justify-content: center;
   padding: 10px;
-  /* border: solid 4px black;
-  border-radius: 8px; */
+  max-width: 90%;
+  margin: auto;
 }
 .title {
   color:white;
