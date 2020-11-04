@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="svg-map-box">
     <div class="map-country-name" >  
       <span v-if="!selectedCountry">The World Map</span>
       <span v-if="selectedCountry">Selected Country: {{ selectedCountry.name }} </span>

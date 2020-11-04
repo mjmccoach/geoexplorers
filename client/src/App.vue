@@ -1,22 +1,27 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
-      <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
+      <!-- <section class = 'header'> -->
+      <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
 
       <div class="stage">
-      <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
+        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
+      <!-- </section> -->
 
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <ul>
           <li>About</li>
           <li>Quiz</li>
-          <li><random-country :countryInfo="countryInfo">
-        </random-country></li>
+          
         </ul>
-      </nav>
+      </nav> -->
+      <random-country :countryInfo="countryInfo">
+        </random-country>
     </header>
+
     <section class="main-container">
+      
     
       <country-search
       :countries="countryInfo" 
@@ -24,8 +29,8 @@
       :borderingCountries="borderingCountries"
       >
       </country-search>
+
     </section>
-    <quiz></quiz>
 
     <footer class = "footer">
       <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
@@ -39,8 +44,6 @@ import { eventBus } from "./main.js";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
-import Quiz from "./components/Quiz";
-
 
 export default {
   name: "app",
@@ -91,18 +94,20 @@ export default {
     }
   },
   components: {
-    
     'country-search': CountrySearch,
     'random-country':RandomCountry,
-    'quiz' : Quiz,
   }
 };
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
 .main-container {
-  font-family: itim;
+  font-family: 'Varela Round';
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -110,11 +115,11 @@ export default {
   border-radius: 8px; */
 }
 .title {
-  text-align: center;
   color:white;
-  font-size: 70px;
-  font-family: itim;
-
+  font-size: 60px;
+  font-family: lemon;
+  margin-right:2px;
+  padding-right: 5px
 }
 .globeimage {
   height: 150px; 
@@ -124,28 +129,38 @@ export default {
   margin-right: auto;
   width: 50%;
 }
-.navbar{
+/* .navbar{
   color:white;
   font-size: 20px;
   font-family: itim;
   list-style: none;
 
 
+} */
+header{
+  display:flex;
+  margin: 2px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 80px;
+  border-bottom:0;
+  background-color: teal;
 }
-main > header {
+/* main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-direction: column;
-  word-spacing: normal;
+  max-height: 20vh;
+} */
+  /* flex-direction: column; */
+  /* word-spacing: normal;
 
-}
-main > header > nav > ul > li {
+/* main > header > nav > ul > li {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; */
   /* justify-content: end;
   margin: 0; */
-}
+/* } */
 /* main >header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,18 +170,16 @@ main > header > nav > ul > li {
 .stage {
         /* border-bottom: 3px solid rgb(21, 143, 51); */
         display: flex;
-        height: 330px;
-        width: 100%;
 }
 
 .globe {
-        align-self: flex-end;
+        /* align-self: flex-end; */
         animation-duration: 2s;
         animation-iteration-count: infinite;
-        height: 200px;
+        height: 140px;
         margin: 0 auto 0 auto;
         transform-origin: bottom;
-        width: 200px;
+        width: 140px;
     }
     .bounce-7 {
         animation-name: bounce-7;
@@ -187,6 +200,10 @@ main > header > nav > ul > li {
       font-size: 20px;
       font-family: itim;
 
+    }
+    main >footer {
+      text-align: center;
+      font-size: 40px;
     }
 
 </style>

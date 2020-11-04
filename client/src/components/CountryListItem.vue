@@ -1,7 +1,7 @@
 <template>
-  <li v-if="country" v-on:click="handleClick">
-    <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
-    <span>{{ country.name }}</span>
+  <li class="border-box" v-if="country" v-on:click="handleClick">
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name">
+      {{ country.name }}
   </li>
 </template>
 
@@ -20,16 +20,38 @@ export default {
 };
 </script>
 
-<style>
-li {
+<style scoped>
+.border-box{
   cursor: pointer;
+  color: black;
+  border: 2px solid black;
+  border-radius: 3px;
+  background: rgb(112, 206, 112);
+  margin: 11px;
+  padding: 4px;
+}
+
+.border-box img{
+display:inline-block;
+vertical-align: middle;
+
 }
 
 #country-flag {
-  border: solid 1px black
+  border: solid 0.5px black;
+  margin-right: 10px;
+  height: 20px;
+  width: 30px;
+  object-fit: cover;
 }
 /* li:hover, h1:hover, a:hover {
   background-color: yellow;
 
 } */
+
+
+
+.border-box:hover {
+  background-color: yellow;
+}
 </style>

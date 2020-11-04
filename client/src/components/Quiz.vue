@@ -2,9 +2,9 @@
 
 <!--container-->
 <section class="container">
-    <button @click="showQuiz">
+    <!-- <button @click="showQuiz">
         Play Quiz!
-      </button>
+      </button> -->
 	<!--questionBox-->
 	<div class="questionBox" id="quiz">
 
@@ -152,7 +152,7 @@
                 "What is the capital of Poland?",
               responses: [
                 { text: "Wrocław", correct: true },
-                { text: "Education" },
+                { text: "Gdansk" },
                 { text: "Krakow" },
                 { text: "Łódź" }
               ]
@@ -230,15 +230,15 @@
         },
         // Return "true" count in userResponses
         score: function() {
-          let dorkfest = 0;
+          let score = 0;
           for (let i = 0; i < this.userResponses.length; i++) {
               if (
                 typeof this.quiz.questions[i].responses[this.userResponses[i]] !== "undefined" 
                 && this.quiz.questions[i].responses[this.userResponses[i]].correct
               ) 
-              {dorkfest = dorkfest + 1;}
+              {score = score + 1;}
           }
-          return dorkfest;
+          return score;
 
          //return this.userResponses.filter(function(val) { return val }).length;
       }
@@ -253,12 +253,13 @@ $trans_duration: 0.3s;
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: itim;
     font-size: 14px;
     height: 100vh;
-    background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%);
+    /* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
     /* mocking native UI */
     cursor: default !important; /* remove text selection cursor */
     user-select: none; /* remove text selection */
@@ -273,7 +274,7 @@ body {
 }
 
 .subtitle {
-   font-family: Montserrat, sans-serif;
+   font-family: itim;
    font-weight: normal;
 }
 .animated {
@@ -281,7 +282,8 @@ body {
 }
 
 .container{
-	margin: 0 0.5rem;
+  margin: 10px 0px 0px 10px
+  
     
 }
 
@@ -291,14 +293,16 @@ body {
 	
 	max-width: 30rem;
 	width: 30rem;
-	min-height: 30rem;
-	background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%);
-    position: relative;
-    display: flex;
+  min-height: 30rem;
+  background: rgb(112, 206, 112);
+	/* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
+  position: relative;
+  display: flex;
 	border-radius: 0.5rem;
 	overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    font-family: Montserrat, sans-serif;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-family: itim;
+  border: solid 4px black;
 
 }	
     /* this header is for the above question box */
@@ -306,9 +310,12 @@ body {
 		background:rgba(0,0,0,0.025);
 		padding: 1.5rem;
 		text-align: center;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 5px solid rgba(0,0,0,0.1);
     }
-		
+    
+.progress{
+  background-color: hotpink;
+  }
 	
 	/* .progressContainer {
        width: 60%;
@@ -340,6 +347,7 @@ body {
 .field-label {
     text-align: left;
     margin-bottom: 0.5rem;
+  
          }
       
 .quizCompleted {
@@ -355,7 +363,7 @@ body {
     }
 			 
 .is-active{
-	color: #00E676;
+	color:yellow;
 		}
 
 .questionContainer {
@@ -368,6 +376,7 @@ body {
 .optionContainer {
     margin-top: 12px;
     flex-grow: 1;
+    
   }
 .option {
     border-radius: 290486px;
@@ -376,14 +385,21 @@ body {
     margin-bottom: 12px;
     transition: $trans_duration;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
     color: rgba(0,0,0,0.85);
-    border: transparent 1px solid;
-    font-family: "Montserrat", sans-serif;
+    border:1px solid;
+    font-family: itim;
+    font-size: 25px;
     }
+.is-selected{
+  background-color:#ff4f5b;
+}
 .option:hover {
-    background-color:#00E676
+    background-color:#f8ca00
     }
+
+.subtitle{
+  font-size: 50px;
+}
 
 .option:active {
     background-color:#00E676
@@ -391,9 +407,6 @@ body {
 .option::selection {
     background-color: #00E676;
     }
-
-    
-      
 
 .questionFooter {
     background:rgba(0,0,0,0.025);
@@ -410,7 +423,8 @@ body {
 
 .pagination{
 	display: flex;
-	justify-content: space-between;
+  justify-content: space-between;
+  
 }
 
 .pagination:hover {
@@ -422,13 +436,23 @@ body {
 	border: 1px solid rgba(0,0,0,0.25);
 	border-radius: 5rem;
 	margin: 0 0.25rem;
-	transition:0.3s;
+  transition:0.3s;
+  background-color:teal;
 }
 		
 .button:hover{
     cursor: pointer;
+    background-color:#f8ca00;
 }
-
+.progress-container{
+  background-color: teal;
+}
+.is-selected{
+  background-color: #ff4f5b;
+}
+.subtitle{
+  font-size: 50px;
+}
 
 
 </style>

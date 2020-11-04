@@ -1,6 +1,6 @@
 <template>
-<section id="country-detail">
-  <article v-if="country">
+<section id="country-detail-container" v-if="country">
+  <article id="country-detail">
     
     <!-- // BASIC INFO -->
     <h1>{{ country.name }}</h1>
@@ -112,15 +112,18 @@ export default {
   color: red;
 }
 
+/* #country-detail-container {
+} */
+
 #country-detail {
-  border: solid 4px darkgreen;
-  background: rgb(255,215,6);
-  background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);  
+  border: solid 4px black;
+  background: #f8ca00;
+  /* background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);   */
   border-radius: 10px;
   height: max-content;
-  margin: 10px;
+  margin: 10px 10px 0px 0px;
   padding: 5px;
-  width: 800px
+  width: 680px;
 }
 
 #country-flag {
@@ -147,9 +150,8 @@ h1 {
 button {
   color: yellow;
   margin-right: 3px;
-  background-color: darkblue;
+  background-color: teal;
   font-family: itim;
+  border: solid 3px black;
 }
 </style>
-
-//  

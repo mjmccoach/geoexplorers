@@ -34,7 +34,7 @@
 .map-country-name {
   width: 1200px;
   height: 20px;
-  background: yellow;
+  background:#f8ca00;
   margin: 1px;
   padding: 0;
   border: 4px solid black; 
@@ -45,3 +45,4 @@
 .map-country-name > span {
   margin: 0;
 }
+
