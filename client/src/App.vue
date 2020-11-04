@@ -1,28 +1,23 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
-      <!-- <section class = 'header'> -->
-      <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
+      <h1 class="title">GeoExplorers</h1> 
+      <random-country :countryInfo="countryInfo"></random-country>
+    </header>
 
-      <div class="stage">
+    <div class="page-intro">
+
+      <div class="intro-title-container">
+        <h3 class="intro-title">Welcome <span id="geoexplorer-text">GeoExplorers!</span></h3>
         <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
-      <!-- </section> -->
-
-      <!-- <nav class="navbar">
-        <ul>
-          <li>About</li>
-          <li>Quiz</li>
-          
-        </ul>
-      </nav> -->
-      <random-country :countryInfo="countryInfo">
-        </random-country>
-    </header>
+      <div>
+        <p class="intro-text">Are you ready to explore? Click and zoom on the map below or use the search fields to find a country.</p>
+      </div>
+    </div>
 
     <section class="main-container">
       
-    
       <country-search
       :countries="countryInfo" 
       :country="selectedCountry" 
@@ -105,6 +100,78 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+header {
+  display:flex;
+  margin: 2px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-bottom:0;
+  background-color: none;
+  background: none;
+}
+
+header > h1 {
+  color:white;
+  font-size: 50px;
+  font-family: lemon;
+}
+
+.page-intro {
+  background-color: teal;
+  padding-top: 120px;
+  width: 70vw;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+.intro-title-container {
+  display: flex;
+}
+
+.intro-title, .intro-text  {
+  font-family: 'Varela Round';
+  color: white;
+}
+
+.intro-title {
+  
+}
+
+.intro-text {
+  font-size: 30px;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+#geoexplorer-text {
+  font-family: lemon;
+  color: white;
+}
+
+.globe {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 140px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 140px;
+}
+
+.bounce-7 {
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}
 
 .main-container {
   font-family: 'Varela Round';
@@ -112,38 +179,18 @@ export default {
   max-width: 90%;
   margin: auto;
 }
-.title {
-  color:white;
-  font-size: 60px;
-  font-family: lemon;
-  margin-right:2px;
-  padding-right: 5px
+
+footer {
+  text-align: center;
+  font-size: 40px;
 }
-.globeimage {
-  height: 150px; 
-  width:150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-/* .navbar{
+
+.copyright{
   color:white;
   font-size: 20px;
   font-family: itim;
-  list-style: none;
-
-
-} */
-header{
-  display:flex;
-  margin: 2px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 80px;
-  border-bottom:0;
-  background-color: teal;
 }
+
 /* main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,43 +212,24 @@ header{
   flex-direction: column;
   word-spacing: normal;
 } */
-.stage {
+/* .stage { */
         /* border-bottom: 3px solid rgb(21, 143, 51); */
-        display: flex;
-}
+        /* display: flex; */
+/* } */
+/* .navbar{
+  color:white;
+  font-size: 20px;
+  font-family: itim;
+  list-style: none;
 
-.globe {
-        /* align-self: flex-end; */
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        height: 140px;
-        margin: 0 auto 0 auto;
-        transform-origin: bottom;
-        width: 140px;
-    }
-    .bounce-7 {
-        animation-name: bounce-7;
-        animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-    }
-    @keyframes bounce-7 {
-        0%   { transform: scale(1,1)      translateY(0); }
-        10%  { transform: scale(1.1,.9)   translateY(0); }
-        30%  { transform: scale(.9,1.1)   translateY(-100px); }
-        50%  { transform: scale(1.05,.95) translateY(0); }
-        57%  { transform: scale(1,1)      translateY(-7px); }
-        64%  { transform: scale(1,1)      translateY(0); }
-        100% { transform: scale(1,1)      translateY(0); }
-    }
 
-    .copyright{
-      color:white;
-      font-size: 20px;
-      font-family: itim;
-
-    }
-    main >footer {
-      text-align: center;
-      font-size: 40px;
-    }
-
+} */
+/* .globeimage {
+  height: 55px; 
+  width: 55px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
 </style>

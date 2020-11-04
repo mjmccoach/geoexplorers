@@ -33,7 +33,7 @@ export default {
 #country-list {
   border: solid 4px black;
   background-color:teal;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0px;
   margin: 0 0 20px 0;
   width: 400px;
@@ -43,6 +43,5 @@ export default {
   margin-block-start: 0;
 	margin-block-end: 0;
 	padding-inline-start: 0;
-  
 }
 </style>
