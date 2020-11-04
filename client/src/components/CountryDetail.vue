@@ -71,7 +71,7 @@
       {{ country.name }} does not have land borders with any other countries.
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
-    &#128187;<a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
+    &#128187; <a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
 
     
   </article>
