@@ -241,6 +241,7 @@ export default {
 	border: 4px solid black;
 	background: teal;
 	border-radius: 8px;
+	height: 200px;
 }
 </style>
 ​

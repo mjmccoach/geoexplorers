@@ -1,6 +1,6 @@
 <template>
   <li class="border-box" v-if="country" v-on:click="handleClick">
-      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/>
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name">
       {{ country.name }}
   </li>
 </template>
@@ -25,13 +25,23 @@ export default {
   cursor: pointer;
   color: black;
   border: 2px solid black;
+  border-radius: 3px;
   background: rgb(112, 206, 112);
-  margin-right:10px;
-  margin-bottom:10px;
+  margin: 11px;
 }
+
+.border-box img{
+display:inline-block;
+vertical-align: middle;
+
+}
+
 #country-flag {
-  border: solid 1px black;
+  border: solid 0.5px black;
   margin-right: 10px;
+  height: 20px;
+  width: 30px;
+  object-fit: cover;
 }
 /* li:hover, h1:hover, a:hover {
   background-color: yellow;
