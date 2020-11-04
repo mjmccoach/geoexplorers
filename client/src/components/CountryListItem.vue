@@ -1,7 +1,7 @@
 <template>
   <li v-if="country" v-on:click="handleClick">
-    <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
-    <span>{{ country.name }}</span>
+      <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/>
+      {{ country.name }}
   </li>
 </template>
 

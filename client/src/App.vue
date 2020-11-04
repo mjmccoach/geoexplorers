@@ -28,8 +28,7 @@
       :borderingCountries="borderingCountries"
       >
       </country-search>
-      <quiz></quiz>
-      
+
     </section>
 
     <footer class = "footer">
@@ -44,8 +43,6 @@ import { eventBus } from "./main.js";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
-import Quiz from "./components/Quiz";
-
 
 export default {
   name: "app",
@@ -93,10 +90,8 @@ export default {
     }
   },
   components: {
-    
     'country-search': CountrySearch,
     'random-country':RandomCountry,
-    'quiz' : Quiz,
   }
 };
 </script>
