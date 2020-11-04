@@ -198,7 +198,7 @@ export default {
 .search-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content:center;
 	
 }
 #alphabet-list {
@@ -236,7 +236,7 @@ export default {
 .search-box-alpha-container {
 	width: max-content;
 	justify-content: center;
-	margin: 0 0 20px 0;
+	margin: 0 10px 20px 0;
 	padding: 0px;
 	border: 4px solid black;
 	background: teal;

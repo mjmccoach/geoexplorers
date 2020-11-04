@@ -28,6 +28,7 @@ export default {
   border-radius: 3px;
   background: rgb(112, 206, 112);
   margin: 11px;
+  padding: 4px;
 }
 
 .border-box img{

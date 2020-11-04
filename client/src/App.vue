@@ -103,10 +103,11 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
 .main-container {
-  font-family: itim;
+  font-family: 'Varela Round';
   display: flex;
   justify-content: center;
   padding: 10px;

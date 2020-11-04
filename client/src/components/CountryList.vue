@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .country-list-wrapper {
-  width: 49%;
+  margin-left: 10px;
 }
 
 #country-list {
