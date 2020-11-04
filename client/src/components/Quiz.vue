@@ -389,6 +389,7 @@ body {
     color: rgba(0,0,0,0.85);
     border: transparent 1px solid;
     font-family: itim;
+    font-size: 25px;
     }
 .option:hover {
     background-color:#f8ca00
@@ -400,9 +401,6 @@ body {
 .option::selection {
     background-color: #00E676;
     }
-
-    
-      
 
 .questionFooter {
     background:rgba(0,0,0,0.025);
