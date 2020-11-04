@@ -1,6 +1,6 @@
 <template lang="html">
   <main v-if="appDataReady">
-    <header-wrapper>
+    <div class="header-wrapper">
       <header>
         <!-- <section class = 'header'> -->
         <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
@@ -18,7 +18,7 @@
           </ul>
         </nav> -->
       </header>
-    </header-wrapper>
+    </div>
     
     <random-country :countryInfo="countryInfo"></random-country>
 
@@ -117,7 +117,7 @@ export default {
   border-radius: 8px; */
 }
 
-header-wrapper {
+.header-wrapper {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -217,7 +217,7 @@ header{
     }
 
     .copyright{
-      color:rgba(0, 80, 40, 0.795);
+      color:rgba(0, 84, 42, 0.797);
 
       font-size: 20px;
       font-family: itim;

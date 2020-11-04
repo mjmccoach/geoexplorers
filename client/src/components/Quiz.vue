@@ -311,7 +311,6 @@ body {
 		background:rgba(0,0,0,0.025);
 		padding: 1.5rem;
 		text-align: center;
-    border-bottom: 5px solid rgba(0,0,0,0.1);
     
     }
     
@@ -400,6 +399,7 @@ body {
     border:2px solid;
     font-family: itim;
     font-size: 25px;
+      transition:0.5s;
     	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     }
@@ -423,7 +423,6 @@ body {
 
 .questionFooter {
     background:rgba(0,0,0,0.025);
-    border-top: 1px solid rgba(0,0,0,0.1);
     width: 100%;
     align-self: flex-end;
     }
@@ -446,10 +445,10 @@ body {
 }
 .button{
 	padding: 0.5rem 1rem;
-	border: 1px solid rgba(0,0,0,0.5);
+	border: 2px solid rgba(0,0,0,0.5);
 	border-radius: 5rem;
 	margin: 0 0.25rem;
-  transition:0.3s;
+  transition:0.5s;
   background-color:teal;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 

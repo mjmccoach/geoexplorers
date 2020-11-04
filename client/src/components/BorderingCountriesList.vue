@@ -22,10 +22,6 @@ export default {
 
 <style lang="css" scoped>
 
-.testing {
-  color: red;
-}
-
 ul {
   list-style: none;
   

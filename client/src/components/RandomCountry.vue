@@ -1,16 +1,15 @@
 <template>
 <div id="app">
-  <random-country-wrapper>
+  <div class="random-country-wrapper">
     <button v-on:click="picker()">Random Capital!</button>
     <span
     class="random-country-text"
-    v-if="randomCountry">
-      The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>! 
-      <button>
-        <img id="random-country-flag" :src="randomCountry.flag" height="50"/>
-      </button>
+    v-if="randomCountry.capital">
+      The Capital of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>!
+      <!-- <img id="random-country-flag" :src="randomCountry.flag"/> -->
+
     </span>
-  </random-country-wrapper>
+  </div>
 </div>
 </template>
 
@@ -54,12 +53,17 @@ body {
 
 random-country-wrapper {
   display: flex;
-  width: 48vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 680px;
   
 
 }
 
 button {
+  align-self: flex-start;
   color:black;
   margin-right: 3px;
   background-color:teal;
@@ -67,28 +71,33 @@ button {
   cursor: pointer;
   font-size: 20px;
   box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
-  /* padding: 10px 10px; */
+  padding: 10px 10px;
   border-radius: 20px;
   border: 4px solid black;
   height: 70px;
   width: 180px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
 }
 
-.random-country-text {
+button:hover {
+    transition:0.8s;
+    background-color: yellow;
+}
+
+span {
   font-family: itim;
   font-size: 20px;
+  align-self: center;
   justify-content: center;
   color:black;
   height: 50px;
-  width: 650px;
+  min-width: 500px;
 }
 
 #random-country-flag {
-  justify-content: right;
-  height: 50px;
-  width: 100px;
+  align-self: flex-end;
+  height: 70px;
+  /* width: 100px; */
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 }

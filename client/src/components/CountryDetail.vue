@@ -112,8 +112,9 @@ export default {
   color: red;
 }
 
-/* #country-detail-container {
-} */
+#country-detail-container {
+  transition: 2s;
+}
 
 #country-detail {
   font-family: itim;
@@ -165,7 +166,16 @@ button {
   font-size: 18px;
   justify-content: center;
   border: solid 1px black;
+
+    transition:0.5s;
+
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:#15b101;
+    color: tomato;
 }
 
 #play {

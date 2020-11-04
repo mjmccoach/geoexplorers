@@ -38,6 +38,7 @@ export default {
 
 #alphabet:hover {
   background-color: yellow;
+  transition:0.9s;
 }
 
 

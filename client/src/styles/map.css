@@ -14,7 +14,8 @@
 }
     
 .svg-map__location:focus, .svg-map__location:hover {
-  fill: #f6e600;
+  fill: #fbeb09;
+  transition:0.9s;
   outline: 0; 
 }
     
@@ -38,7 +39,7 @@
   font-family: itim;
   width: 66vw;
   height: 20px;
-  background:#f8ca00;
+  background: teal;
   margin: 1px;
   padding: 0;
   border: 4px solid black; 

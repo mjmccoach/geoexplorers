@@ -220,7 +220,7 @@ export default {
 }
 
 .search-wrapper input {
-	font-family: inherit;
+	font-family: itim;
 	width: 400px;
 	background: rgb(112, 206, 112);
 	max-width: 400px;
@@ -233,7 +233,16 @@ export default {
 	border: 4px solid black;
 	border-radius: 8px;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 
+.search-wrapper input:hover {
+	transition:0.8s;
+	background-color: rgba(255, 255, 0, 0.667);
+}
+
+.search-wrapper input::-moz-selection {
+	transition:0.1s;
+	background-color: rgba(255, 255, 0, 0.667);
 }
 
 .search-box-alpha-container {
