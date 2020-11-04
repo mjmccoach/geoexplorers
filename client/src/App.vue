@@ -18,12 +18,12 @@
     </header>
     <section class="main-container">
     
-    <country-search
-    :countries="countryInfo" 
-    :country="selectedCountry" 
-    :borderingCountries="borderingCountries"
-    >
-    </country-search>
+      <country-search
+      :countries="countryInfo" 
+      :country="selectedCountry" 
+      :borderingCountries="borderingCountries"
+      >
+      </country-search>
     </section>
     <quiz></quiz>
 
