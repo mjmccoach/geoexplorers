@@ -1,7 +1,9 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
+
       <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
+
       <div class="stage">
         <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
@@ -12,10 +14,12 @@
           <li>Quiz</li>
           <li>
             <random-country :countryInfo="countryInfo"></random-country>
-        </li>
+          </li>
         </ul>
       </nav>
+
     </header>
+
     <section class="main-container">
     
       <country-search
@@ -24,8 +28,8 @@
       :borderingCountries="borderingCountries"
       >
       </country-search>
+      <quiz></quiz>
     </section>
-    <quiz></quiz>
 
     <footer class = "footer">
       <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
