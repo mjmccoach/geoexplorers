@@ -2,9 +2,9 @@
 
 <!--container-->
 <section class="container">
-    <button @click="showQuiz">
+    <!-- <button @click="showQuiz">
         Play Quiz!
-      </button>
+      </button> -->
 	<!--questionBox-->
 	<div class="questionBox" id="quiz">
 
@@ -253,12 +253,13 @@ $trans_duration: 0.3s;
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: itim;
     font-size: 14px;
     height: 100vh;
-    background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%);
+    /* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
     /* mocking native UI */
     cursor: default !important; /* remove text selection cursor */
     user-select: none; /* remove text selection */
@@ -273,7 +274,7 @@ body {
 }
 
 .subtitle {
-   font-family: Montserrat, sans-serif;
+   font-family: itim;
    font-weight: normal;
 }
 .animated {
@@ -281,7 +282,8 @@ body {
 }
 
 .container{
-	margin: 0 0.5rem;
+  margin: 0 0.5rem;
+  
     
 }
 
@@ -299,7 +301,8 @@ body {
 	border-radius: 0.5rem;
 	overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  font-family: Montserrat, sans-serif;
+  font-family: itim;
+  border: solid 4px black;
 
 }	
     /* this header is for the above question box */
@@ -307,9 +310,12 @@ body {
 		background:rgba(0,0,0,0.025);
 		padding: 1.5rem;
 		text-align: center;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 5px solid rgba(0,0,0,0.1);
     }
-		
+    
+.progress{
+  background-color: hotpink;
+  }
 	
 	/* .progressContainer {
        width: 60%;
@@ -357,7 +363,7 @@ body {
     }
 			 
 .is-active{
-	color: #00E676;
+	color:yellow;
 		}
 
 .questionContainer {
@@ -382,7 +388,7 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
     color: rgba(0,0,0,0.85);
     border: transparent 1px solid;
-    font-family: "Montserrat", sans-serif;
+    font-family: itim;
     }
 .option:hover {
     background-color:#f8ca00
@@ -426,15 +432,18 @@ body {
 	border: 1px solid rgba(0,0,0,0.25);
 	border-radius: 5rem;
 	margin: 0 0.25rem;
-	transition:0.3s;
+  transition:0.3s;
+  background-color:teal;
 }
 		
 .button:hover{
     cursor: pointer;
+    background-color:#f8ca00;
 }
 .progress-container{
   background-color: teal;
 }
+
 
 
 </style>

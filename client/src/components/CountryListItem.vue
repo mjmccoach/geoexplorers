@@ -26,7 +26,8 @@ li {
 }
 
 #country-flag {
-  border: solid 1px black
+  border: solid 1px black;
+  margin-right: 10px;
 }
 /* li:hover, h1:hover, a:hover {
   background-color: yellow;
@@ -39,7 +40,7 @@ li {
     background: rgb(112, 206, 112);
     border-radius: 3px;
     padding: 5px;
-    margin: 2px;
+    margin: 10px;  
 }
 
 .country-border:hover {

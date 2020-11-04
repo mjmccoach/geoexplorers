@@ -101,6 +101,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 .main-container {
   font-family: itim;
   display: flex;
@@ -113,7 +114,7 @@ export default {
   text-align: center;
   color:white;
   font-size: 70px;
-  font-family: itim;
+  font-family: lemon;
 
 }
 .globeimage {
@@ -191,6 +192,10 @@ export default {
       font-size: 20px;
       font-family: itim;
 
+    }
+    main >footer {
+      text-align: center;
+      font-size: 40px;
     }
 
 </style>
