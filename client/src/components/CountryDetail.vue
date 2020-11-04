@@ -112,9 +112,8 @@ export default {
   color: red;
 }
 
-#country-detail-container {
-  width: 49%;
-}
+/* #country-detail-container {
+} */
 
 #country-detail {
   border: solid 4px black;
@@ -122,9 +121,9 @@ export default {
   /* background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);   */
   border-radius: 10px;
   height: max-content;
-  margin: 10px;
+  margin: 10px 10px 0px 0px;
   padding: 5px;
-  width: 700px;
+  width: 680px;
 }
 
 #country-flag {

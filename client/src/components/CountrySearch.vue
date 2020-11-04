@@ -198,7 +198,7 @@ export default {
 .search-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content:center;
 	
 }
 #alphabet-list {
@@ -208,12 +208,13 @@ export default {
 	justify-content: center;
 	width: 400px;
 	height: 130px;
-	margin: 0px;
-	margin-bottom: 10px;
+	margin: auto;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: 0;
 	list-style: none;
 	text-align: center;
 	padding: 0px;
-	border: 4px solid black;
 	background: teal;
 	border-radius: 8px;
 }
@@ -233,7 +234,14 @@ export default {
 }
 
 .search-box-alpha-container {
-	width: 49%;
+	width: max-content;
+	justify-content: center;
+	margin: 0 10px 20px 0;
+	padding: 0px;
+	border: 4px solid black;
+	background: teal;
+	border-radius: 8px;
+	height: 200px;
 }
 </style>
 ​

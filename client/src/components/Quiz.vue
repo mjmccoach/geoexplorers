@@ -282,8 +282,8 @@ body {
 }
 
 .container{
-  margin: 0 0.5rem;
-  width: 49%;
+  margin: 10px 0px 0px 10px
+  
     
 }
 
@@ -390,6 +390,9 @@ body {
     font-family: itim;
     font-size: 25px;
     }
+.is-selected{
+  background-color:#ff4f5b;
+}
 .option:hover {
     background-color:#f8ca00
     }
@@ -446,6 +449,9 @@ body {
 }
 .is-selected{
   background-color: #ff4f5b;
+}
+.subtitle{
+  font-size: 50px;
 }
 
 
