@@ -5,7 +5,7 @@
       <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
 
       <div class="stage">
-      <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
+        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
       </section>
 
@@ -17,18 +17,19 @@
         </ul>
       </nav> -->
     </header>
+
     <section class="main-container">
       <li><random-country :countryInfo="countryInfo">
         </random-country></li>
     
-    <country-search
-    :countries="countryInfo" 
-    :country="selectedCountry" 
-    :borderingCountries="borderingCountries"
-    >
-    </country-search>
+      <country-search
+      :countries="countryInfo" 
+      :country="selectedCountry" 
+      :borderingCountries="borderingCountries"
+      >
+      </country-search>
+
     </section>
-    <quiz></quiz>
 
     <footer class = "footer">
       <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
@@ -42,8 +43,6 @@ import { eventBus } from "./main.js";
 import CountrySearch from "./components/CountrySearch";
 import RandomCountry from "./components/RandomCountry";
 import CountryDetail from "./components/CountryDetail";
-import Quiz from "./components/Quiz";
-
 
 export default {
   name: "app",
@@ -58,6 +57,7 @@ export default {
   },
   async mounted() {
     await this.fetchCountryInfo();
+    
     this.fetchAppBanana();
     this.appDataReady = true;
 
@@ -79,6 +79,8 @@ export default {
         .then(()=>{
           var chosenNumber = Math.floor(Math.random() * this.countryInfo.length);
           this.selectedCountry = this.countryInfo[chosenNumber];
+          this.borderingCountries = this.findBorderingCountries();
+
         })
     },
     findBorderingCountries: function () {
@@ -91,10 +93,8 @@ export default {
     }
   },
   components: {
-    
     'country-search': CountrySearch,
     'random-country':RandomCountry,
-    'quiz' : Quiz,
   }
 };
 </script>

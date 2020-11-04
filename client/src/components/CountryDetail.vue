@@ -1,6 +1,6 @@
 <template>
-<section id="country-detail">
-  <article v-if="country">
+<section id="country-detail-container" v-if="country">
+  <article id="country-detail">
     
     <!-- // BASIC INFO -->
     <h1>{{ country.name }}</h1>
@@ -71,7 +71,7 @@
       {{ country.name }} does not have land borders with any other countries.
       <bordering-countries-list :borderingCountries="borderingCountries"></bordering-countries-list>
     </p>
-    &#128187;<a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
+    &#128187; <a :href="this.wikiUrl" target="_blank">Learn more about {{ country.name }} on Wikipedia</a>
 
     
   </article>
@@ -112,6 +112,10 @@ export default {
   color: red;
 }
 
+#country-detail-container {
+  width: 49%;
+}
+
 #country-detail {
   border: solid 4px black;
   background: #f8ca00;
@@ -120,7 +124,7 @@ export default {
   height: max-content;
   margin: 10px;
   padding: 5px;
-  width: 800px
+  width: 700px;
 }
 
 #country-flag {
@@ -152,5 +156,3 @@ button {
   border: solid 3px black;
 }
 </style>
-
-//  

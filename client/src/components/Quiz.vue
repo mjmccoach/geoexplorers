@@ -283,7 +283,7 @@ body {
 
 .container{
   margin: 0 0.5rem;
-  
+  width: 49%;
     
 }
 

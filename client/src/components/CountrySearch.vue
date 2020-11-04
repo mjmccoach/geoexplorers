@@ -1,44 +1,42 @@
-<template>
-
-<div id="app"
-v-if="dataReady"
->	
-	<h2>Countries starting with:</h2>
-  	<div class="search-wrapper">
-		  
-		<ul id="alphabet-list">
-
+<template>	
+  <div class="search-wrapper" id="app" v-if="dataReady">
+		<div class="search-box-alpha-container">
+			<input type="text" v-model="search" v-on:keyup="resetSelectedCountry" placeholder="Search or select first letter..." />
+			<ul id="alphabet-list">
+				<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :countries="countries" :key="index"></first-letter-search>
+			</ul>
+		</div>
+		<!-- <ul id="alphabet-list">
+			<h2>Countries starting with:</h2>
 			<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :countries="countries" :key="index"></first-letter-search>
-			<!-- <first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list> -->
+				<first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list>
 
-			<!-- <span>Countries By Continent:</span>
-			<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
-			<region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list>
-	
-			<span>Countries By Region:</span>
-			<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
-			<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list> -->
+				<span>Countries By Continent:</span>
+				<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
+				<region-results-list :countries="countries" :selectedRegion="selectedRegion"></region-results-list>
+		
+				<span>Countries By Region:</span>
+				<sub-region-search v-for="(subRegion, index) in subRegions" :subRegion="subRegion" :key="index"></sub-region-search>
+				<sub-region-results-list :countries="countries" :selectedSubRegion="selectedSubRegion"></sub-region-results-list>
 
-			<!-- <span>Countries By Political/Economic Bloc:</span>
-			<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="index"></bloc-search>
-			<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
+				<span>Countries By Political/Economic Bloc:</span>
+				<bloc-search v-for="(bloc, index) in blocs" :bloc="bloc" :key="index"></bloc-search>
+				<bloc-results-list :countries="countries" :selectedBloc="selectedBloc"></bloc-results-list>
 
-			<span>Countries By Language Spoken:</span>
-			<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
-			<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
-		</ul>
-
-    <input type="text" v-model="search" v-on:keyup="resetSelectedCountry" placeholder="Search countries..." />
+				<span>Countries By Language Spoken:</span>
+				<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
+				<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list>
+			</ul> -->
+    
 		<country-list :countries="filteredList" ></country-list>
 		<svg-map :countries="countries"></svg-map>
 		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
+		<quiz></quiz>
   </div>
-</div>
 </template>
 
 <script>
 import { eventBus } from '@/main.js';
-
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
@@ -52,6 +50,7 @@ import BlocResultsList from './BlocResultsList';
 import LanguageSearch from './LanguageSearch';
 import LanguageSearchResultsList from './LanguageResultsList';
 import SvgMap from "./SvgMap";
+import Quiz from "./Quiz";
 
 export default {
 	name: 'country-search',
@@ -86,7 +85,8 @@ export default {
 		'bloc-results-list': BlocResultsList,
 		'language-search': LanguageSearch,
 		'language-results-list': LanguageSearchResultsList,
-		'svg-map': SvgMap
+		'svg-map': SvgMap,
+		'quiz' : Quiz,
 	},	
 
 	computed: {
@@ -104,12 +104,12 @@ export default {
 			};
 		}
 	},
-	mounted() {
+	async mounted() {
 		// These method calls are greyed out to have arrays be reliably populated until styling is complete.
-		// this.getAllRegions();
-		// this.getAllSubRegions();
-		// this.getAllBlocs();
-		// this.getAllLanguages();
+		// await this.getAllRegions();
+		// await this.getAllSubRegions();
+		// await this.getAllBlocs();
+		// await this.getAllLanguages();
 
 		this.bananaCheck();
 		this.dataReady = true;
@@ -198,6 +198,7 @@ export default {
 .search-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
 	
 }
 #alphabet-list {
@@ -215,9 +216,7 @@ export default {
 	border: 4px solid black;
 	background: teal;
 	border-radius: 8px;
-
 }
-
 
 .search-wrapper input {
 	font-family: inherit;
@@ -233,6 +232,8 @@ export default {
     border: 4px solid black;
 }
 
-
+.search-box-alpha-container {
+	width: 49%;
+}
 </style>
 ​
