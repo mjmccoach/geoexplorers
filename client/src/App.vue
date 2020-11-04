@@ -1,13 +1,13 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
-      <section class = 'header'>
+      <!-- <section class = 'header'> -->
       <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
 
       <div class="stage">
         <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
-      </section>
+      <!-- </section> -->
 
       <!-- <nav class="navbar">
         <ul>
@@ -113,10 +113,12 @@ export default {
   border-radius: 8px; */
 }
 .title {
-  
+  flex-grow:1;
   color:white;
   font-size: 60px;
   font-family: lemon;
+  margin-right:2px;
+  padding-right: 5px
 }
 .globeimage {
   height: 150px; 
@@ -134,17 +136,18 @@ export default {
 
 
 } */
-.header{
+header{
   display:flex;
   margin: 5px;
   flex-wrap: nowrap;
   justify-content: center;
+  margin-top: 80px;
 }
-main > header {
+/* main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-height: 20vh;
-}
+} */
   /* flex-direction: column; */
   /* word-spacing: normal;
 
@@ -164,12 +167,10 @@ main > header {
 .stage {
         /* border-bottom: 3px solid rgb(21, 143, 51); */
         display: flex;
-        height: 275px;
-        width: 100%;
 }
 
 .globe {
-        align-self: flex-end;
+        /* align-self: flex-end; */
         animation-duration: 2s;
         animation-iteration-count: infinite;
         height: 140px;
