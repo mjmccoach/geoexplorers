@@ -114,7 +114,7 @@ export default {
 
 #country-detail {
   border: solid 4px darkgreen;
-  background: rgb(255,215,6);
+  background: #f8ca00;
   background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);  
   border-radius: 10px;
   height: max-content;
