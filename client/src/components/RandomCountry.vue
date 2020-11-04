@@ -53,9 +53,10 @@ body {
 
 random-country-wrapper {
   display: flex;
+  align-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 680px;
   
@@ -63,9 +64,8 @@ random-country-wrapper {
 }
 
 button {
-  align-self: flex-start;
   color:black;
-  margin-right: 3px;
+  margin-right: auto;
   background-color:teal;
   font-family: itim;
   cursor: pointer;
@@ -88,10 +88,10 @@ span {
   font-family: itim;
   font-size: 20px;
   align-self: center;
-  justify-content: center;
   color:black;
   height: 50px;
   min-width: 500px;
+  margin-left: auto;
 }
 
 #random-country-flag {

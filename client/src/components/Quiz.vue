@@ -399,7 +399,7 @@ body {
     border:2px solid;
     font-family: itim;
     font-size: 25px;
-      transition:0.5s;
+      transition:0.9s;
     	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     }
