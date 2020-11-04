@@ -1,22 +1,25 @@
 <template lang="html">
   <main v-if="appDataReady">
     <header>
+      <section class = 'header'>
       <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
 
       <div class="stage">
       <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
+      </section>
 
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <ul>
           <li>About</li>
           <li>Quiz</li>
-          <li><random-country :countryInfo="countryInfo">
-        </random-country></li>
+          
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <section class="main-container">
+      <li><random-country :countryInfo="countryInfo">
+        </random-country></li>
     
     <country-search
     :countries="countryInfo" 
@@ -129,20 +132,24 @@ export default {
 
 
 }
-main > header {
+/* .header{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+} */
+/* main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-direction: column;
-  word-spacing: normal;
+  /* flex-direction: column; */
+  /* word-spacing: normal; */
 
-}
-main > header > nav > ul > li {
+/* main > header > nav > ul > li {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; */
   /* justify-content: end;
   margin: 0; */
-}
+/* } */
 /* main >header {
   display: grid;
   grid-template-columns: 1fr 1fr;

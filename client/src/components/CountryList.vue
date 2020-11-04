@@ -38,8 +38,8 @@ export default {
 }
 
 #country-list {
-  border: solid 4px darkgreen;
-  background-color: aquamarine;
+  border: solid 4px black;
+  background-color:teal;
   border-radius: 6px;
   padding: 5px;
   width: 400px;

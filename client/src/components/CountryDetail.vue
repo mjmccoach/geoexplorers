@@ -113,9 +113,9 @@ export default {
 }
 
 #country-detail {
-  border: solid 4px darkgreen;
+  border: solid 4px black;
   background: #f8ca00;
-  background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);  
+  /* background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);   */
   border-radius: 10px;
   height: max-content;
   margin: 10px;
@@ -147,8 +147,9 @@ h1 {
 button {
   color: yellow;
   margin-right: 3px;
-  background-color: darkblue;
+  background-color: teal;
   font-family: itim;
+  border: solid 3px black;
 }
 </style>
 

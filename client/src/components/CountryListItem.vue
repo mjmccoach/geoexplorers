@@ -1,6 +1,6 @@
 <template>
-  <li v-if="country" v-on:click="handleClick">
-    <span><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
+  <li class= "country-border" v-if="country" v-on:click="handleClick">
+    <span ><img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="40"/></span>
     <span>{{ country.name }}</span>
   </li>
 </template>
@@ -32,4 +32,17 @@ li {
   background-color: yellow;
 
 } */
+
+.country-border {
+    color: black;
+    border: 2px solid black;
+    background: rgb(112, 206, 112);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.country-border:hover {
+  background-color: yellow;
+}
 </style>

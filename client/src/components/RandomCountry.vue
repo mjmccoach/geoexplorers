@@ -61,15 +61,17 @@ p {
 } */
 
 button {
-  color:white;
+  color:black;
   margin-right: 3px;
-  background-color: rgb(44, 159, 235);
+  background-color:teal;
   font-family: itim;
   cursor: pointer;
   font-size: 20px;
   box-shadow: 0 1px 5px rgba(68, 68, 68, 0.5);
   padding: 10px 10px;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: 4px solid black;
+  
 
 }
 

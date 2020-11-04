@@ -222,13 +222,17 @@ export default {
 .search-wrapper input {
 	font-family: inherit;
 	width: 400px;
-	background-color: lightgoldenrodyellow;
+	background: rgb(112, 206, 112);
 	max-width: 400px;
-	border: solid 4px darkgreen;
 	border-radius: 10px;
+	border-radius: 3px;
 	font-size: 1.2rem;
 	padding: 7px;
 	margin:10px;
+	color: black;
+    border: 4px solid black;
 }
+
+
 </style>
 ​

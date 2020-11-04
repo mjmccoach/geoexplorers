@@ -152,7 +152,7 @@
                 "What is the capital of Poland?",
               responses: [
                 { text: "Wrocław", correct: true },
-                { text: "Education" },
+                { text: "Gdansk" },
                 { text: "Krakow" },
                 { text: "Łódź" }
               ]
@@ -230,15 +230,15 @@
         },
         // Return "true" count in userResponses
         score: function() {
-          let dorkfest = 0;
+          let score = 0;
           for (let i = 0; i < this.userResponses.length; i++) {
               if (
                 typeof this.quiz.questions[i].responses[this.userResponses[i]] !== "undefined" 
                 && this.quiz.questions[i].responses[this.userResponses[i]].correct
               ) 
-              {dorkfest = dorkfest + 1;}
+              {score = score + 1;}
           }
-          return dorkfest;
+          return score;
 
          //return this.userResponses.filter(function(val) { return val }).length;
       }
@@ -291,14 +291,15 @@ body {
 	
 	max-width: 30rem;
 	width: 30rem;
-	min-height: 30rem;
-	background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%);
-    position: relative;
-    display: flex;
+  min-height: 30rem;
+  background: rgb(112, 206, 112);
+	/* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
+  position: relative;
+  display: flex;
 	border-radius: 0.5rem;
 	overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    font-family: Montserrat, sans-serif;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-family: Montserrat, sans-serif;
 
 }	
     /* this header is for the above question box */
@@ -340,6 +341,7 @@ body {
 .field-label {
     text-align: left;
     margin-bottom: 0.5rem;
+  
          }
       
 .quizCompleted {
@@ -368,6 +370,7 @@ body {
 .optionContainer {
     margin-top: 12px;
     flex-grow: 1;
+    
   }
 .option {
     border-radius: 290486px;
@@ -382,7 +385,7 @@ body {
     font-family: "Montserrat", sans-serif;
     }
 .option:hover {
-    background-color:#00E676
+    background-color:#f8ca00
     }
 
 .option:active {
@@ -410,7 +413,8 @@ body {
 
 .pagination{
 	display: flex;
-	justify-content: space-between;
+  justify-content: space-between;
+  
 }
 
 .pagination:hover {
@@ -428,7 +432,9 @@ body {
 .button:hover{
     cursor: pointer;
 }
-
+.progress-container{
+  background-color: teal;
+}
 
 
 </style>
