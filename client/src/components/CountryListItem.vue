@@ -38,16 +38,9 @@ export default {
 
 } */
 
-.country-border {
-    color: black;
-    border: 2px solid black;
-    background: rgb(112, 206, 112);
-    border-radius: 3px;
-    padding: 5px;
-    margin: 10px;  
-}
 
-.country-border:hover {
+
+.border-box:hover {
   background-color: yellow;
 }
 </style>
