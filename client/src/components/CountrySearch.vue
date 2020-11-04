@@ -1,13 +1,12 @@
 <template>
 
-<div id="app"
-v-if="dataReady"
->
+<div id="app" v-if="dataReady">
   	<div class="search-wrapper">
 		<ul id="alphabet-list">
+
 			<span>Countries starting with:</span>
-			<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :key="index"></first-letter-search>
-			<first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list>
+			<first-letter-search v-for="(letter, index) in alphabet" :letter="letter" :countries="countries" :key="index"></first-letter-search>
+			<!-- <first-letter-results-list :countries="countries" :selectedFirstLetter="selectedFirstLetter"></first-letter-results-list> -->
 
 			<!-- <span>Countries By Continent:</span>
 			<region-search v-for="(region, index) in regions" :region="region" :key="index"></region-search>
@@ -25,8 +24,9 @@ v-if="dataReady"
 			<language-search v-for="(language, index) in languages" :language="language" :key="'language' + index"></language-search>
 			<language-results-list :countries="countries" :selectedLangauge="selectedLanguage"></language-results-list> -->
 		</ul>
-    <input type="text" v-model="search" placeholder="Search Countries.."/>
-		<country-list :countries="filteredList"></country-list>
+
+    <input type="text" v-model="search" v-on:keyup="resetSelectedCountry" placeholder="Search countries..." />
+		<country-list :countries="filteredList" ></country-list>
 		<svg-map :countries="countries"></svg-map>
 		<country-detail :country="country" :borderingCountries="borderingCountries"></country-detail>
   </div>
@@ -39,7 +39,7 @@ import { eventBus } from '@/main.js';
 import CountryList from './CountryList';
 import CountryDetail from './CountryDetail';
 import FirstLetterSearch from './FirstLetterSearch';
-import FirstLetterResultsList from './FirstLetterResultsList';
+// import FirstLetterResultsList from './FirstLetterResultsList';
 import RegionSearch from './RegionSearch';
 import RegionResultsList from './RegionResultsList';
 import SubRegionSearch from './SubRegionSearch';
@@ -59,7 +59,7 @@ export default {
 			bananaData: "",
 			search: '',
 			alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
-			selectedFirstLetter: "",
+			selectedFirstLetter: null,
 			regions: ["", "Africa", "Americas", "Asia", "Europe", "Oceania", "Polar"],
 			selectedRegion: "",
 			subRegions: ["", "Australia and New Zealand", "Caribbean", "Central America", "Central Asia", "Eastern Africa", "Eastern Asia", "Eastern Europe", "Melanesia", "Micronesia", "Middle Africa", "Northern Africa", "Northern America", "Northern Europe", "Polynesia", "South America", "South-Eastern Asia", "Southern Africa", "Southern Asia", "Southern Europe", "Western Africa", "Western Asia", "Western Europe"],
@@ -74,7 +74,7 @@ export default {
 		'country-detail' : CountryDetail,
 		'country-list' : CountryList,
 		'first-letter-search': FirstLetterSearch,
-		'first-letter-results-list': FirstLetterResultsList,
+		// 'first-letter-results-list': FirstLetterResultsList,
 		'region-search': RegionSearch,
 		'region-results-list': RegionResultsList,
 		'sub-region-search': SubRegionSearch,
@@ -86,13 +86,19 @@ export default {
 		'svg-map': SvgMap
 	},	
 
-	computed : {
+	computed: {
 		filteredList() {
-			return this.countries.filter((country) => {
-				return country.name
-				  .toLowerCase()
-				  .includes(this.search.toLowerCase());
-			})
+			if(!this.selectedFirstLetter) {
+				return this.countries.filter((country) => {
+					return country.name
+				  	.toLowerCase()
+				  	.includes(this.search.toLowerCase());
+				});
+			} else {
+				return this.countries.filter((country) => {
+				return country.name.startsWith(this.selectedFirstLetter);
+				});
+			};
 		}
 	},
 	mounted() {
@@ -123,6 +129,10 @@ export default {
 	},
 
 	methods: {
+		resetSelectedCountry: function() {
+			this.selectedFirstLetter = null;
+		},
+
 		getAllRegions: function () {
 			let regionArray = [...new Set(this.countries.map(element => element.region))];
 			regionArray.sort();
@@ -183,13 +193,9 @@ export default {
 
 #alphabet-list {
 	display: flex;
-	
-
 	list-style: none;
 	text-align: left;
 }
-
-
 
 .search-wrapper {
 	display: block;
