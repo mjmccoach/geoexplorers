@@ -22,6 +22,8 @@ export default {
 
 <style scoped>
 .border-box{
+  font-family: itim;
+  font-size: 18px;
   cursor: pointer;
   color: black;
   border: 2px solid black;
@@ -29,11 +31,15 @@ export default {
   background: rgb(112, 206, 112);
   margin: 11px;
   padding: 4px;
+  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 
 .border-box img{
 display:inline-block;
 vertical-align: middle;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 
 }
 

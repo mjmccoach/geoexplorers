@@ -42,7 +42,9 @@ export default {
   height: 200px;
   margin-block-start: 0;
 	margin-block-end: 0;
-	padding-inline-start: 0;
+  padding-inline-start: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
   
 }
 </style>

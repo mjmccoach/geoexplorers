@@ -215,8 +215,8 @@ export default {
 	list-style: none;
 	text-align: center;
 	padding: 0px;
-	background: teal;
 	border-radius: 8px;
+	
 }
 
 .search-wrapper input {
@@ -225,12 +225,15 @@ export default {
 	background: rgb(112, 206, 112);
 	max-width: 400px;
 	border-radius: 10px;
-	border-radius: 3px;
+	border-radius: 1.5px;
 	font-size: 1.2rem;
-	padding: 7px;
+	padding: 6px;
 	margin:10px;
 	color: black;
-    border: 4px solid black;
+	border: 4px solid black;
+	border-radius: 8px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 
 .search-box-alpha-container {
@@ -242,6 +245,8 @@ export default {
 	background: teal;
 	border-radius: 8px;
 	height: 200px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 </style>
 ​

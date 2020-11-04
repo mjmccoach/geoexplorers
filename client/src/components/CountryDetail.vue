@@ -52,10 +52,10 @@
         <source :src="this.audioUrl" >
         </audio>
         <div>
-        <button onclick="document.getElementById('player').play()">Play</button> 
-        <button onclick="document.getElementById('player').load()">Stop</button>
-        <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
-        <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+        <button id="play" onclick="document.getElementById('player').play()">Play</button> 
+        <button id="stop" onclick="document.getElementById('player').load()">Stop</button>
+        <button id="v-up" onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+        <button id="v-dn" onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
   </div>
 
     <!-- // INFO ABOUT BORDERING COUNTRIES -->
@@ -116,14 +116,21 @@ export default {
 } */
 
 #country-detail {
+  font-family: itim;
+  font-size: 20px;
+
+
   border: solid 4px black;
   background: #f8ca00;
   /* background: linear-gradient(180deg, rgba(255,215,6,1) 58%, rgba(252,176,69,1) 100%);   */
   border-radius: 10px;
+  min-height: 95.5%;
   height: max-content;
   margin: 10px 10px 0px 0px;
   padding: 5px;
   width: 680px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 
 #country-flag {
@@ -132,26 +139,36 @@ export default {
   margin-left: auto;
   margin-right: auto;
   border: solid 2px black;
-  box-shadow: 5px 5px 15px 5px black;
+  box-shadow: 3px 3px 12px 3px black;
   
-  
+
+
 }
 
 h1 {
+  font-family: itim;
+
   font-weight: bold;
   text-emphasis: none;
   text-align: center;
-  font-size: 25px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   text-justify: auto;
 }
 
 button {
   color: yellow;
-  margin-right: 3px;
+  margin-right: 8px;
   background-color: teal;
   font-family: itim;
-  border: solid 3px black;
+  font-size: 18px;
+  justify-content: center;
+  border: solid 1px black;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#play {
+  margin-left: 60px;
 }
 </style>

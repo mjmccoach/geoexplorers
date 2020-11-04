@@ -282,7 +282,8 @@ body {
 }
 
 .container{
-  margin: 10px 0px 0px 10px
+  margin: 10px 0px 0px 10px;
+
   
     
 }
@@ -310,11 +311,14 @@ body {
 		background:rgba(0,0,0,0.025);
 		padding: 1.5rem;
 		text-align: center;
-		border-bottom: 5px solid rgba(0,0,0,0.1);
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+    
     }
     
 .progress{
   background-color: hotpink;
+  	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
   }
 	
 	/* .progressContainer {
@@ -328,6 +332,7 @@ body {
     text-align: center;
     margin: 0 auto;
     padding: 1.5rem;
+    
 
       }
 
@@ -337,23 +342,27 @@ body {
 
     height: 100%;
     width: 100%;
+    
    }
 
 .quizFormContainer {
     height: 100%;
     margin: 15px 18px;
+    
   }
 
 .field-label {
     text-align: left;
     margin-bottom: 0.5rem;
+    
   
          }
       
 .quizCompleted {
     width: 100%;
     padding: 1rem;
-	text-align:center;
+  text-align:center;
+  
     
    }
 		 
@@ -370,12 +379,14 @@ body {
     white-space: normal;
     height: 100%;
     width: 100%;
+    
 
    }
 
 .optionContainer {
     margin-top: 12px;
     flex-grow: 1;
+    
     
   }
 .option {
@@ -386,9 +397,11 @@ body {
     transition: $trans_duration;
     cursor: pointer;
     color: rgba(0,0,0,0.85);
-    border:1px solid;
+    border:2px solid;
     font-family: itim;
     font-size: 25px;
+    	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
     }
 .is-selected{
   background-color:#ff4f5b;
@@ -433,11 +446,13 @@ body {
 }
 .button{
 	padding: 0.5rem 1rem;
-	border: 1px solid rgba(0,0,0,0.25);
+	border: 1px solid rgba(0,0,0,0.5);
 	border-radius: 5rem;
 	margin: 0 0.25rem;
   transition:0.3s;
   background-color:teal;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 		
 .button:hover{

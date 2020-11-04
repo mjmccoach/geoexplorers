@@ -1,24 +1,26 @@
 <template lang="html">
   <main v-if="appDataReady">
-    <header>
-      <!-- <section class = 'header'> -->
-      <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
+    <header-wrapper>
+      <header>
+        <!-- <section class = 'header'> -->
+        <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
 
-      <div class="stage">
-        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
-      </div>
-      <!-- </section> -->
+        <div class="stage">
+          <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
+        </div>
+        <!-- </section> -->
 
-      <!-- <nav class="navbar">
-        <ul>
-          <li>About</li>
-          <li>Quiz</li>
-          
-        </ul>
-      </nav> -->
-      <random-country :countryInfo="countryInfo">
-        </random-country>
-    </header>
+        <!-- <nav class="navbar">
+          <ul>
+            <li>About</li>
+            <li>Quiz</li>
+            
+          </ul>
+        </nav> -->
+      </header>
+    </header-wrapper>
+    
+    <random-country :countryInfo="countryInfo"></random-country>
 
     <section class="main-container">
       
@@ -114,12 +116,39 @@ export default {
   /* border: solid 4px black;
   border-radius: 8px; */
 }
+
+header-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+header{
+  display:flex;
+  margin: 2px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 64vw;
+  margin-top: 80px;
+  border-bottom:0;
+  background-color: teal;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 25px;
+  	border: 4px solid black;
+
+
+}
+
 .title {
   color:white;
-  font-size: 60px;
+  font-size: 58px;
+  width: 44vw;
   font-family: lemon;
-  margin-right:2px;
-  padding-right: 5px
+  margin-right: 0px;
+  padding-right: 0px;
+  -webkit-text-stroke: 0.4px;
+  -webkit-text-stroke-color: rgba(170, 170, 170, 0.25);
+
 }
 .globeimage {
   height: 150px; 
@@ -137,15 +166,7 @@ export default {
 
 
 } */
-header{
-  display:flex;
-  margin: 2px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 80px;
-  border-bottom:0;
-  background-color: teal;
-}
+
 /* main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -196,7 +217,8 @@ header{
     }
 
     .copyright{
-      color:white;
+      color:rgba(0, 80, 40, 0.795);
+
       font-size: 20px;
       font-family: itim;
 
