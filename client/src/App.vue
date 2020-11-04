@@ -2,7 +2,7 @@
   <main v-if="appDataReady">
     <header>
       <section class = 'header'>
-      <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
+      <h1 class="title"><strong>Welcome GeoExplorers!</strong></h1>
 
       <div class="stage">
         <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
@@ -103,6 +103,8 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+
+
 .main-container {
   font-family: itim;
   display: flex;
@@ -112,11 +114,10 @@ export default {
   border-radius: 8px; */
 }
 .title {
-  text-align: center;
+  
   color:white;
-  font-size: 70px;
+  font-size: 60px;
   font-family: lemon;
-
 }
 .globeimage {
   height: 150px; 
@@ -126,24 +127,27 @@ export default {
   margin-right: auto;
   width: 50%;
 }
-.navbar{
+/* .navbar{
   color:white;
   font-size: 20px;
   font-family: itim;
   list-style: none;
 
 
-}
-/* .header{
-  display:flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
 } */
-/* main > header {
+.header{
+  display:flex;
+  margin: 5px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+main > header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-height: 20vh;
+}
   /* flex-direction: column; */
-  /* word-spacing: normal; */
+  /* word-spacing: normal;
 
 /* main > header > nav > ul > li {
   list-style: none;
@@ -161,7 +165,7 @@ export default {
 .stage {
         /* border-bottom: 3px solid rgb(21, 143, 51); */
         display: flex;
-        height: 330px;
+        height: 275px;
         width: 100%;
 }
 
@@ -169,10 +173,10 @@ export default {
         align-self: flex-end;
         animation-duration: 2s;
         animation-iteration-count: infinite;
-        height: 200px;
+        height: 140px;
         margin: 0 auto 0 auto;
         transform-origin: bottom;
-        width: 200px;
+        width: 140px;
     }
     .bounce-7 {
         animation-name: bounce-7;
