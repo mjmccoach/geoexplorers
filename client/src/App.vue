@@ -2,17 +2,17 @@
   <main v-if="appDataReady">
     <header>
       <h1 class="title"><strong>Welcome GeoExplorers!!</strong></h1>
-
       <div class="stage">
-      <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
+        <img class ="globe bounce-7"src="../src/assets/earth.svg" alt="globe" width=100px>
       </div>
 
       <nav class="navbar">
         <ul>
           <li>About</li>
           <li>Quiz</li>
-          <li><random-country :countryInfo="countryInfo">
-        </random-country></li>
+          <li>
+            <random-country :countryInfo="countryInfo"></random-country>
+        </li>
         </ul>
       </nav>
     </header>
