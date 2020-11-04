@@ -1,14 +1,7 @@
 <template>
-  <section id="country-list">
-    <ul class="scroll">
-      <country-list-item
-        v-for="(country, index) in countries" :country="country" :key="index"
-        
-        >
-        
-      </country-list-item>
+    <ul class="scroll" id="country-list">
+      <country-list-item v-for="(country, index) in countries" :country="country" :key="index"></country-list-item>
     </ul>
-  </section>
 </template>
 
 <script>

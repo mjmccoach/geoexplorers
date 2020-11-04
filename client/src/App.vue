@@ -29,6 +29,7 @@
       >
       </country-search>
       <quiz></quiz>
+      
     </section>
 
     <footer class = "footer">

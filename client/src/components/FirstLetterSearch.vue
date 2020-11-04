@@ -1,12 +1,7 @@
 <template lang="html">
-    <div>
-        <li v-on:click='handleFirstLetterSelectClick'>
-            <span id="alphabet" >
-                {{ letter }}
-            </span>
-        </li>
-    </div>
-    </section>
+    <li v-on:click='handleFirstLetterSelectClick' id="alphabet">
+        {{ letter }}
+    </li>
 </template>
 
 <script>
