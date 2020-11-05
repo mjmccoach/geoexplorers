@@ -131,23 +131,23 @@ header{
   width: 64vw;
   margin-top: 80px;
   border-bottom:0;
-  background-color: teal;
+    background: linear-gradient(rgba(147, 226, 1, 0.433) 33%, rgba(243, 230, 48, 0.667) 77%,rgba(147, 226, 1, 0.667) 33%,rgba(243, 230, 48, 0.667) 77%);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-radius: 25px;
-  	border: 4px solid black;
+  border: 4px solid black;
 
 
 }
 
 .title {
-  color:white;
+  color:rgb(0, 0, 0);
   font-size: 58px;
   width: 44vw;
   font-family: lemon;
   margin-right: 0px;
   padding-right: 0px;
-  -webkit-text-stroke: 0.4px;
-  -webkit-text-stroke-color: rgba(170, 170, 170, 0.25);
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: rgba(194, 194, 194, 0.37);
 
 }
 .globeimage {

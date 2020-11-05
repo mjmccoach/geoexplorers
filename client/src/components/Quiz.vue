@@ -297,6 +297,7 @@ body {
   min-height: 30rem;
   background: rgb(112, 206, 112);
 	/* background: linear-gradient(90deg,  rgba(252, 176, 69, 1) 100%, rgba(255, 118, 6, 1) 58%); */
+
   position: relative;
   display: flex;
 	border-radius: 0.5rem;
@@ -315,8 +316,8 @@ body {
     }
     
 .progress{
-  background-color: hotpink;
-  box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
+  background-color: radial-gradient(hotpink);
+  /* box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21); */
 
   }
 	
@@ -404,12 +405,12 @@ body {
 
     }
 .is-selected{
-  background-color:#ff4f5b;
+  background: radial-gradient(rgba(255, 44, 44, 0.746), rgb(255, 125, 125));
   box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 
 }
 .option:hover {
-    background-color:#f8ca00;
+    background: radial-gradient(rgba(255, 166, 0, 0.200), rgba(255, 255, 0, 0.800));
     box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 
     }
@@ -463,7 +464,7 @@ body {
 		
 .button:hover{
     cursor: pointer;
-    background-color:#f8ca00;
+    background: radial-gradient(rgba(255, 166, 0, 0.200), rgba(255, 255, 0, 0.800));
     box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 
 }

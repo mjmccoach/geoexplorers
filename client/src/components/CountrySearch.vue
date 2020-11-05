@@ -242,7 +242,7 @@ export default {
 
 .search-wrapper input::-moz-selection {
   transition:0.9s ease-in-out;
-	background-color: rgba(255, 255, 0, 0.667);
+    background: radial-gradient(rgba(255, 166, 0, 0.200), rgba(255, 255, 0, 0.800));
 }
 
 .search-box-alpha-container {

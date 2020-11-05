@@ -7,7 +7,7 @@
     <p>
       <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name" width="250"/>
     </p>
-
+    <p id="did-you-know">&#10067; Did you know:</p>
     <!-- // INFO ABOUT NAME & REGION -->
     <p v-if="country.altspellings > 1">
       {{ country.name }}, also known as {{ country.altSpellings[1] }}, is a country in the {{ country.subregion }} part of {{ country.region }}.
@@ -111,6 +111,11 @@ export default {
 
 <style lang="css" scoped>
 
+#did-you-know {
+  font-weight: bolder;
+  font-size: x-large;
+}
+
 #country-detail-container {
   transition: 2s;
 }
@@ -136,7 +141,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   border: solid 2px black;
-  box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
+  box-shadow: 3px 3px 13px 3px rgba(0, 0, 0, 0.667);
 }
 
 h1 {
@@ -155,8 +160,8 @@ button {
   font-size: 34px;
   border: solid 1px black;
   margin: 1%;
-  transition:0.9s ease-in-out;
-  border-radius: 8px;
+  transition:0.9s;
+  border-radius: 5px;
   box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 

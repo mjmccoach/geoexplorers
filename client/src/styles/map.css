@@ -45,7 +45,7 @@
   font-size: 24px;
   width: 66vw;
   height: 20px;
-  background: rgb(112, 206, 112);
+  background: linear-gradient(rgba(147, 226, 1, 0.433) 10%, rgba(243, 230, 48, 0.667) 90%);
   margin: 1px;
   padding-top: 8px;
   padding-bottom: 14px;

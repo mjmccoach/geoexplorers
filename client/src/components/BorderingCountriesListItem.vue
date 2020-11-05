@@ -42,14 +42,14 @@ button {
   background: rgb(112, 206, 112);
   margin: 11px;
   padding: 4px;
-    transition:0.9s ease-in-out;
+  transition:0.9s ease-in-out;
 
   border-radius: 8px;
   box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
 
 button:hover {
-  background-color: yellow;
+  background: radial-gradient(rgba(255, 166, 0, 0.200), rgba(255, 255, 0, 0.800));
   transition:0.9s ease-in-out;
   box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }

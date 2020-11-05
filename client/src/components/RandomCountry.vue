@@ -81,7 +81,7 @@ button {
 }
 
 button:hover {
-    background-color: yellow;
+    background: radial-gradient(rgba(255, 166, 0, 0.200), rgba(255, 255, 0, 0.800));
     box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);
 }
 

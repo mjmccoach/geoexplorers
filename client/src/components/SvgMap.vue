@@ -2,7 +2,7 @@
   <div class="svg-map-box">
     <div class="map-country-name" >  
       <span v-if="!selectedCountry">The World Map</span>
-      <span v-if="selectedCountry">Selected Country: {{ selectedCountry.name }} </span>
+      <span v-if="selectedCountry">You Have Selected {{ selectedCountry.name }} </span>
     </div>
     <div class="map-container">
     <panZoom :options="{minZoom: 0.8, maxZoom: 6}">
