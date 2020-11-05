@@ -235,7 +235,7 @@ footer {
 }
 
 .copyright{
-  color:white;
+  color:teal;
   font-size: 16px;
   font-family: 'Varela Round';
 }
