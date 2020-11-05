@@ -1,5 +1,5 @@
 <template>
-  <li class="border-box" v-if="country" v-on:click="handleClick">
+  <li class="border-box" v-if="country" v-on:click="handleClick" v-scroll-to="'#svg-map-box'">
       <img id="country-flag" :src="country.flag" :alt="'Flag of ' + country.name">
       {{ country.name }}
   </li>
@@ -63,12 +63,6 @@ box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
   transition:0.9s ease-in-out;
 
 }
-/* li:hover, h1:hover, a:hover {
-  background-color: yellow;
-
-} */
-
-
 
 .border-box:hover {
   background-color: yellow;

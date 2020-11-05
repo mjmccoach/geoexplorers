@@ -6,7 +6,7 @@
     class="random-country-text"
     v-if="randomCountry">
       The Capital city of <strong>{{randomCountry.name}} </strong> is <strong>{{randomCountry.capital}}</strong>!
-      <!-- <img id="random-country-flag" :src="randomCountry.flag"/> -->
+      <img id="country-flag" :src="randomCountry.flag" height="25"/>
 
     </span>
   </div>
@@ -100,6 +100,8 @@ button:hover {
   /* width: 100px; */
   box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
 }
+
+
 /* button {
   border: none;
   background: #1b7e28;

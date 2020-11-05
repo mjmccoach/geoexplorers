@@ -22,9 +22,14 @@
     
     <random-country :countryInfo="countryInfo"></random-country>
 
+    <article class="page-intro">
+      <div>
+        <p class="intro-text">Are you ready to <strong>explore</strong>? Click and zoom on the map below or use the search fields to find a country 🔎</p>
+      </div>
+    </article>
+
     <section class="main-container">
       
-    
       <country-search
       :countries="countryInfo" 
       :country="selectedCountry" 
@@ -34,8 +39,8 @@
 
     </section>
 
-    <footer class = "footer">
-      <h1 class="copyright">Brought to you by &#169 MAAAD EDUCATION</h1>
+    <footer >
+      <h1 class="copyright">Brought to you by &#169 <span class="logo">MAAAD EDUCATION</span></h1>
     </footer>
 
   </main>
@@ -107,14 +112,16 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-
-.main-container {
-  font-family: 'Varela Round';
+header {
   display: flex;
-  justify-content: center;
-  padding: 10px;
-  /* border: solid 4px black;
-  border-radius: 8px; */
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom:0;
+  background-color: none;
+  background: none;
+  align-items: center;
+  padding: 80px 25px 25px 25px;
+  margin: 0;
 }
 
 .header-wrapper {
@@ -150,22 +157,91 @@ header{
   -webkit-text-stroke-color: rgba(194, 194, 194, 0.37);
 
 }
-.globeimage {
-  height: 150px; 
-  width:150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+
+.dummy-div {
+  width: 300px;
 }
-/* .navbar{
+.navbar{
   color:white;
   font-size: 20px;
     font-family: 'Varela Round';
   list-style: none;
+}
+
+.page-intro {
+  background-color: teal;
+  padding-top: 120px;
+  width: 70vw;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 8px;
+}
 
 
+.intro-title-container {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+}
+
+.intro-text {
+  color: white;
+  font-family: 'Varela Round';
+  font-size: 30px;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+#geoexplorer-text {
+  font-family: lemon;
+  color: white;
+}
+
+/* .globe {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 140px;
+  transform-origin: top;
+  width: 140px;
+}
+
+.bounce-7 {
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
 } */
+
+.main-container {
+  font-family: 'Varela Round';
+  padding: 10px;
+  max-width: 90%;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  font-size: 40px;
+}
+
+.copyright{
+  color:white;
+  font-size: 16px;
+  font-family: 'Varela Round';
+}
+
+.logo {
+  font-size: 24px;
+  font-family: itim;
+}
 
 /* main > header {
   display: grid;
@@ -188,10 +264,10 @@ header{
   flex-direction: column;
   word-spacing: normal;
 } */
-.stage {
+/* .stage { */
         /* border-bottom: 3px solid rgb(21, 143, 51); */
-        display: flex;
-}
+        /* display: flex;
+} */
 
 .globe {
         /* align-self: flex-end; */
@@ -216,16 +292,21 @@ header{
         100% { transform: scale(1,1)      translateY(0); }
     }
 
-    .copyright{
+    /* .copyright{
       color:rgba(0, 84, 42, 0.797);
 
       font-size: 20px;
-    font-family: 'Varela Round';
+    font-family: 'Varela Round'; 
+    } */
 
-    }
-    main >footer {
-      text-align: center;
-      font-size: 40px;
-    }
 
+
+/* .globeimage {
+  height: 55px; 
+  width: 55px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
 </style>
