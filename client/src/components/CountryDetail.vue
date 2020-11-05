@@ -45,7 +45,7 @@
     <p>
       &#127963; The capital of {{ country.name }} is {{ country.capital }}.
     <p>
-      &#127926; Play National Anthem of {{ country.name }}.
+      &#127926; Press Play To Hear The National Anthem of {{ country.name }}.
 
     </p>
     <div class="audio-wrapper">
