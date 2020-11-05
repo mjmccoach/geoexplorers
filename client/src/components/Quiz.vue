@@ -394,7 +394,6 @@ body {
     padding: 9px 18px;
     margin: 0 18px;
     margin-bottom: 12px;
-    transition: $trans_duration;
     cursor: pointer;
     color: rgba(0,0,0,0.85);
     border:2px solid;
@@ -402,8 +401,8 @@ body {
     font-size: 25px;
     transition:0.9s;
     box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
-
-    }
+    transition: $trans_duration;
+}
 .is-selected{
   background: radial-gradient(rgba(255, 44, 44, 0.746), rgb(255, 125, 125));
   box-shadow: 0 13px 21px rgba(0,0,0,0.55), 0 8px 8px rgba(0,0,0,0.55);

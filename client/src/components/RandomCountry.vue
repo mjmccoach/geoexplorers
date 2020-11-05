@@ -49,6 +49,7 @@ body {
 	flex-wrap: wrap;
   justify-content:center;
   padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -58,7 +59,7 @@ random-country-wrapper {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  width: 680px;
+  width: 66vw;
 }
 
 button {

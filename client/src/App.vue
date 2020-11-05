@@ -120,7 +120,7 @@ header {
   background-color: none;
   background: none;
   align-items: center;
-  padding: 80px 25px 25px 25px;
+  padding: 25px 25px 25px 25px;
   margin: 0;
 }
 
@@ -135,10 +135,10 @@ header{
   margin: 2px;
   flex-wrap: nowrap;
   justify-content: center;
-  width: 64vw;
-  margin-top: 80px;
+  width: 66vw;
+  margin-top: 60px;
   border-bottom:0;
-    background: linear-gradient(rgba(147, 226, 1, 0.433) 33%, rgba(243, 230, 48, 0.667) 77%,rgba(147, 226, 1, 0.667) 33%,rgba(243, 230, 48, 0.667) 77%);
+  background: linear-gradient(rgba(147, 226, 1, 0.433) 33%, rgba(243, 230, 48, 0.667) 77%,rgba(147, 226, 1, 0.667) 33%,rgba(243, 230, 48, 0.667) 77%);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   border-radius: 25px;
   border: 4px solid black;
@@ -170,11 +170,13 @@ header{
 
 .page-intro {
   background-color: teal;
-  padding-top: 120px;
-  width: 70vw;
+  padding-top: 10px;
+  width: 66vw;
   margin: auto;
   border: 4px solid black;
-  border-radius: 8px;
+  border-radius: 25px;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.21), 0 5px 5px rgba(0,0,0,0.21);
+
 }
 
 
