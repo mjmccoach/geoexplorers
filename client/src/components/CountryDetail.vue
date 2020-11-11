@@ -19,7 +19,7 @@
 
     <!-- // INFO ABOUT POPULATION & AREA -->
     <p>
-      &#128200; {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles.
+      <!-- &#128200; {{ country.name }} has a population of {{ country.population.toLocaleString() }} people spread over a surface area of {{ country.area.toLocaleString() }} square miles. -->
     </p>
 
     <!-- // INFO ABOUT LANGUAGE, NATIONALITY & CURRENCY -->
